@@ -1,4 +1,4 @@
-import SectionWrapper from "@/components/layout/SectionWrapper";
+import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const LogoCloud = ({ title, logos }) => {
   // logos should be an array of objects: [{ src: '/path/to/logo.png', alt: 'Client Name' }]

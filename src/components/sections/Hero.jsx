@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/Button";
-import SectionWrapper from "@/components/layout/SectionWrapper";
+import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const Hero = ({ title, body, cta, imageUrl }) => {
   return (

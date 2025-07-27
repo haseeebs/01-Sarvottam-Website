@@ -7,9 +7,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary: #0d2c54;
-  --color-secondary: #8d99ae;
-  --color-accent: #f2b705;
+  --color-my-primary: #0d2c54;
+  --color-my-secondary: #8d99ae;
+  --color-my-accent: #f2b705;
 
   --font-family-display: "Montserrat", sans-serif;
   --font-family-body: "Lato", sans-serif;

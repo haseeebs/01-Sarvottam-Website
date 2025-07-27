@@ -1,46 +1,5 @@
 import React, { useState, useEffect } from "react";
-
-// Placeholder for the logo component as specified.
-const SarvottamEnterprisesLogo = () => (
-  <a
-    href="/"
-    className="flex items-center gap-3"
-    aria-label="Sarvottam Enterprises Home"
-  >
-    {/* Placeholder Icon */}
-    <svg
-      width="36"
-      height="36"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M12 2L2 7L12 12L22 7L12 2Z"
-        stroke="#212529"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M2 17L12 22L22 17"
-        stroke="#212529"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M22 12L12 17L2 12"
-        stroke="#212529"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-    <span className="text-xl font-bold text-[#212529] tracking-wide">
-      Sarvottam Enterprises
-    </span>
-  </a>
-);
+import Logo from "@/assets/images/Logo.webp";
 
 const NavLink = ({ href, children }) => (
   <a
@@ -81,7 +40,9 @@ export default function Header({ navigationLinks }) {
       >
         <div className="mx-auto flex h-[80px] max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex-shrink-0">
-            <SarvottamEnterprisesLogo />
+            <div className="flex-shrink-0">
+              <img src={Logo} alt="Logo" className="h-54 w-auto" />
+            </div>
           </div>
 
           <nav className="hidden items-center gap-8 md:flex">
