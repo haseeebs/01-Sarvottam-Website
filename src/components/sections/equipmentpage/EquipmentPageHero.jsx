@@ -13,7 +13,7 @@ const EquipmentPageHero = ({ headline, body }) => {
       ></div>
 
       {/* Blue Overlay */}
-      <div className='bg-opacity-60 absolute inset-0 bg-blue-900'></div>
+      <div className='bg-opacity-60 bg-my-primary absolute inset-0'></div>
 
       {/* Content */}
       <div className='relative mx-auto max-w-7xl px-6 py-32 sm:py-48 lg:py-56'>

@@ -29,7 +29,7 @@ const ProjectShowcase = ({ title, projects }) => {
                   />
                   <div className='flex flex-1 flex-col p-6'>
                     <div>
-                      <p className='inline-block rounded-full bg-blue-100 px-3 py-1 text-xs leading-6 font-semibold text-blue-800'>
+                      <p className='bg-my-primary/20 text-my-primary/60 inline-block rounded-full px-3 py-1 text-xs leading-6 font-semibold'>
                         {project.category}
                       </p>
                     </div>

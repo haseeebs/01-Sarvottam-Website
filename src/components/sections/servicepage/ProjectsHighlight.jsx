@@ -32,7 +32,7 @@ const ProjectsHighlight = ({ title, projects = [] }) => {
   return (
     <section className='bg-slate-50 py-16 sm:py-24'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        <h2 className='mb-12 text-center font-sans text-3xl font-bold text-blue-800 md:text-4xl'>
+        <h2 className='text-my-primary/60 mb-12 text-center font-sans text-3xl font-bold md:text-4xl'>
           {title}
         </h2>
 

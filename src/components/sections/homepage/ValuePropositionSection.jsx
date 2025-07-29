@@ -15,10 +15,10 @@ export default function ValuePropositionSection({ imageSrc, body }) {
         <div className='grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16'>
           <div className='order-last lg:order-first'>
             <div className='max-w-lg'>
-              <p className='text-base font-semibold tracking-wider text-[#D4AF37] uppercase'>
+              <p className='text-my-accent text-base font-semibold tracking-wider uppercase'>
                 Our Foundation
               </p>
-              <h2 className='mt-2 text-3xl font-extrabold tracking-tight text-[#212529] sm:text-4xl'>
+              <h2 className='text-my-primary mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl'>
                 Commitment through Trust and Determination
               </h2>
               <p className='mt-6 text-lg leading-relaxed text-gray-600'>

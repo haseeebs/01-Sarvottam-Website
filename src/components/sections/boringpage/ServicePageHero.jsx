@@ -10,7 +10,7 @@ const ServicePageHero = ({ headline, subheadline, cta }) => {
       }}
     >
       {/* Overlay */}
-      <div className='absolute inset-0 bg-blue-900/60'></div>
+      <div className='bg-my-primary/60 absolute inset-0'></div>
 
       {/* Content Container */}
       <div className='relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
@@ -21,7 +21,7 @@ const ServicePageHero = ({ headline, subheadline, cta }) => {
             </h1>
             <p className='mt-6 text-lg text-white/85'>{subheadline}</p>
             <div className='mt-10'>
-              <button className='rounded-md bg-yellow-400 px-8 py-3 text-base font-bold text-blue-900 shadow-lg transition hover:bg-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400'>
+              <button className='bg-my-accent text-my-primary hover:bg-my-accent/80 focus-visible:outline-my-accent rounded-md px-8 py-3 text-base font-bold shadow-lg transition focus-visible:outline focus-visible:outline-offset-2'>
                 {cta}
               </button>
             </div>

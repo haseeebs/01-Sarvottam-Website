@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ProjectCard = ({ image, category, title, location, link }) => (
   <Link
     to={link}
-    className='group block overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-xl focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:outline-none'
+    className='group focus:ring-my-accent block overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-xl focus:ring-2 focus:ring-offset-2 focus:outline-none'
   >
     <div className='relative h-56 w-full'>
       <img
@@ -12,12 +12,12 @@ const ProjectCard = ({ image, category, title, location, link }) => (
         alt={`Project image for ${title}`}
         className='h-full w-full object-cover transition-transform duration-300 group-hover:scale-105'
       />
-      <div className='absolute top-4 left-4 rounded-full bg-[#D4AF37] px-3 py-1 text-xs font-bold tracking-wide text-white uppercase'>
+      <div className='bg-my-accent absolute top-4 left-4 rounded-full px-3 py-1 text-xs font-bold tracking-wide text-white uppercase'>
         {category}
       </div>
     </div>
     <div className='p-6'>
-      <h3 className='text-xl font-bold text-[#212529]'>{title}</h3>
+      <h3 className='text-my-primary text-xl font-bold'>{title}</h3>
       <p className='mt-1 text-base text-gray-600'>{location}</p>
     </div>
   </Link>
@@ -54,7 +54,7 @@ export default function ProjectsShowcaseSection({ title, cta, projects }) {
     <section className='bg-gray-50 py-16 sm:py-20 lg:py-24'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='text-center'>
-          <h2 className='text-3xl font-extrabold tracking-tight text-[#212529] sm:text-4xl'>
+          <h2 className='text-my-primary text-3xl font-extrabold tracking-tight sm:text-4xl'>
             {displayTitle}
           </h2>
           <p className='mx-auto mt-4 max-w-2xl text-lg text-gray-600'>
@@ -79,7 +79,7 @@ export default function ProjectsShowcaseSection({ title, cta, projects }) {
         <div className='mt-16 text-center'>
           <Link
             to={displayCta.link}
-            className='inline-block rounded-md bg-[#212529] px-8 py-3 text-base font-semibold text-white shadow-md transition-transform duration-300 hover:-translate-y-0.5 hover:bg-[#343a40] focus:ring-2 focus:ring-[#212529] focus:ring-offset-2 focus:outline-none'
+            className='bg-my-primary focus:ring-my-primary inline-block rounded-md px-8 py-3 text-base font-semibold text-white shadow-md transition-transform duration-300 hover:-translate-y-0.5 hover:bg-[#343a40] focus:ring-2 focus:ring-offset-2 focus:outline-none'
           >
             {displayCta.text}
           </Link>

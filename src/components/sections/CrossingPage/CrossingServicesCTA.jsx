@@ -2,9 +2,9 @@ import React from 'react';
 
 const CrossingServiceCTA = ({ title, button_text, href = '#' }) => {
   return (
-    <div className='bg-blue-900'>
+    <div className='bg-my-primary'>
       <div className='mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8'>
-        <div className='relative isolate overflow-hidden bg-blue-900 px-6 pt-16 text-center sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0'>
+        <div className='bg-my-primary relative isolate overflow-hidden px-6 pt-16 text-center sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0'>
           {/* Decorative SVG elements */}
           <svg
             viewBox='0 0 1024 1024'
@@ -32,7 +32,7 @@ const CrossingServiceCTA = ({ title, button_text, href = '#' }) => {
             <div className='mt-10 flex items-center justify-center gap-x-6 lg:justify-start'>
               <a
                 href={href}
-                className='rounded-md border-2 border-amber-400 bg-transparent px-6 py-3 text-sm font-semibold text-amber-400 shadow-sm transition-colors duration-300 ease-in-out hover:bg-amber-400 hover:text-blue-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400'
+                className='hover:text-my-primary rounded-md border-2 border-amber-400 bg-transparent px-6 py-3 text-sm font-semibold text-amber-400 shadow-sm transition-colors duration-300 ease-in-out hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400'
               >
                 {button_text || 'Get a Quote for Your Crossing Project'}
               </a>

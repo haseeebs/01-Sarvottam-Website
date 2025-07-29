@@ -44,12 +44,12 @@ const OtherServices = ({ title }) => {
             <a
               key={service.name}
               to={service.to}
-              className='group block rounded-lg bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 ease-in-out ring-inset hover:shadow-lg hover:ring-blue-600'
+              className='group hover:ring-my-primary/60 block rounded-lg bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 ease-in-out ring-inset hover:shadow-lg'
             >
               <div>
-                <span className='inline-flex rounded-lg bg-blue-100 p-3 ring-4 ring-white'>
+                <span className='bg-my-primary/20 inline-flex rounded-lg p-3 ring-4 ring-white'>
                   <service.icon
-                    className='h-8 w-8 text-blue-800'
+                    className='text-my-primary h-8 w-8'
                     aria-hidden='true'
                   />
                 </span>
@@ -61,7 +61,7 @@ const OtherServices = ({ title }) => {
                 <p className='mt-2 text-base leading-7 text-gray-600'>
                   {service.description}
                 </p>
-                <p className='mt-6 text-sm font-semibold text-blue-700 transition-opacity duration-300 group-hover:opacity-100 lg:opacity-0'>
+                <p className='text-my-primary mt-6 text-sm font-semibold transition-opacity duration-300 group-hover:opacity-100 lg:opacity-0'>
                   Learn More <span aria-hidden='true'>→</span>
                 </p>
               </div>

@@ -6,7 +6,7 @@ const ClientsPageHero = ({ headline, body, cta }) => {
       <div className='relative isolate px-6 pt-14 lg:px-8'>
         <div className='mx-auto max-w-4xl py-24 sm:py-32'>
           <div className='text-center'>
-            <h1 className='text-4xl leading-tight font-bold tracking-tight text-blue-900 sm:text-[42px] sm:leading-tight'>
+            <h1 className='text-my-primary text-4xl leading-tight font-bold tracking-tight sm:text-[42px] sm:leading-tight'>
               {headline}
             </h1>
             <p className='mx-auto mt-6 max-w-[750px] text-lg leading-8 text-slate-700'>

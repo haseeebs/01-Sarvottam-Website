@@ -60,16 +60,16 @@ const FeaturedProjects = ({ title, projects = projectsData }) => {
                 <h3 className='font-display text-my-accent text-[28px] font-bold'>
                   {project.title}
                 </h3>
-                <p className='font-body mt-4 max-w-prose text-base text-[#212529]'>
+                <p className='font-body text-my-primary mt-4 max-w-prose text-base'>
                   {project.description}
                 </p>
                 <div className='mt-5 space-y-2'>
                   {project.stats.map((stat) => (
                     <p key={stat.label} className='font-body text-sm'>
-                      <span className='font-bold text-[#8D99AE]'>
+                      <span className='text-my-secondary font-bold'>
                         {stat.label}:
                       </span>
-                      <span className='ml-2 text-[#212529]'>{stat.value}</span>
+                      <span className='text-my-primary ml-2'>{stat.value}</span>
                     </p>
                   ))}
                 </div>

@@ -75,11 +75,11 @@ const EquipmentCard = ({ name, imageUrl }) => (
       alt={name}
       className='h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110'
     />
-    <div className='bg-opacity-70 absolute inset-0 flex flex-col items-center justify-center bg-blue-900 p-4 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100'>
+    <div className='bg-opacity-70 bg-my-primary absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100'>
       <h3 className='font-body text-xl font-bold text-white'>{name}</h3>
       <Link
         to='#'
-        className='font-body mt-2 text-base text-yellow-400 transition-colors hover:text-yellow-300'
+        className='font-body text-my-accent/90 hover:text-my-accent mt-2 text-base transition-colors'
       >
         View Details →
       </Link>
@@ -120,7 +120,7 @@ const EquipmentGallery = () => {
               onClick={() => setActiveCategory(category)}
               className={`font-body rounded-full px-4 py-2 text-sm font-bold transition-colors duration-300 sm:text-base ${
                 activeCategory === category
-                  ? 'bg-blue-600 text-white shadow-md'
+                  ? 'bg-my-primary/50 text-white shadow-md'
                   : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
               }`}
             >

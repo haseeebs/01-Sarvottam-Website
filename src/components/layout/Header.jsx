@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const NavLink = ({ to, children }) => (
   <Link
     to={to}
-    className='font-body group relative py-2 text-base font-bold text-[#212529]'
+    className='font-body group text-my-primary relative py-2 text-base font-bold'
   >
     {children}
-    <span className='absolute bottom-0 left-0 block h-[2px] w-full origin-left scale-x-0 transform bg-[#D4AF37] transition-transform duration-300 ease-out group-hover:scale-x-100'></span>
+    <span className='bg-my-accent absolute bottom-0 left-0 block h-[2px] w-full origin-left scale-x-0 transform transition-transform duration-300 ease-out group-hover:scale-x-100'></span>
   </Link>
 );
 
@@ -58,7 +58,7 @@ export default function Header({ navigationLinks }) {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label='Toggle navigation menu'
-              className='z-30 p-2 text-[#212529]'
+              className='text-my-primary z-30 p-2'
             >
               {isMenuOpen ? (
                 <svg
@@ -108,7 +108,7 @@ export default function Header({ navigationLinks }) {
               key={item.label}
               to={item.path}
               onClick={() => setIsMenuOpen(false)}
-              className='font-body text-2xl font-bold text-[#212529]'
+              className='font-body text-my-primary text-2xl font-bold'
             >
               {item.label}
             </Link>

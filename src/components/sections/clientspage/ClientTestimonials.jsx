@@ -56,7 +56,7 @@ const ClientTestimonials = ({ title }) => {
         <div className='mt-12 flex justify-center gap-x-3'>
           <button
             aria-label='Go to slide 1'
-            className='h-2.5 w-2.5 rounded-full bg-blue-900'
+            className='bg-my-primary h-2.5 w-2.5 rounded-full'
           ></button>
           <button
             aria-label='Go to slide 2'

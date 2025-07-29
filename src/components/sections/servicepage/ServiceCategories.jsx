@@ -15,7 +15,7 @@ const ServiceCard = ({ imageUrl, title, description, link }) => {
       </div>
       {/* Content part */}
       <div className='flex flex-grow flex-col p-6'>
-        <h3 className='mb-3 font-sans text-xl font-bold text-blue-800'>
+        <h3 className='text-my-primary/60 mb-3 font-sans text-xl font-bold'>
           {title}
         </h3>
         <p className='mb-5 flex-grow font-sans text-base text-slate-700'>
@@ -23,7 +23,7 @@ const ServiceCard = ({ imageUrl, title, description, link }) => {
         </p>
         <Link
           to={link}
-          className='self-start font-sans text-base font-bold text-yellow-600 transition-colors hover:text-yellow-500'
+          className='hover:text-my-accent/85 text-my-accent/50 self-start font-sans text-base font-bold transition-colors'
         >
           Learn More →
         </Link>
@@ -36,7 +36,7 @@ const ServiceCategories = ({ title, services = [] }) => {
   return (
     <div className='bg-slate-50 py-16 sm:py-24'>
       <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
-        <h2 className='mb-12 text-center font-sans text-3xl font-bold text-blue-800 md:text-4xl'>
+        <h2 className='text-my-primary/60 mb-12 text-center font-sans text-3xl font-bold md:text-4xl'>
           {title}
         </h2>
         <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>

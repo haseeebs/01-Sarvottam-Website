@@ -14,7 +14,7 @@ const ContactPageHero = ({ headline, body, cta }) => {
           {cta && (
             <a
               href='#contact'
-              className='inline-block rounded-md bg-blue-600 px-8 py-3 text-lg font-semibold text-white shadow-sm transition-colors duration-300 hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600'
+              className='bg-my-primary/50 hover:bg-my-primary focus-visible:outline-my-primary inline-block rounded-md px-8 py-3 text-lg font-semibold text-white shadow-sm transition-colors duration-300 focus-visible:outline focus-visible:outline-offset-2'
             >
               {cta}
             </a>

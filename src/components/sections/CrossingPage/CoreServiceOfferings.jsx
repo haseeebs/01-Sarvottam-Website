@@ -99,7 +99,7 @@ const CoreServiceOfferings = ({ title, features }) => {
                   className='h-12 w-12 text-amber-500 transition-transform duration-300 ease-in-out group-hover:scale-110'
                 />
               </div>
-              <h3 className='mt-4 font-serif text-xl font-bold text-blue-900'>
+              <h3 className='text-my-primary mt-4 font-serif text-xl font-bold'>
                 {feature.name}
               </h3>
             </div>

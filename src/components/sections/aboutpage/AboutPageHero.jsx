@@ -15,13 +15,13 @@ const AboutPageHero = ({ content, imageUrl, imageAlt }) => {
                 {content.headline}
               </h1>
 
-              <p className='font-body mt-6 text-lg leading-relaxed text-[#212529]'>
+              <p className='font-body text-my-primary mt-6 text-lg leading-relaxed'>
                 {content.body}
               </p>
 
               <div className='mt-8 flex flex-wrap justify-center gap-4 md:justify-start'>
                 <a
-                  className='font-display text-my-primary hover:bg-opacity-90 block w-full rounded-md bg-[#F5B841] px-12 py-3 text-center text-base font-bold shadow transition focus:ring-2 focus:ring-[#F5B841] focus:ring-offset-2 focus:outline-none sm:w-auto'
+                  className='font-display text-my-primary hover:bg-opacity-90 bg-my-accent focus:ring-my-accent block w-full rounded-md px-12 py-3 text-center text-base font-bold shadow transition focus:ring-2 focus:ring-offset-2 focus:outline-none sm:w-auto'
                   href='#'
                 >
                   {content.cta}

@@ -10,7 +10,7 @@ const WhyChooseUs = ({
   return (
     <section className='bg-white py-16 sm:py-24'>
       <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
-        <h2 className='mb-16 text-center font-sans text-3xl font-bold text-blue-800 md:text-4xl'>
+        <h2 className='text-my-primary/60 mb-16 text-center font-sans text-3xl font-bold md:text-4xl'>
           {title}
         </h2>
         <div className='grid grid-cols-1 items-center gap-12 md:grid-cols-2'>

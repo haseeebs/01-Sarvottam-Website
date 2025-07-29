@@ -7,7 +7,7 @@ const StartProjectCTA = ({ title = 'Have a similar project in mind?' }) => {
         <h2 className='font-display text-3xl font-bold text-white sm:text-4xl'>
           {title}
         </h2>
-        <p className='font-body mt-4 text-base text-[#8D99AE] sm:text-lg'>
+        <p className='font-body text-my-secondary mt-4 text-base sm:text-lg'>
           Let's discuss how our expertise can bring your vision to life.
         </p>
         <div className='mt-8 flex justify-center'>

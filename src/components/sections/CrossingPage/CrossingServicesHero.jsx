@@ -48,7 +48,7 @@ const CrossingServicesHero = ({ content, imageUrl }) => {
             )}
 
             {/* Headline */}
-            <h1 className='mt-2 font-serif text-4xl font-bold tracking-tight text-blue-900 sm:text-5xl'>
+            <h1 className='text-my-primary mt-2 font-serif text-4xl font-bold tracking-tight sm:text-5xl'>
               {headline}
             </h1>
 
@@ -61,7 +61,7 @@ const CrossingServicesHero = ({ content, imageUrl }) => {
             <div className='mt-8'>
               <a
                 href='#quote'
-                className='inline-block rounded-md bg-amber-400 px-8 py-3 text-base font-semibold text-blue-900 shadow-lg transition-colors hover:bg-amber-500 focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:outline-none'
+                className='text-my-primary inline-block rounded-md bg-amber-400 px-8 py-3 text-base font-semibold shadow-lg transition-colors hover:bg-amber-500 focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:outline-none'
               >
                 {cta}
               </a>

@@ -135,7 +135,7 @@ const ServicePage = () => {
           </p>
           <ul className='space-y-4 pl-4'>
             <li className='flex items-start'>
-              <span className='mr-3 font-bold text-blue-800'>✔</span>
+              <span className='text-my-primary/60 mr-3 font-bold'>✔</span>
               <span>
                 <strong>Advanced Technology:</strong> We invest in the latest
                 trenchless equipment to ensure efficiency, precision, and
@@ -143,7 +143,7 @@ const ServicePage = () => {
               </span>
             </li>
             <li className='flex items-start'>
-              <span className='mr-3 font-bold text-blue-800'>✔</span>
+              <span className='text-my-primary/60 mr-3 font-bold'>✔</span>
               <span>
                 <strong>Experienced Professionals:</strong> Our team consists of
                 seasoned engineers and technicians with decades of collective
@@ -151,7 +151,7 @@ const ServicePage = () => {
               </span>
             </li>
             <li className='flex items-start'>
-              <span className='mr-3 font-bold text-blue-800'>✔</span>
+              <span className='text-my-primary/60 mr-3 font-bold'>✔</span>
               <span>
                 <strong>Safety First Culture:</strong> We adhere to the
                 strictest safety protocols to protect our team, our clients, and

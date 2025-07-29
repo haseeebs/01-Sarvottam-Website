@@ -28,7 +28,7 @@ const RockBoringSpecialists = ({ title, benefits }) => {
                 <div key={benefit.name} className='flex flex-col'>
                   <dt className='flex items-center gap-x-3 text-xl leading-7 font-semibold text-gray-900'>
                     <IconComponent
-                      className='h-12 w-12 flex-none text-yellow-500'
+                      className='text-my-accent/85 h-12 w-12 flex-none'
                       aria-hidden='true'
                     />
                     {benefit.name}

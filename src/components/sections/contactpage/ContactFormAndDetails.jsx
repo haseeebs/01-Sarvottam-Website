@@ -183,7 +183,7 @@ const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
               <div className='mt-8'>
                 <button
                   type='submit'
-                  className='w-full rounded-md bg-amber-500 px-3.5 py-3 text-center text-base font-bold text-blue-900 shadow-sm transition-colors duration-200 hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600'
+                  className='text-my-primary w-full rounded-md bg-amber-500 px-3.5 py-3 text-center text-base font-bold shadow-sm transition-colors duration-200 hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600'
                 >
                   Send Inquiry
                 </button>

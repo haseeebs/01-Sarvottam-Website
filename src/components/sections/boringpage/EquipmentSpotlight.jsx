@@ -78,7 +78,7 @@ const EquipmentSpotlight = ({ title }) => {
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent'></div>
                 <div className='absolute bottom-0 w-full p-4 md:p-6'>
-                  <p className='text-sm font-semibold tracking-wider text-yellow-400 uppercase'>
+                  <p className='text-my-accent/90 text-sm font-semibold tracking-wider uppercase'>
                     {project.category}
                   </p>
                   <h3 className='mt-1 text-lg font-bold text-white'>

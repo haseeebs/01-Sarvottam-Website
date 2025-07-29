@@ -9,7 +9,7 @@ const ServicePageHero = ({ headline, body, cta }) => {
       }}
     >
       {/* Corporate Blue Overlay */}
-      <div className='bg-opacity-60 absolute inset-0 bg-blue-900'></div>
+      <div className='bg-opacity-60 bg-my-primary absolute inset-0'></div>
 
       <div className='relative mx-auto max-w-6xl px-4 py-24 sm:py-32 lg:px-8'>
         <div className='text-center md:text-left'>
@@ -24,7 +24,7 @@ const ServicePageHero = ({ headline, body, cta }) => {
           <div className='mt-10'>
             <a
               href='#'
-              className='inline-block rounded-md bg-amber-400 px-8 py-3 text-base font-semibold text-blue-900 shadow-sm transition hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400'
+              className='text-my-primary inline-block rounded-md bg-amber-400 px-8 py-3 text-base font-semibold shadow-sm transition hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400'
             >
               {cta}
             </a>

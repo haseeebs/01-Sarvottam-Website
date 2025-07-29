@@ -23,7 +23,7 @@ const ProjectsPageHero = ({ headline, body }) => {
             {headline}
           </h1>
           <p
-            className='font-body animate-fade-in-up mx-auto mt-6 max-w-[700px] text-base text-[#8D99AE] md:text-lg'
+            className='font-body animate-fade-in-up text-my-secondary mx-auto mt-6 max-w-[700px] text-base md:text-lg'
             style={{ animationDelay: '200ms' }}
           >
             {body}

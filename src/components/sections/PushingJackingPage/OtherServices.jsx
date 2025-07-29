@@ -19,7 +19,7 @@ const OtherServices = ({ title, services }) => {
               <div className='flex-shrink-0'>
                 {/* The Icon component should be passed via props */}
                 <service.Icon
-                  className='h-10 w-10 text-blue-900 transition-colors group-hover:text-amber-500'
+                  className='text-my-primary h-10 w-10 transition-colors group-hover:text-amber-500'
                   aria-hidden='true'
                 />
               </div>

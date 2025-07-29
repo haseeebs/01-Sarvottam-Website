@@ -106,7 +106,7 @@ const ProjectPortfolio = ({ title = 'Our Complete Portfolio' }) => {
                 <h3 className='font-display text-my-primary text-xl font-bold'>
                   {project.title}
                 </h3>
-                <p className='font-body mt-2 text-sm text-[#8D99AE]'>
+                <p className='font-body text-my-secondary mt-2 text-sm'>
                   {project.category}
                 </p>
               </div>

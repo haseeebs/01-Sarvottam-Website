@@ -34,7 +34,7 @@ const Footer = () => {
               Sarvottam
             </h2>
             {/* Component 2 se description aur styling */}
-            <p className='text-sm/6 text-[#8D99AE]'>
+            <p className='text-my-secondary text-sm/6'>
               Pioneering trenchless technology with a foundation of trust and
               determination for over 15 years.
             </p>
@@ -56,7 +56,7 @@ const Footer = () => {
                   <li key={item.name}>
                     <Link
                       to={item.to}
-                      className='text-base text-[#8D99AE] hover:text-white'
+                      className='text-my-secondary text-base hover:text-white'
                     >
                       {item.name}
                     </Link>
@@ -78,7 +78,7 @@ const Footer = () => {
                   <li key={item.name}>
                     <Link
                       to={item.to}
-                      className='text-base text-[#8D99AE] hover:text-white'
+                      className='text-my-secondary text-base hover:text-white'
                     >
                       {item.name}
                     </Link>
@@ -95,7 +95,7 @@ const Footer = () => {
               >
                 Contact
               </h3>
-              <ul className='mt-6 space-y-4 text-base text-[#8D99AE]'>
+              <ul className='text-my-secondary mt-6 space-y-4 text-base'>
                 <li>
                   <p>
                     123 Infrastructure Lane,
@@ -124,7 +124,7 @@ const Footer = () => {
         {/* Bottom Copyright Section */}
         {/* Border aur text color ko Component 2 ke style ke hisaab se adjust kiya gaya hai */}
         <div className='mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24'>
-          <p className='text-sm text-[#8D99AE]'>
+          <p className='text-my-secondary text-sm'>
             © {new Date().getFullYear()} Sarvottam Enterprises. All rights
             reserved.
           </p>
