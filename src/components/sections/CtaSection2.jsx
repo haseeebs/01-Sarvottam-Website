@@ -14,7 +14,7 @@ const CtaSection2 = ({
         <div className='mt-10 flex cursor-pointer items-center gap-x-6 lg:mt-0 lg:shrink-0'>
           <a
             buttonLink={buttonLink}
-            className='hover:text-my-primary rounded-md border-2 border-amber-400 bg-transparent px-6 py-3 text-sm font-semibold text-amber-400 shadow-sm transition-colors duration-300 ease-in-out hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400'
+            className='hover:text-my-primary rounded-sm border-2 border-amber-400 bg-transparent px-6 py-3 text-sm font-semibold text-amber-400 shadow-sm transition-colors duration-300 ease-in-out hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400'
           >
             {buttonText}
           </a>

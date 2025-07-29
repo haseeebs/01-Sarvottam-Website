@@ -15,7 +15,7 @@ const PrimaryCTA = ({ title, buttonText }) => {
         <div className='mt-10 flex justify-center'>
           <button
             type='button'
-            className='text-my-primary rounded-md bg-amber-500 px-6 py-3 text-base font-semibold shadow-sm transition-colors hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500'
+            className='text-my-primary rounded-sm bg-amber-500 px-6 py-3 text-base font-semibold shadow-sm transition-colors hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500'
           >
             {buttonText || defaultContent.buttonText}
           </button>

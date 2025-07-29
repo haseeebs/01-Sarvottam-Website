@@ -95,7 +95,7 @@ const ProjectPortfolio = ({ title = 'Our Complete Portfolio' }) => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className='overflow-hidden rounded-lg bg-white shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl'
+              className='overflow-hidden rounded-sm bg-white shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl'
             >
               <img
                 src={project.imageUrl}

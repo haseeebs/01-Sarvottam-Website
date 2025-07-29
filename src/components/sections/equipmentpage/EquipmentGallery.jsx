@@ -69,7 +69,7 @@ const allEquipment = [
 ];
 
 const EquipmentCard = ({ name, imageUrl }) => (
-  <div className='group relative aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg'>
+  <div className='group relative aspect-[4/3] w-full overflow-hidden rounded-sm shadow-lg'>
     <img
       src={imageUrl}
       alt={name}

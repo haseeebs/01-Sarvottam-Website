@@ -13,7 +13,7 @@ const StartProjectCTA = ({ title = 'Have a similar project in mind?' }) => {
         <div className='mt-8 flex justify-center'>
           <button
             type='button'
-            className='font-display text-my-primary bg-my-accent focus:ring-offset-my-primary focus:ring-my-accent inline-flex items-center rounded-md border border-transparent px-8 py-3 text-base font-bold shadow-sm transition-transform duration-300 ease-in-out hover:scale-105 focus:ring-2 focus:ring-offset-2 focus:outline-none'
+            className='font-display text-my-primary bg-my-accent focus:ring-offset-my-primary focus:ring-my-accent inline-flex items-center rounded-sm border border-transparent px-8 py-3 text-base font-bold shadow-sm transition-transform duration-300 ease-in-out hover:scale-105 focus:ring-2 focus:ring-offset-2 focus:outline-none'
           >
             Contact Us Today
           </button>

@@ -12,7 +12,7 @@ const PartnershipCTA = ({ title, cta }) => {
           <div className='flex-shrink-0'>
             <Link
               to='#'
-              className='rounded-md bg-amber-500 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500'
+              className='rounded-sm bg-amber-500 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500'
             >
               {cta}
             </Link>

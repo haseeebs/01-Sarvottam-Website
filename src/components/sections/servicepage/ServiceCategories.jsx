@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // This is a sub-component. In a real project, it might be in its own file.
 const ServiceCard = ({ imageUrl, title, description, link }) => {
   return (
-    <div className='flex flex-col rounded-lg border border-slate-200 bg-white shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl'>
+    <div className='flex flex-col rounded-sm border border-slate-200 bg-white shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl'>
       {/* Visual/Image part */}
       <div className='aspect-video'>
         <img

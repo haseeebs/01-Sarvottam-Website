@@ -31,7 +31,7 @@ const ServiceBreakdown = ({ service1, service2, imageSrc }) => {
             <img
               src={imageSrc}
               alt='Isometric 3D schematic of Box Pushing and Pipe Jacking processes'
-              className='aspect-square h-auto w-full rounded-lg bg-gray-100 object-contain'
+              className='aspect-square h-auto w-full rounded-sm bg-gray-100 object-contain'
             />
           </div>
         </div>

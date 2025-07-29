@@ -24,7 +24,7 @@ const WhyChooseUs = ({
             <img
               src={imageSrc}
               alt={imageAlt}
-              className='h-auto w-full rounded-lg shadow-xl'
+              className='h-auto w-full rounded-sm shadow-xl'
             />
           </div>
         </div>

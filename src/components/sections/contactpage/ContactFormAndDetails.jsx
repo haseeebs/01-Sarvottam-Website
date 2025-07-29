@@ -89,7 +89,7 @@ const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
                       name='name'
                       id='name'
                       autoComplete='name'
-                      className='block w-full rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
+                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
                     />
                   </div>
                 </div>
@@ -106,7 +106,7 @@ const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
                       name='company'
                       id='company'
                       autoComplete='organization'
-                      className='block w-full rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
+                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
                     />
                   </div>
                 </div>
@@ -123,7 +123,7 @@ const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
                       name='email'
                       id='email'
                       autoComplete='email'
-                      className='block w-full rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
+                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
                     />
                   </div>
                 </div>
@@ -140,7 +140,7 @@ const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
                       name='phone'
                       id='phone'
                       autoComplete='tel'
-                      className='block w-full rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
+                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
                     />
                   </div>
                 </div>
@@ -155,7 +155,7 @@ const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
                     <select
                       id='service-of-interest'
                       name='service-of-interest'
-                      className='block w-full rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
+                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
                     >
                       {serviceOptions.map((option) => (
                         <option key={option}>{option}</option>
@@ -175,7 +175,7 @@ const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
                       name='message'
                       id='message'
                       rows='4'
-                      className='block w-full rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
+                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
                     ></textarea>
                   </div>
                 </div>
@@ -183,7 +183,7 @@ const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
               <div className='mt-8'>
                 <button
                   type='submit'
-                  className='text-my-primary w-full rounded-md bg-amber-500 px-3.5 py-3 text-center text-base font-bold shadow-sm transition-colors duration-200 hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600'
+                  className='text-my-primary w-full rounded-sm bg-amber-500 px-3.5 py-3 text-center text-base font-bold shadow-sm transition-colors duration-200 hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600'
                 >
                   Send Inquiry
                 </button>

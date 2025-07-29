@@ -17,7 +17,7 @@ const ServicePageHero = ({ headline, body, cta }) => {
           <div className='mt-10'>
             <a
               href='#'
-              className='text-my-primary inline-block rounded-md bg-amber-400 px-8 py-3 text-base font-semibold shadow-sm transition hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400'
+              className='text-my-primary inline-block rounded-sm bg-amber-400 px-8 py-3 text-base font-semibold shadow-sm transition hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400'
             >
               {cta}
             </a>

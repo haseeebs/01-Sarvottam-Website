@@ -21,7 +21,7 @@ const ServicePageHero = ({ headline, subheadline, cta }) => {
             </h1>
             <p className='mt-6 text-lg text-white/85'>{subheadline}</p>
             <div className='mt-10'>
-              <button className='bg-my-accent text-my-primary hover:bg-my-accent/80 focus-visible:outline-my-accent rounded-md px-8 py-3 text-base font-bold shadow-lg transition focus-visible:outline focus-visible:outline-offset-2'>
+              <button className='bg-my-accent text-my-primary hover:bg-my-accent/80 focus-visible:outline-my-accent rounded-sm px-8 py-3 text-base font-bold shadow-lg transition focus-visible:outline focus-visible:outline-offset-2'>
                 {cta}
               </button>
             </div>

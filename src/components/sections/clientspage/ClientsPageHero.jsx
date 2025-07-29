@@ -16,7 +16,7 @@ const ClientsPageHero = ({ headline, body, cta }) => {
             <div className='mt-10 flex items-center justify-center gap-x-6'>
               <Link
                 to='#'
-                className='bg-my-accent hover:bg-my-accent/90 focus-visible:outline-my-accent rounded-md px-6 py-3 text-base font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
+                className='bg-my-accent hover:bg-my-accent/90 focus-visible:outline-my-accent rounded-sm px-6 py-3 text-base font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
               >
                 {cta}
               </Link>

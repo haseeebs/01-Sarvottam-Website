@@ -14,7 +14,7 @@ const OtherServices = ({ title, services }) => {
             <Link
               key={service.name}
               to={service.to}
-              className='group flex flex-col items-start rounded-lg border border-gray-200 p-8 transition-all duration-300 hover:border-transparent hover:shadow-lg'
+              className='group flex flex-col items-start rounded-sm border border-gray-200 p-8 transition-all duration-300 hover:border-transparent hover:shadow-lg'
             >
               <div className='flex-shrink-0'>
                 {/* The Icon component should be passed via props */}

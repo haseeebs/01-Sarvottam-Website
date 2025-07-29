@@ -33,7 +33,7 @@ const RelatedProjects = ({ title, projects }) => {
           {projectsToDisplay.map((project) => (
             <article
               key={project.title}
-              className='relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pt-80 pb-8 shadow-lg transition-shadow duration-300 hover:shadow-2xl sm:pt-48 lg:pt-80'
+              className='relative isolate flex flex-col justify-end overflow-hidden rounded-sm bg-gray-900 px-8 pt-80 pb-8 shadow-lg transition-shadow duration-300 hover:shadow-2xl sm:pt-48 lg:pt-80'
             >
               <img
                 src={project.image_url}
@@ -41,7 +41,7 @@ const RelatedProjects = ({ title, projects }) => {
                 className='absolute inset-0 -z-10 h-full w-full object-cover'
               />
               <div className='absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40' />
-              <div className='absolute inset-0 -z-10 rounded-2xl ring-1 ring-gray-900/10 ring-inset' />
+              <div className='absolute inset-0 -z-10 rounded-sm ring-1 ring-gray-900/10 ring-inset' />
 
               <div className='flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300'>
                 {project.tags.split(',').map((tag, index) => (

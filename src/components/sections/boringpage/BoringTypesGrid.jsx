@@ -24,7 +24,7 @@ const BoringTypesGrid = ({ services }) => {
             <img
               src='https://images.unsplash.com/photo-1621947081720-869708235779?q=80&w=1932&auto=format&fit=crop'
               alt='Technical schematic showing box pushing and pipe jacking processes.'
-              className='w-full rounded-xl shadow-xl ring-1 ring-gray-400/10'
+              className='w-full rounded-sm shadow-xl ring-1 ring-gray-400/10'
               width={2432}
               height={1442}
             />

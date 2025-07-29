@@ -6,24 +6,14 @@ import ServicesHighlightSection from '@/components/sections/homepage/ServicesHig
 import ValuePropositionSection from '@/components/sections/homepage/ValuePropositionSection';
 import heroImage1 from '@/assets/images/Hero-image-2.jpg';
 import boxpushingImg from '@/assets/images/Box-pushing.jpg';
+import pipelineImg from '@/assets/images/NormalImg-1.jpg';
 import CtaSection from '@/components/sections/CTASection';
-
-const splitSectionContent = {
-  title: 'Precision and Safety for Critical Corridors',
-  // Passing the highlights array to the body prop for a list view
-  body: [
-    'Minimal Disruption to active transport corridors.',
-    'Advanced techniques for hard rock and unstable soil.',
-    'Uncompromising commitment to safety and compliance.',
-  ],
-};
 
 const services = [
   {
     title: 'Tunnel & Pipeline Crossing',
     link: '/services/pipeline-crossing',
-    imgSrc:
-      'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
+    imgSrc: pipelineImg,
     imgAlt: 'Specialized equipment for tunnel and pipeline crossing.',
   },
   {

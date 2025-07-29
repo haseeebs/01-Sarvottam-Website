@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import CTAImg from '../../assets/images/CTAImg.jpg';
+import CTAImg from '@/assets/images/CTAImg.jpg';
 
-const CtaSection = ({ title, buttonText, buttonLink }) => {
+const CtaSection = ({ title, buttonText, buttonLink, imgUrl = CTAImg }) => {
   const defaultTitle = 'Ready to Discuss Your Next Infrastructure Challenge?';
   const defaultButtonText = 'Request a Quote';
   const defaultButtonLink = '/contact?subject=QuoteRequest';
@@ -13,7 +13,7 @@ const CtaSection = ({ title, buttonText, buttonLink }) => {
   return (
     <div className='bg-my-primary relative border-b-1'>
       <div className='relative h-80 overflow-hidden md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2'>
-        <img alt='' src={CTAImg} className='size-full object-cover' />
+        <img alt='' src={imgUrl} className='size-full object-cover' />
         <svg
           viewBox='0 0 926 676'
           aria-hidden='true'
@@ -53,7 +53,7 @@ const CtaSection = ({ title, buttonText, buttonLink }) => {
           <div className='mt-8'>
             <Link
               to={displayButtonLink}
-              className='text-my-primary focus:ring-offset-my-primary bg-my-accent focus:ring-my-accent inline-flex items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-bold shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:brightness-105 focus:ring-2 focus:ring-offset-2 focus:outline-none'
+              className='text-my-primary focus:ring-offset-my-primary bg-my-accent focus:ring-my-accent inline-flex items-center justify-center rounded-sm border border-transparent px-8 py-3 text-base font-bold shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:brightness-105 focus:ring-2 focus:ring-offset-2 focus:outline-none'
             >
               {displayButtonText}
             </Link>

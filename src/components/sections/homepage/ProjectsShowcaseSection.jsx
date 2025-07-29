@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ProjectCard = ({ image, category, title, location, link }) => (
   <Link
     to={link}
-    className='group focus:ring-my-accent block overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-xl focus:ring-2 focus:ring-offset-2 focus:outline-none'
+    className='group focus:ring-my-accent block overflow-hidden rounded-sm bg-white shadow-md transition-shadow duration-300 hover:shadow-xl focus:ring-2 focus:ring-offset-2 focus:outline-none'
   >
     <div className='relative h-56 w-full'>
       <img
@@ -79,7 +79,7 @@ export default function ProjectsShowcaseSection({ title, cta, projects }) {
         <div className='mt-16 text-center'>
           <Link
             to={displayCta.link}
-            className='bg-my-primary focus:ring-my-primary inline-block rounded-md px-8 py-3 text-base font-semibold text-white shadow-md transition-transform duration-300 hover:-translate-y-0.5 hover:bg-[#343a40] focus:ring-2 focus:ring-offset-2 focus:outline-none'
+            className='bg-my-primary focus:ring-my-primary inline-block rounded-sm px-8 py-3 text-base font-semibold text-white shadow-md transition-transform duration-300 hover:-translate-y-0.5 hover:bg-[#343a40] focus:ring-2 focus:ring-offset-2 focus:outline-none'
           >
             {displayCta.text}
           </Link>

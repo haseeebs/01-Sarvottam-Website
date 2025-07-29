@@ -11,10 +11,10 @@ const ProjectInquiryCTA = () => {
           </span>
         </h2>
         <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
-          <div className='inline-flex rounded-md shadow'>
+          <div className='inline-flex rounded-sm shadow'>
             <a
               href='#'
-              className='bg-my-accent/90 hover:bg-my-accent inline-flex items-center justify-center rounded-md border border-transparent px-5 py-3 text-base font-medium text-gray-900'
+              className='bg-my-accent/90 hover:bg-my-accent inline-flex items-center justify-center rounded-sm border border-transparent px-5 py-3 text-base font-medium text-gray-900'
             >
               Request a Project Consultation
             </a>

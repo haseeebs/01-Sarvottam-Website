@@ -10,7 +10,7 @@ const ServicesPageCTA = ({ title, buttonText, buttonLink = '#' }) => {
         </h2>
         <Link
           to={buttonLink}
-          className='hover:text-my-primary/60 mt-8 inline-flex w-full items-center justify-center rounded-md border-2 border-white px-8 py-3 font-sans text-base font-medium text-white transition-colors duration-300 hover:bg-white sm:w-auto'
+          className='hover:text-my-primary/60 mt-8 inline-flex w-full items-center justify-center rounded-sm border-2 border-white px-8 py-3 font-sans text-base font-medium text-white transition-colors duration-300 hover:bg-white sm:w-auto'
         >
           {buttonText}
         </Link>

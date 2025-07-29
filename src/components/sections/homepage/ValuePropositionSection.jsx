@@ -28,7 +28,7 @@ export default function ValuePropositionSection({ imageSrc, body }) {
           </div>
           <div className='h-80 w-full lg:h-full'>
             <img
-              className='h-full w-full rounded-xl object-cover shadow-lg'
+              className='h-full w-full rounded-sm object-cover shadow-lg'
               src={displayImage}
               alt='A dedicated construction team working on a project, representing trust and determination.'
             />

@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const ProjectCard = ({ imageUrl, projectName, serviceType }) => (
   <Link
     to='#'
-    className='group relative block aspect-[4/3] overflow-hidden rounded-lg shadow-lg'
+    className='group relative block aspect-[4/3] overflow-hidden rounded-sm shadow-lg'
   >
     <img
       src={imageUrl}

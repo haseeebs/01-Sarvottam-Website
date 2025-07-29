@@ -27,7 +27,7 @@ const AboutPageHero = ({ content, imageUrl, imageAlt }) => {
             <div className='mt-8 flex justify-center md:justify-start'>
               <a
                 href={content.ctaHref || '#'}
-                className='font-display text-my-primary hover:bg-opacity-90 bg-my-accent focus:ring-my-accent block w-full rounded-md px-12 py-3 text-center text-base font-bold shadow transition focus:ring-2 focus:ring-offset-2 focus:outline-none sm:w-auto'
+                className='font-display text-my-primary hover:bg-opacity-90 bg-my-accent focus:ring-my-accent block w-full rounded-sm px-12 py-3 text-center text-base font-bold shadow transition focus:ring-2 focus:ring-offset-2 focus:outline-none sm:w-auto'
               >
                 {content.cta}
               </a>

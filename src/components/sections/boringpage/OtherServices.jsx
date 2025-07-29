@@ -44,10 +44,10 @@ const OtherServices = ({ title }) => {
             <a
               key={service.name}
               to={service.to}
-              className='group hover:ring-my-primary/60 block rounded-lg bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 ease-in-out ring-inset hover:shadow-lg'
+              className='group hover:ring-my-primary/60 block rounded-sm bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 ease-in-out ring-inset hover:shadow-lg'
             >
               <div>
-                <span className='bg-my-primary/20 inline-flex rounded-lg p-3 ring-4 ring-white'>
+                <span className='bg-my-primary/20 inline-flex rounded-sm p-3 ring-4 ring-white'>
                   <service.icon
                     className='text-my-primary h-8 w-8'
                     aria-hidden='true'

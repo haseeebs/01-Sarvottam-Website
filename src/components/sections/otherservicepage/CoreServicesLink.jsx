@@ -41,7 +41,7 @@ const CoreServicesLink = ({ title, services = coreServicesData }) => {
             <Link
               key={service.title}
               to={service.to}
-              className='group flex flex-col rounded-lg border border-gray-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus:ring-2 focus:ring-amber-500 focus:outline-none'
+              className='group flex flex-col rounded-sm border border-gray-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus:ring-2 focus:ring-amber-500 focus:outline-none'
             >
               <h3 className='text-xl leading-8 font-semibold text-gray-900'>
                 {service.title}

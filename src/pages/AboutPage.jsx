@@ -3,10 +3,11 @@ import AboutPageHero from '@/components/sections/aboutpage/AboutPageHero';
 import CompanyPrinciples from '@/components/sections/aboutpage/CompanyPrinciples';
 import ExpertiseHighlights from '@/components/sections/aboutpage/ExpertiseHighlights';
 import ClientLogos from '@/components/sections/aboutpage/ClientLogos';
-import CtaSection2 from '@/components/sections/CtaSection2';
 import LogoCloud from '@/components/sections/LogoCloud';
 import LogoCloudWithHeading from '@/components/sections/LogoCloudWithHeading';
 import heroImage1 from '@/assets/images/Hero-image-1.jpg';
+import TeamImg from '@/assets/images/TeamImg.jpg';
+import CtaSection from '@/components/sections/CTASection';
 
 const AboutPage = () => {
   const heroContent = {
@@ -67,10 +68,11 @@ const AboutPage = () => {
       />
       <LogoCloud />
       <LogoCloudWithHeading />
-      <CtaSection2
+      <CtaSection
         title="Let's Build the Future, Together."
         buttonText='Request a Quote'
         buttonLink='#'
+        imgUrl={TeamImg}
       />
     </>
   );

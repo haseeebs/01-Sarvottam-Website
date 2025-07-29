@@ -21,7 +21,7 @@ const ProjectShowcase = ({ title, projects }) => {
                 key={project.id}
                 className='w-[80%] flex-shrink-0 snap-start sm:w-[45%] md:w-[40%] lg:w-[calc(33.333%-1.334rem)]'
               >
-                <article className='flex h-full flex-col overflow-hidden rounded-lg bg-gray-50 shadow-md transition hover:shadow-xl'>
+                <article className='flex h-full flex-col overflow-hidden rounded-sm bg-gray-50 shadow-md transition hover:shadow-xl'>
                   <img
                     alt={project.title}
                     src={project.imageSrc}

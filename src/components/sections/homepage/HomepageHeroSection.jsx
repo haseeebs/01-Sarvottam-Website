@@ -20,7 +20,7 @@ const HomepageHero = ({ headline, body, cta, imageSrc, imageAlt }) => {
 
             {/* CTA Button - Style aur content Component 2 se */}
             <div className='mt-10 flex items-center'>
-              <button className='font-family-display bg-my-accent text-my-primary focus-visible:outline-my-accent rounded-md px-4 py-3 text-base font-bold transition-transform duration-300 ease-in-out hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2'>
+              <button className='font-family-display bg-my-accent text-my-primary focus-visible:outline-my-accent rounded-sm px-4 py-3 text-base font-bold transition-transform duration-300 ease-in-out hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2'>
                 {cta}
               </button>
             </div>

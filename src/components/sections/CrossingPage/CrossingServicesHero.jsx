@@ -11,7 +11,7 @@ const CrossingServicesHero = ({ content, imageUrl }) => {
           {/* Image section (DOM mein pehle, taaki mobile par upar dikhe) */}
           <div className='lg:order-2'>
             <img
-              className='aspect-video h-auto w-full rounded-xl object-cover shadow-xl'
+              className='aspect-video h-auto w-full rounded-sm object-cover shadow-xl'
               src={
                 imageUrl ||
                 'https://images.unsplash.com/photo-1599481238623-7140000a6848?q=80&w=1287&auto=format&fit=crop'
@@ -36,7 +36,7 @@ const CrossingServicesHero = ({ content, imageUrl }) => {
             <div className='mt-8'>
               <a
                 href='#quote'
-                className='text-my-primary inline-block rounded-md bg-amber-400 px-8 py-3 text-base font-semibold shadow-lg transition-colors hover:bg-amber-500 focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:outline-none'
+                className='text-my-primary inline-block rounded-sm bg-amber-400 px-8 py-3 text-base font-semibold shadow-lg transition-colors hover:bg-amber-500 focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:outline-none'
               >
                 {cta}
               </a>

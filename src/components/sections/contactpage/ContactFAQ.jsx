@@ -47,7 +47,7 @@ const ContactFAQ = ({ title, items }) => {
                   style={{ maxHeight: isOpen ? '20rem' : '0' }}
                 >
                   <div className='pr-10 pb-4'>
-                    <div className='rounded-md bg-slate-100 p-4'>
+                    <div className='rounded-sm bg-slate-100 p-4'>
                       <p className='text-base leading-relaxed text-gray-700'>
                         {item.answer}
                       </p>

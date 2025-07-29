@@ -9,7 +9,7 @@ const ExpertiseHighlights = ({ stats }) => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className='flex flex-col items-center justify-center rounded-lg p-4'
+                className='flex flex-col items-center justify-center rounded-sm p-4'
               >
                 <h2 className='font-display text-accent order-first text-5xl font-bold'>
                   {stat.value}

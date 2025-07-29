@@ -70,7 +70,7 @@ const EquipmentSpotlight = ({ title }) => {
         >
           {projects.map((project) => (
             <SwiperSlide key={project.title}>
-              <div className='group aspect-[4/3] w-full overflow-hidden rounded-lg shadow-lg'>
+              <div className='group aspect-[4/3] w-full overflow-hidden rounded-sm shadow-lg'>
                 <img
                   src={project.imageUrl}
                   alt={`Image of ${project.title}`}

@@ -49,7 +49,7 @@ const FeaturedProjects = ({ title, projects = projectsData }) => {
               {/* Image Column */}
               <div className={index % 2 !== 0 ? 'md:order-last' : ''}>
                 <img
-                  className='aspect-video h-auto w-full rounded-lg object-cover shadow-md'
+                  className='aspect-video h-auto w-full rounded-sm object-cover shadow-md'
                   src={project.imageUrl}
                   alt={`Image for ${project.title}`}
                 />
