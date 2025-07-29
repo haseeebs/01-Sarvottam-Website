@@ -1,7 +1,6 @@
 import React from 'react';
 import CoreServiceOfferings from '@/components/sections/CrossingPage/CoreServiceOfferings';
 import RelatedProjects from '@/components/sections/CrossingPage/RelatedProjects';
-import ClientLogos from '@/components/sections/CrossingPage/ClientLogos';
 import ServicePageHero from '@/components/sections/PushingJackingPage/ServicePageHero';
 import CTA from '@/components/sections/CTA';
 
@@ -53,18 +52,6 @@ const cardGridContent = {
   ],
 };
 
-const logoCloudContent = {
-  title: 'Trusted By Leading Agencies & Contractors',
-  // Sample logos for demonstration
-  logos: [
-    { name: 'GAIL', alt: 'GAIL India Limited' },
-    { name: 'NHAI', alt: 'National Highways Authority of India' },
-    { name: 'Indian Railways', alt: 'Indian Railways' },
-    { name: 'Larsen & Toubro', alt: 'Larsen & Toubro' },
-    { name: 'Afcons Infrastructure', alt: 'Afcons Infrastructure' },
-  ],
-};
-
 const ctaContent = {
   title: 'Have a Critical Crossing Project?',
   buttonText: 'Get a Quote for Your Crossing Project',
@@ -86,10 +73,6 @@ const CrossingPage = () => {
       <RelatedProjects
         title={cardGridContent.title}
         projects={cardGridContent.projects}
-      />
-      <ClientLogos
-        title={logoCloudContent.title}
-        logos={logoCloudContent.logos}
       />
       <CTA
         variant='inline'

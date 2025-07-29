@@ -3,7 +3,6 @@ import ServicePageHero from '@/components/sections/PushingJackingPage/ServicePag
 import ServiceBreakdown from '@/components/sections/PushingJackingPage/ServiceBreakdown';
 import KeyBenefits from '@/components/sections/PushingJackingPage/KeyBenefits';
 import ProjectShowcase from '@/components/sections/ProjectShowcase';
-import CTA from '@/components/sections/PushingJackingPage/CTA';
 import OtherServices from '@/components/sections/PushingJackingPage/OtherServices';
 
 // Assume you are using a library like 'lucide-react' for icons.
@@ -16,6 +15,7 @@ import {
   ScanLine,
   Tally3,
 } from 'lucide-react';
+import CTA from '@/components/sections/CTA';
 
 const PushingJackingPage = () => {
   // Data for ServicePageHero

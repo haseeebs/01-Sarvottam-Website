@@ -2,7 +2,6 @@ import React from 'react';
 import ProjectsPageHero from '@/components/sections/projectspage/ProjectsPageHero';
 import FeaturedProjects from '@/components/sections/projectspage/FeaturedProjects';
 import ProjectPortfolio from '@/components/sections/projectspage/ProjectPortfolio';
-import ClientLogos from '@/components/sections/projectspage/ClientLogos';
 import StartProjectCTA from '@/components/sections/projectspage/StartProjectCTA';
 
 // Content ko manage karne ke liye ek alag object banaya gaya hai
@@ -39,10 +38,6 @@ const ProjectsPage = () => {
       <ProjectPortfolio
         title={projectsPageContent.portfolio.title}
         // Note: Filter and project data is assumed to be inside the component
-      />
-      <ClientLogos
-        title={projectsPageContent.clients.title}
-        // Note: Logo data is assumed to be inside the component
       />
       <StartProjectCTA title={projectsPageContent.cta.title} />
     </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import AboutPageHero from '@/components/sections/aboutpage/AboutPageHero';
 import ExpertiseHighlights from '@/components/sections/aboutpage/ExpertiseHighlights';
-import ClientLogos from '@/components/sections/aboutpage/ClientLogos';
 import heroImage1 from '@/assets/images/Hero-image-1.jpg';
 import TeamImg from '@/assets/images/TeamImg.jpg';
 import CTA from '@/components/sections/CTA';
+import ClientLogosNew from '@/components/sections/ClientLogos';
 
 const AboutPage = () => {
   const heroContent = {
@@ -20,19 +20,7 @@ const AboutPage = () => {
     { value: 'Tough', label: 'Terrains Mastered' },
     { value: '100%', label: 'Safety Compliance' },
   ];
-  const clientLogosData = [
-    {
-      name: 'Larsen & Toubro',
-      logoUrl: 'https://logo.clearbit.com/ltconstruction.com',
-    },
-    { name: 'GAIL', logoUrl: 'https://logo.clearbit.com/gailonline.com' },
-    { name: 'Indian Oil', logoUrl: 'https://logo.clearbit.com/iocl.com' },
-    { name: 'NTPC', logoUrl: 'https://logo.clearbit.com/ntpc.co.in' },
-    {
-      name: 'Reliance Industries',
-      logoUrl: 'https://logo.clearbit.com/ril.com',
-    },
-  ];
+
   return (
     <>
       <AboutPageHero
@@ -41,11 +29,7 @@ const AboutPage = () => {
         imageAlt='Senior engineer at a project site'
       />
       <ExpertiseHighlights stats={expertiseStats} />
-      <ClientLogos
-        title='Trusted By Industry Leaders'
-        clients={clientLogosData}
-      />
-
+      <ClientLogosNew grayscale />
       <CTA
         variant='image-left'
         title="Let's Build the Future, Together."

@@ -1,5 +1,4 @@
 import React from 'react';
-import { ClientLogosSection } from '@/components/sections/homepage/ClientLogosSection';
 import HomepageHero from '@/components/sections/homepage/HomepageHeroSection';
 import ProjectsShowcaseSection from '@/components/sections/homepage/ProjectsShowcaseSection';
 import ServicesHighlightSection from '@/components/sections/homepage/ServicesHighlightSection';
@@ -8,6 +7,7 @@ import heroImage1 from '@/assets/images/Hero-image-2.jpg';
 import boxpushingImg from '@/assets/images/Box-pushing.jpg';
 import pipelineImg from '@/assets/images/NormalImg-1.jpg';
 import CTA from '@/components/sections/CTA';
+import ClientLogosNew from '@/components/sections/ClientLogos';
 
 const services = [
   {
@@ -41,7 +41,7 @@ const HomePage = () => {
         imageSrc={heroImage1}
         imageAlt='Trenchless Technology Project'
       />
-      <ClientLogosSection />
+      <ClientLogosNew layout='marquee' />
       <ServicesHighlightSection services={services} />
 
       <ValuePropositionSection />
