@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ image, category, title, location, link }) => (
-  <a
-    href={link}
+  <Link
+    to={link}
     className='group block overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-xl focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:outline-none'
   >
     <div className='relative h-56 w-full'>
@@ -19,7 +20,7 @@ const ProjectCard = ({ image, category, title, location, link }) => (
       <h3 className='text-xl font-bold text-[#212529]'>{title}</h3>
       <p className='mt-1 text-base text-gray-600'>{location}</p>
     </div>
-  </a>
+  </Link>
 );
 
 export default function ProjectsShowcaseSection({ title, cta, projects }) {
@@ -76,12 +77,12 @@ export default function ProjectsShowcaseSection({ title, cta, projects }) {
         </div>
 
         <div className='mt-16 text-center'>
-          <a
-            href={displayCta.link}
+          <Link
+            to={displayCta.link}
             className='inline-block rounded-md bg-[#212529] px-8 py-3 text-base font-semibold text-white shadow-md transition-transform duration-300 hover:-translate-y-0.5 hover:bg-[#343a40] focus:ring-2 focus:ring-[#212529] focus:ring-offset-2 focus:outline-none'
           >
             {displayCta.text}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

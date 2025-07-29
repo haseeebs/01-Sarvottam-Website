@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 
 // Sample data - in a real app, this would come from props or an API
 const allEquipment = [
@@ -76,12 +77,12 @@ const EquipmentCard = ({ name, imageUrl }) => (
     />
     <div className='bg-opacity-70 absolute inset-0 flex flex-col items-center justify-center bg-blue-900 p-4 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100'>
       <h3 className='font-body text-xl font-bold text-white'>{name}</h3>
-      <a
-        href='#'
+      <Link
+        to='#'
         className='font-body mt-2 text-base text-yellow-400 transition-colors hover:text-yellow-300'
       >
         View Details →
-      </a>
+      </Link>
     </div>
   </div>
 );

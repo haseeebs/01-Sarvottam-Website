@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ServicesHighlightSection = () => {
   const services = [
@@ -45,9 +46,9 @@ const ServicesHighlightSection = () => {
 
           <div className='mt-16 grid grid-cols-1 gap-y-16 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-3'>
             {services.map((service) => (
-              <a
+              <Link
                 key={service.title}
-                href={service.link}
+                to={service.link}
                 className='group block text-left'
               >
                 <img
@@ -63,7 +64,7 @@ const ServicesHighlightSection = () => {
                     <ArrowRight className='text-my-secondary group-hover:text-my-accent h-6 w-6 transition-transform duration-300 group-hover:translate-x-1' />
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </section>

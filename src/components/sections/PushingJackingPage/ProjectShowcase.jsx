@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const ProjectShowcase = ({ title, projects }) => {
   // In a real app, you would filter projects based on a category prop.
   // For this example, we assume the 'projects' prop is already filtered.
@@ -33,11 +35,11 @@ const ProjectShowcase = ({ title, projects }) => {
                     </div>
                     <div className='mt-4'>
                       <h3 className='text-lg font-semibold text-gray-900'>
-                        <a href='#'>
+                        <Link to='#'>
                           {/* This could be a link to the project details page */}
                           <span className='absolute inset-0' />
                           {project.title}
-                        </a>
+                        </Link>
                       </h3>
                       <p className='mt-2 text-sm text-gray-600'>
                         {project.location}

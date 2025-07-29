@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // NOTE: For a functional slider, a library like Swiper.js is recommended.
 // Installation: `npm install swiper`
 // This component is structured to be easily integrated with Swiper.
 
 // A sub-component for individual project cards.
 const ProjectCard = ({ imageUrl, projectName, serviceType }) => (
-  <a
-    href='#'
+  <Link
+    to='#'
     className='group relative block aspect-[4/3] overflow-hidden rounded-lg shadow-lg'
   >
     <img
@@ -24,7 +25,7 @@ const ProjectCard = ({ imageUrl, projectName, serviceType }) => (
       </h3>
       <p className='mt-1 font-sans text-sm opacity-90'>{serviceType}</p>
     </div>
-  </a>
+  </Link>
 );
 
 const ProjectsHighlight = ({ title, projects = [] }) => {

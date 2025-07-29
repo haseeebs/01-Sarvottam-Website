@@ -11,21 +11,21 @@ const otherServices = [
     name: 'Pipeline & River Crossing',
     description:
       'Specialized techniques for installing pipelines under rivers, roads, and other obstacles with minimal environmental impact.',
-    href: '/services/pipeline-crossing',
+    to: '/services/pipeline-crossing',
     icon: ArrowsRightLeftIcon,
   },
   {
     name: 'Auger Boring',
     description:
       'A reliable method for installing steel casings in a wide range of ground conditions, ideal for utility conduits.',
-    href: '/services/boring',
+    to: '/services/boring',
     icon: CogIcon,
   },
   {
     name: 'Microtunneling',
     description:
       'Precision-guided pipe jacking for installing pipelines with extreme accuracy over long distances and challenging alignments.',
-    href: '/services/microtunneling',
+    to: '/services/microtunneling',
     icon: CircleStackIcon,
   },
 ];
@@ -43,7 +43,7 @@ const OtherServices = ({ title }) => {
           {otherServices.map((service) => (
             <a
               key={service.name}
-              href={service.href}
+              to={service.to}
               className='group block rounded-lg bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 ease-in-out ring-inset hover:shadow-lg hover:ring-blue-600'
             >
               <div>

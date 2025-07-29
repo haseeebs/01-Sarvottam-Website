@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const OtherServices = ({ title, services }) => {
   return (
     <div className='bg-white py-16 font-sans sm:py-24'>
@@ -9,9 +11,9 @@ const OtherServices = ({ title, services }) => {
         </div>
         <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
           {services.map((service) => (
-            <a
+            <Link
               key={service.name}
-              href={service.href}
+              to={service.to}
               className='group flex flex-col items-start rounded-lg border border-gray-200 p-8 transition-all duration-300 hover:border-transparent hover:shadow-lg'
             >
               <div className='flex-shrink-0'>
@@ -29,7 +31,7 @@ const OtherServices = ({ title, services }) => {
                   {service.description}
                 </p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const projectsData = [
   {
@@ -72,12 +73,12 @@ const FeaturedProjects = ({ title, projects = projectsData }) => {
                     </p>
                   ))}
                 </div>
-                <a
-                  href={project.caseStudyUrl}
+                <Link
+                  to={project.caseStudyUrl}
                   className='font-display text-my-primary mt-6 inline-block text-base font-bold underline-offset-4 hover:underline'
                 >
                   View Case Study →
-                </a>
+                </Link>
               </div>
             </div>
           ))}

@@ -1,18 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Navigation links ka data, Component 2 ke content ke hisaab se.
 const navigation = {
   company: [
-    { name: 'About Us', href: '#' },
-    { name: 'Our Projects', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'Blog', href: '#' },
+    { name: 'About Us', to: '#' },
+    { name: 'Our Projects', to: '#' },
+    { name: 'Careers', to: '#' },
+    { name: 'Blog', to: '#' },
   ],
   services: [
-    { name: 'Trenchless Technology', href: '#' },
-    { name: 'Tunnel Crossing', href: '#' },
-    { name: 'Box Pushing', href: '#' },
-    { name: 'Rock Boring', href: '#' },
+    { name: 'Trenchless Technology', to: '#' },
+    { name: 'Tunnel Crossing', to: '#' },
+    { name: 'Box Pushing', to: '#' },
+    { name: 'Rock Boring', to: '#' },
   ],
 };
 
@@ -53,12 +54,12 @@ const Footer = () => {
               <ul role='list' className='mt-6 space-y-4'>
                 {navigation.company.map((item) => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.to}
                       className='text-base text-[#8D99AE] hover:text-white'
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -75,12 +76,12 @@ const Footer = () => {
               <ul role='list' className='mt-6 space-y-4'>
                 {navigation.services.map((item) => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.to}
                       className='text-base text-[#8D99AE] hover:text-white'
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

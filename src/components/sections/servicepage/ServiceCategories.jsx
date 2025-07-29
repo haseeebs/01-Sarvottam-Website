@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // This is a sub-component. In a real project, it might be in its own file.
 const ServiceCard = ({ imageUrl, title, description, link }) => {
@@ -20,12 +21,12 @@ const ServiceCard = ({ imageUrl, title, description, link }) => {
         <p className='mb-5 flex-grow font-sans text-base text-slate-700'>
           {description}
         </p>
-        <a
-          href={link}
+        <Link
+          to={link}
           className='self-start font-sans text-base font-bold text-yellow-600 transition-colors hover:text-yellow-500'
         >
           Learn More →
-        </a>
+        </Link>
       </div>
     </div>
   );

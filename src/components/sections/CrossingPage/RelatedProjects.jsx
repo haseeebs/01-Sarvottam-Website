@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RelatedProjects = ({ title, projects }) => {
   // Fallback data agar projects prop na diya jaye, component ko demonstrate karne ke liye.
@@ -53,10 +54,10 @@ const RelatedProjects = ({ title, projects }) => {
                 ))}
               </div>
               <h3 className='mt-3 text-lg leading-6 font-semibold text-white'>
-                <a href='#'>
+                <Link to='#'>
                   <span className='absolute inset-0' />
                   {project.title}
-                </a>
+                </Link>
               </h3>
             </article>
           ))}

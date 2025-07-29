@@ -111,21 +111,21 @@ const PushingJackingPage = () => {
         name: 'Auger Boring & Pipe Ramming',
         description:
           'Precision boring for medium-diameter steel casings under roadways and railways.',
-        href: '/services/boring',
+        to: '/services/boring',
         Icon: TrainFrontTunnel,
       },
       {
         name: 'Microtunneling',
         description:
           'Advanced, remotely-controlled tunneling for critical sewer and water line installations in urban areas.',
-        href: '/services/microtunneling',
+        to: '/services/microtunneling',
         Icon: ScanLine,
       },
       {
         name: 'Pipeline Crossing Solutions',
         description:
           'Specialized solutions for safely installing pipelines across rivers, canals, and other challenging terrains.',
-        href: '/services/pipeline-crossing',
+        to: '/services/pipeline-crossing',
         Icon: Tally3,
       },
     ],

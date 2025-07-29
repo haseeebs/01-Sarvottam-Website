@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '@/assets/images/Logo.webp';
+import { Link } from 'react-router-dom';
 
-const NavLink = ({ href, children }) => (
-  <a
-    href={href}
+const NavLink = ({ to, children }) => (
+  <Link
+    to={to}
     className='font-body group relative py-2 text-base font-bold text-[#212529]'
   >
     {children}
     <span className='absolute bottom-0 left-0 block h-[2px] w-full origin-left scale-x-0 transform bg-[#D4AF37] transition-transform duration-300 ease-out group-hover:scale-x-100'></span>
-  </a>
+  </Link>
 );
 
 export default function Header({ navigationLinks }) {
@@ -47,7 +48,7 @@ export default function Header({ navigationLinks }) {
 
           <nav className='hidden items-center gap-8 md:flex'>
             {navItems.map((item) => (
-              <NavLink key={item.label} href={item.path}>
+              <NavLink key={item.label} to={item.path}>
                 {item.label}
               </NavLink>
             ))}
@@ -103,14 +104,14 @@ export default function Header({ navigationLinks }) {
       >
         <nav className='flex h-full flex-col items-center justify-center gap-10'>
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.path}
+              to={item.path}
               onClick={() => setIsMenuOpen(false)}
               className='font-body text-2xl font-bold text-[#212529]'
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
