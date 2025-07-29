@@ -4,7 +4,7 @@ import GovernmentClients from '@/components/sections/clientspage/GovernmentClien
 import CorporateClients from '@/components/sections/clientspage/CorporateClients';
 import PartnershipProof from '@/components/sections/clientspage/PartnershipProof';
 import ClientTestimonials from '@/components/sections/clientspage/ClientTestimonials';
-import PartnershipCTA from '@/components/sections/clientspage/PartnershipCTA';
+import CTA from '@/components/sections/CTA';
 
 // Data for the components, structured for clarity
 const pageData = {
@@ -56,7 +56,7 @@ const ClientsPage = () => {
       />
       <PartnershipProof stats={pageData.partnershipProof.stats} />
       <ClientTestimonials title={pageData.testimonials.title} />
-      <PartnershipCTA title={pageData.cta.title} cta={pageData.cta.cta} />
+      <CTA title={pageData.cta.title} buttonText={pageData.cta.cta} />
     </div>
   );
 };

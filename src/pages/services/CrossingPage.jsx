@@ -3,7 +3,7 @@ import CoreServiceOfferings from '@/components/sections/CrossingPage/CoreService
 import RelatedProjects from '@/components/sections/CrossingPage/RelatedProjects';
 import ClientLogos from '@/components/sections/CrossingPage/ClientLogos';
 import ServicePageHero from '@/components/sections/PushingJackingPage/ServicePageHero';
-import CtaSection2 from '@/components/sections/CtaSection2';
+import CTA from '@/components/sections/CTA';
 
 // Data for the page, extracted from the JSON
 const heroContent = {
@@ -91,9 +91,12 @@ const CrossingPage = () => {
         title={logoCloudContent.title}
         logos={logoCloudContent.logos}
       />
-      <CtaSection2
+      <CTA
+        variant='inline'
         title={ctaContent.title}
         buttonText={ctaContent.buttonText}
+        buttonLink='#'
+        buttonStyle='outline-amber'
       />
     </div>
   );

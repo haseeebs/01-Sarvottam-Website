@@ -3,7 +3,7 @@ import ServicePageHero from '@/components/sections/PushingJackingPage/ServicePag
 import ServiceBreakdown from '@/components/sections/PushingJackingPage/ServiceBreakdown';
 import KeyBenefits from '@/components/sections/PushingJackingPage/KeyBenefits';
 import ProjectShowcase from '@/components/sections/ProjectShowcase';
-import PrimaryCTA from '@/components/sections/PushingJackingPage/PrimaryCTA';
+import CTA from '@/components/sections/PushingJackingPage/CTA';
 import OtherServices from '@/components/sections/PushingJackingPage/OtherServices';
 
 // Assume you are using a library like 'lucide-react' for icons.
@@ -97,8 +97,8 @@ const PushingJackingPage = () => {
     ],
   };
 
-  // Data for PrimaryCTA
-  const primaryCtaContent = {
+  // Data for CTA
+  const CTAContent = {
     title: 'Ready to Execute a Demanding Project?',
     buttonText: 'Plan Your Pushing & Jacking Project',
   };
@@ -151,10 +151,7 @@ const PushingJackingPage = () => {
         title={projectShowcaseContent.title}
         projects={projectShowcaseContent.projects}
       />
-      <PrimaryCTA
-        title={primaryCtaContent.title}
-        buttonText={primaryCtaContent.buttonText}
-      />
+      <CTA title={CTAContent.title} buttonText={CTAContent.buttonText} />
       <OtherServices
         title={otherServicesContent.title}
         services={otherServicesContent.services}

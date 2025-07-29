@@ -4,7 +4,7 @@ import ServiceCategories from '@/components/sections/servicepage/ServiceCategori
 import WhyChooseUs from '@/components/sections/servicepage/WhyChooseUs';
 import ServiceProcess from '@/components/sections/servicepage/ServiceProcess';
 import ProjectsHighlight from '@/components/sections/servicepage/ProjectsHighlight';
-import CtaSection2 from '@/components/sections/CtaSection2';
+import CTA from '@/components/sections/CTA';
 
 const serviceCategoriesData = {
   title: 'Our Service Portfolio',
@@ -169,7 +169,7 @@ const ServicePage = () => {
         projects={projectsData.projects}
       />
 
-      <CtaSection2
+      <CTA
         title='Ready to Discuss Your Technical Requirements?'
         buttonText='Request a Quote'
         buttonLink='/contact'

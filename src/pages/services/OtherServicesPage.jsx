@@ -2,8 +2,8 @@ import React from 'react';
 import ServicePageHero from '@/components/sections/otherservicepage/ServicePageHero';
 import SupportServicesGrid from '@/components/sections/otherservicepage/SupportServicesGrid';
 import IntegratedApproach from '@/components/sections/otherservicepage/IntegratedApproach';
-import PrimaryCTA from '@/components/sections/otherservicepage/PrimaryCTA';
 import CoreServicesLink from '@/components/sections/otherservicepage/CoreServicesLink';
+import CTA from '@/components/sections/CTA';
 
 // Data derived from the provided JSON content
 const pageContent = {
@@ -41,7 +41,7 @@ const pageContent = {
     title: 'Your Reliable, Full-Service Partner',
     // The body text is part of the component's default props, so it doesn't need to be passed here unless overridden.
   },
-  primaryCTA: {
+  CTA: {
     title: "Let's Build Your Project, End-to-End.",
     buttonText: 'Inquire About Our Full Capabilities',
   },
@@ -67,9 +67,9 @@ const OtherServicesPage = () => {
         subtitle={pageContent.integratedApproach.subtitle}
         title={pageContent.integratedApproach.title}
       />
-      <PrimaryCTA
-        title={pageContent.primaryCTA.title}
-        buttonText={pageContent.primaryCTA.buttonText}
+      <CTA
+        title={pageContent.CTA.title}
+        buttonText={pageContent.CTA.buttonText}
       />
       <CoreServicesLink title={pageContent.coreServices.title} />
     </div>

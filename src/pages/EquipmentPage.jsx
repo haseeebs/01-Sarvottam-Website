@@ -2,7 +2,7 @@ import React from 'react';
 import EquipmentPageHero from '@/components/sections/equipmentpage/EquipmentPageHero';
 import EquipmentGallery from '@/components/sections/equipmentpage/EquipmentGallery';
 import FleetAdvantages from '@/components/sections/equipmentpage/FleetAdvantages';
-import ProjectInquiryCTA from '@/components/sections/equipmentpage/ProjectInquiryCTA';
+import CTA from '@/components/sections/CTA';
 
 // In a real application, this data would likely come from a CMS or API.
 const pageData = {
@@ -133,10 +133,7 @@ const EquipmentPage = () => {
         features={pageData.advantages.features}
       />
 
-      <ProjectInquiryCTA
-        title={pageData.cta.title}
-        buttonText={pageData.cta.buttonText}
-      />
+      <CTA title={pageData.cta.title} buttonText={pageData.cta.buttonText} />
     </div>
   );
 };

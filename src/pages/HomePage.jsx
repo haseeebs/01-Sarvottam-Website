@@ -7,7 +7,7 @@ import ValuePropositionSection from '@/components/sections/homepage/ValueProposi
 import heroImage1 from '@/assets/images/Hero-image-2.jpg';
 import boxpushingImg from '@/assets/images/Box-pushing.jpg';
 import pipelineImg from '@/assets/images/NormalImg-1.jpg';
-import CtaSection from '@/components/sections/CTASection';
+import CTA from '@/components/sections/CTA';
 
 const services = [
   {
@@ -46,7 +46,15 @@ const HomePage = () => {
 
       <ValuePropositionSection />
       <ProjectsShowcaseSection />
-      <CtaSection />
+      <CTA
+        variant='image-left'
+        title='Ready to Discuss Your Next Infrastructure Challenge?'
+        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.'
+        buttonText='Request a Quote'
+        buttonLink='/contact?subject=QuoteRequest'
+        buttonStyle='solid-accent'
+        // imgUrl prop yahan de sakte hain, warna default image istemal hogi
+      />
     </>
   );
 };
