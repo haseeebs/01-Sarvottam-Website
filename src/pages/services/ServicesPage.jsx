@@ -107,19 +107,16 @@ const projectsData = {
 const ServicePage = () => {
   return (
     <div>
-      {/* ✅ Matches ServicesPageHero */}
       <ServicesPageHero
         headline='Comprehensive Trenchless Engineering & Underground Solutions'
         body='Sarvottam Enterprises offers a full spectrum of specialized underground construction services designed for modern infrastructure needs. Our expertise in trenchless engineering solutions minimizes surface disruption and environmental impact. From critical pipeline crossings under railways and highways to large-scale boring and jacking, our services are categorized to meet the specific technical demands of our clients, including government agencies and major private contractors.'
       />
 
-      {/* ✅ Matches ServiceCategories */}
       <ServiceCategories
         title={serviceCategoriesData.title}
         services={serviceCategoriesData.services}
       />
 
-      {/* ✅ Matches WhyChooseUs */}
       <WhyChooseUs
         title={whyChooseUsData.title}
         imageSrc={whyChooseUsData.imageSrc}
@@ -162,19 +159,16 @@ const ServicePage = () => {
         </div>
       </WhyChooseUs>
 
-      {/* ✅ Matches ServiceProcess */}
       <ServiceProcess
         title={serviceProcessData.title}
         steps={serviceProcessData.steps}
       />
 
-      {/* ✅ Matches ProjectsHighlight */}
       <ProjectsHighlight
         title={projectsData.title}
         projects={projectsData.projects}
       />
 
-      {/* ✅ Matches ServicesPageCTA */}
       <CtaSection2
         title='Ready to Discuss Your Technical Requirements?'
         buttonText='Request a Quote'

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import CTAImg from '../../assets/images/CTAImg.jpg';
 
 const CtaSection = ({ title, buttonText, buttonLink }) => {
   const defaultTitle = 'Ready to Discuss Your Next Infrastructure Challenge?';
@@ -10,13 +11,9 @@ const CtaSection = ({ title, buttonText, buttonLink }) => {
   const displayButtonLink = buttonLink || defaultButtonLink;
 
   return (
-    <div className='bg-my-primary/95 relative'>
+    <div className='bg-my-primary relative border-b-1'>
       <div className='relative h-80 overflow-hidden md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2'>
-        <img
-          alt=''
-          src='https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply'
-          className='size-full object-cover'
-        />
+        <img alt='' src={CTAImg} className='size-full object-cover' />
         <svg
           viewBox='0 0 926 676'
           aria-hidden='true'

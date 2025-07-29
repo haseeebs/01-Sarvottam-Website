@@ -1,35 +1,11 @@
-import { ArrowRight } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-const ServicesHighlightSection = () => {
-  const services = [
-    {
-      title: 'Tunnel & Pipeline Crossing',
-      link: '/services/pipeline-crossing',
-      imgSrc:
-        'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-      imgAlt: 'Specialized equipment for tunnel and pipeline crossing.',
-    },
-    {
-      title: 'Box Pushing & Pipe Jacking',
-      link: '/services/pushing-jacking',
-      imgSrc:
-        'https://tailwindui.com/plus-assets/img/ecommerce-images/product-page-04-detail-product-shot-02.jpg',
-      imgAlt: 'Hydraulic jacks for box pushing and pipe jacking projects.',
-    },
-    {
-      title: 'Precision Boring Services',
-      link: '/services/auger-boring',
-      imgSrc:
-        'https://images.unsplash.com/photo-1593349122513-c357671fad43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      imgAlt: 'Auger boring machine for precision underground services.',
-    },
-  ];
-
+const ServicesHighlightSection = ({ services }) => {
   return (
     <div className='bg-gray-50'>
-      <div className='mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8'>
+      <div className='mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-20 lg:px-8'>
         <section aria-labelledby='details-heading'>
           <div className='flex flex-col items-center text-center'>
             <h2
@@ -44,7 +20,7 @@ const ServicesHighlightSection = () => {
             </p>
           </div>
 
-          <div className='mt-16 grid grid-cols-1 gap-y-16 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-3'>
+          <div className='mt-16 grid grid-cols-1 gap-y-16 sm:grid-cols-2 sm:gap-x-2 lg:grid-cols-3'>
             {services.map((service) => (
               <Link
                 key={service.title}
@@ -54,7 +30,7 @@ const ServicesHighlightSection = () => {
                 <img
                   alt={service.imgAlt}
                   src={service.imgSrc}
-                  className='aspect-3/2 w-full rounded-sm object-cover'
+                  className='aspect-3/2 h-96 w-full rounded-sm object-cover'
                 />
                 <div className='mt-6 flex items-start justify-between'>
                   <h3 className='text-my-primary text-xl font-bold'>

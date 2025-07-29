@@ -6,7 +6,7 @@ const CtaSection2 = ({
   buttonLink = '#',
 }) => {
   return (
-    <div className='bg-my-primary/95'>
+    <div className='bg-my-primary border-b-1'>
       <div className='mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8'>
         <h2 className='max-w-2xl text-4xl font-semibold tracking-tight text-white sm:text-5xl'>
           {title}
