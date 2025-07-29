@@ -3,43 +3,43 @@ const ProjectShowcase = ({ title, projects }) => {
   // For this example, we assume the 'projects' prop is already filtered.
 
   return (
-    <section className="bg-white py-16 sm:py-24 font-sans">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+    <section className='bg-white py-16 font-sans sm:py-24'>
+      <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+        <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
           {title}
         </h2>
       </div>
 
       {/* Slider Container */}
-      <div className="mt-12">
-        <div className="relative">
-          <div className="flex gap-8 overflow-x-auto pb-8 snap-x snap-mandatory lg:gap-8 px-6 lg:px-8 no-scrollbar">
+      <div className='mt-12'>
+        <div className='relative'>
+          <div className='no-scrollbar flex snap-x snap-mandatory gap-8 overflow-x-auto px-6 pb-8 lg:gap-8 lg:px-8'>
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="snap-start flex-shrink-0 w-[80%] sm:w-[45%] md:w-[40%] lg:w-[calc(33.333%-1.334rem)]"
+                className='w-[80%] flex-shrink-0 snap-start sm:w-[45%] md:w-[40%] lg:w-[calc(33.333%-1.334rem)]'
               >
-                <article className="flex flex-col h-full overflow-hidden rounded-lg shadow-md transition hover:shadow-xl bg-gray-50">
+                <article className='flex h-full flex-col overflow-hidden rounded-lg bg-gray-50 shadow-md transition hover:shadow-xl'>
                   <img
                     alt={project.title}
                     src={project.imageSrc}
-                    className="h-56 w-full object-cover"
+                    className='h-56 w-full object-cover'
                   />
-                  <div className="flex flex-col flex-1 p-6">
+                  <div className='flex flex-1 flex-col p-6'>
                     <div>
-                      <p className="inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold leading-6 text-blue-800">
+                      <p className='inline-block rounded-full bg-blue-100 px-3 py-1 text-xs leading-6 font-semibold text-blue-800'>
                         {project.category}
                       </p>
                     </div>
-                    <div className="mt-4">
-                      <h3 className="text-lg font-semibold text-gray-900">
-                        <a href="#">
+                    <div className='mt-4'>
+                      <h3 className='text-lg font-semibold text-gray-900'>
+                        <a href='#'>
                           {/* This could be a link to the project details page */}
-                          <span className="absolute inset-0" />
+                          <span className='absolute inset-0' />
                           {project.title}
                         </a>
                       </h3>
-                      <p className="mt-2 text-sm text-gray-600">
+                      <p className='mt-2 text-sm text-gray-600'>
                         {project.location}
                       </p>
                     </div>

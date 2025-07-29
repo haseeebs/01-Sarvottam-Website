@@ -1,96 +1,96 @@
-import React from "react";
-import ServicePageHero from "@/components/sections/boringpage/ServicePageHero";
-import BoringTypesGrid from "@/components/sections/boringpage/BoringTypesGrid";
-import RockBoringSpecialists from "@/components/sections/boringpage/RockBoringSpecialists";
-import EquipmentSpotlight from "@/components/sections/boringpage/EquipmentSpotlight";
-import PrimaryCTA from "@/components/sections/boringpage/PrimaryCTA";
-import OtherServices from "@/components/sections/boringpage/OtherServices";
+import React from 'react';
+import ServicePageHero from '@/components/sections/boringpage/ServicePageHero';
+import BoringTypesGrid from '@/components/sections/boringpage/BoringTypesGrid';
+import RockBoringSpecialists from '@/components/sections/boringpage/RockBoringSpecialists';
+import EquipmentSpotlight from '@/components/sections/boringpage/EquipmentSpotlight';
+import PrimaryCTA from '@/components/sections/boringpage/PrimaryCTA';
+import OtherServices from '@/components/sections/boringpage/OtherServices';
 
 // JSON data ko ek constant mein store kiya gaya hai
 const pageData = [
   {
-    taskName: "Build Hero Component",
-    componentName: "Hero.jsx",
+    taskName: 'Build Hero Component',
+    componentName: 'Hero.jsx',
     context: {
       content: {
-        headline: "Advanced Pipe Jacking & Box Pushing Contractors",
+        headline: 'Advanced Pipe Jacking & Box Pushing Contractors',
         subheadline:
-          "Our pushing and jacking services are engineered for maximum power and surgical precision, enabling complex underground infrastructure projects without surface disruption.",
-        cta: "Plan Your Pushing & Jacking Project",
+          'Our pushing and jacking services are engineered for maximum power and surgical precision, enabling complex underground infrastructure projects without surface disruption.',
+        cta: 'Plan Your Pushing & Jacking Project',
       },
     },
   },
   {
-    taskName: "Build TwoColumnContent Component",
-    componentName: "TwoColumnContent.jsx",
+    taskName: 'Build TwoColumnContent Component',
+    componentName: 'TwoColumnContent.jsx',
     context: {
       content: {
         services: [
           {
-            name: "Box Pushing (RCC/Precast)",
+            name: 'Box Pushing (RCC/Precast)',
             description:
-              "Ideal for creating underpasses, culverts, and tunnels under railways and highways with minimal traffic disruption. We use powerful hydraulic systems to push precast concrete box segments into place with millimeter accuracy.",
+              'Ideal for creating underpasses, culverts, and tunnels under railways and highways with minimal traffic disruption. We use powerful hydraulic systems to push precast concrete box segments into place with millimeter accuracy.',
           },
           {
-            name: "Pipe Pushing & Jacking",
+            name: 'Pipe Pushing & Jacking',
             description:
-              "A trenchless method for installing pipelines and conduits. We handle a wide range of diameters for water mains, sewer lines, and utility casings, ensuring environmental preservation and structural integrity.",
+              'A trenchless method for installing pipelines and conduits. We handle a wide range of diameters for water mains, sewer lines, and utility casings, ensuring environmental preservation and structural integrity.',
           },
         ],
       },
     },
   },
   {
-    taskName: "Build FeatureGrid Component",
-    componentName: "FeatureGrid.jsx",
+    taskName: 'Build FeatureGrid Component',
+    componentName: 'FeatureGrid.jsx',
     context: {
       content: {
-        title: "Our Core Strengths",
+        title: 'Our Core Strengths',
         benefits: [
           {
-            name: "Experienced Team",
+            name: 'Experienced Team',
             description:
-              "Our crew consists of seasoned engineers and operators with a proven track record of successfully completing challenging projects.",
+              'Our crew consists of seasoned engineers and operators with a proven track record of successfully completing challenging projects.',
           },
           {
-            name: "Powerful Machinery",
+            name: 'Powerful Machinery',
             description:
-              "We deploy a state-of-the-art fleet of hydraulic jacks and boring machines capable of handling immense loads and difficult ground conditions.",
+              'We deploy a state-of-the-art fleet of hydraulic jacks and boring machines capable of handling immense loads and difficult ground conditions.',
           },
           {
-            name: "Precise Execution",
+            name: 'Precise Execution',
             description:
-              "Combining advanced surveying technology with expert control, we ensure every push and jack meets exact project specifications.",
+              'Combining advanced surveying technology with expert control, we ensure every push and jack meets exact project specifications.',
           },
         ],
       },
     },
   },
   {
-    taskName: "Build ProjectSlider Component",
-    componentName: "ProjectSlider.jsx",
+    taskName: 'Build ProjectSlider Component',
+    componentName: 'ProjectSlider.jsx',
     context: {
       content: {
-        title: "Pushing & Jacking Projects in Action",
+        title: 'Pushing & Jacking Projects in Action',
       },
     },
   },
   {
-    taskName: "Build CallToAction Component",
-    componentName: "CallToAction.jsx",
+    taskName: 'Build CallToAction Component',
+    componentName: 'CallToAction.jsx',
     context: {
       content: {
-        title: "Ready to Execute a Demanding Project?",
-        buttonText: "Plan Your Pushing & Jacking Project",
+        title: 'Ready to Execute a Demanding Project?',
+        buttonText: 'Plan Your Pushing & Jacking Project',
       },
     },
   },
   {
-    taskName: "Build CardGrid Component",
-    componentName: "CardGrid.jsx",
+    taskName: 'Build CardGrid Component',
+    componentName: 'CardGrid.jsx',
     context: {
       content: {
-        title: "Explore Our Other Services",
+        title: 'Explore Our Other Services',
       },
     },
   },

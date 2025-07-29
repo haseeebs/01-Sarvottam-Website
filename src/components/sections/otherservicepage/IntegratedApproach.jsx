@@ -17,7 +17,7 @@ const IntegratedApproach = ({ subtitle, title, body, imageUrl }) => {
           {/* Content Column */}
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
-              <h4 className="font-lato text-base font-bold leading-7 text-amber-500">
+              <h4 className="font-body text-base font-bold leading-7 text-amber-500">
                 {subtitle || defaultContent.subtitle}
               </h4>
               <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

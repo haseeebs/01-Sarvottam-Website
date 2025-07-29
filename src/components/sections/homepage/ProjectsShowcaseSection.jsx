@@ -1,47 +1,47 @@
-import React from "react";
+import React from 'react';
 
 const ProjectCard = ({ image, category, title, location, link }) => (
   <a
     href={link}
-    className="group block overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2"
+    className='group block overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-xl focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:outline-none'
   >
-    <div className="relative h-56 w-full">
+    <div className='relative h-56 w-full'>
       <img
         src={image}
         alt={`Project image for ${title}`}
-        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+        className='h-full w-full object-cover transition-transform duration-300 group-hover:scale-105'
       />
-      <div className="absolute top-4 left-4 rounded-full bg-[#D4AF37] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+      <div className='absolute top-4 left-4 rounded-full bg-[#D4AF37] px-3 py-1 text-xs font-bold tracking-wide text-white uppercase'>
         {category}
       </div>
     </div>
-    <div className="p-6">
-      <h3 className="text-xl font-bold text-[#212529]">{title}</h3>
-      <p className="mt-1 text-base text-gray-600">{location}</p>
+    <div className='p-6'>
+      <h3 className='text-xl font-bold text-[#212529]'>{title}</h3>
+      <p className='mt-1 text-base text-gray-600'>{location}</p>
     </div>
   </a>
 );
 
 export default function ProjectsShowcaseSection({ title, cta, projects }) {
-  const defaultTitle = "Our Landmark Projects";
-  const defaultCta = { text: "Explore All Projects", link: "/projects" };
+  const defaultTitle = 'Our Landmark Projects';
+  const defaultCta = { text: 'Explore All Projects', link: '/projects' };
 
   const defaultProjects = [
     {
       image:
-        "https://images.unsplash.com/photo-1593349129539-a0a38b191a3c?auto=format&fit=crop&w=800&q=80",
-      category: "Box Pushing",
-      title: "Nagpur Metro Rail Corridor",
-      location: "Nagpur, Maharashtra",
-      link: "/projects/nagpur-metro",
+        'https://images.unsplash.com/photo-1593349129539-a0a38b191a3c?auto=format&fit=crop&w=800&q=80',
+      category: 'Box Pushing',
+      title: 'Nagpur Metro Rail Corridor',
+      location: 'Nagpur, Maharashtra',
+      link: '/projects/nagpur-metro',
     },
     {
       image:
-        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
-      category: "Tunnel Crossing",
-      title: "Yamuna Expressway Utility Tunnel",
-      location: "Greater Noida, Uttar Pradesh",
-      link: "/projects/yamuna-expressway",
+        'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
+      category: 'Tunnel Crossing',
+      title: 'Yamuna Expressway Utility Tunnel',
+      location: 'Greater Noida, Uttar Pradesh',
+      link: '/projects/yamuna-expressway',
     },
   ];
 
@@ -50,19 +50,19 @@ export default function ProjectsShowcaseSection({ title, cta, projects }) {
   const projectsToShow = projects || defaultProjects;
 
   return (
-    <section className="bg-gray-50 py-16 sm:py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-[#212529] sm:text-4xl">
+    <section className='bg-gray-50 py-16 sm:py-20 lg:py-24'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        <div className='text-center'>
+          <h2 className='text-3xl font-extrabold tracking-tight text-[#212529] sm:text-4xl'>
             {displayTitle}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+          <p className='mx-auto mt-4 max-w-2xl text-lg text-gray-600'>
             Showcasing our capability in executing complex projects with
             precision and excellence.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+        <div className='mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2'>
           {projectsToShow.map((project) => (
             <ProjectCard
               key={project.title}
@@ -75,10 +75,10 @@ export default function ProjectsShowcaseSection({ title, cta, projects }) {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className='mt-16 text-center'>
           <a
             href={displayCta.link}
-            className="inline-block rounded-md bg-[#212529] px-8 py-3 text-base font-semibold text-white shadow-md transition-transform duration-300 hover:-translate-y-0.5 hover:bg-[#343a40] focus:outline-none focus:ring-2 focus:ring-[#212529] focus:ring-offset-2"
+            className='inline-block rounded-md bg-[#212529] px-8 py-3 text-base font-semibold text-white shadow-md transition-transform duration-300 hover:-translate-y-0.5 hover:bg-[#343a40] focus:ring-2 focus:ring-[#212529] focus:ring-offset-2 focus:outline-none'
           >
             {displayCta.text}
           </a>

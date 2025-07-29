@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap");
-@import "tailwindcss";
-@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @plugin "tailwind-scrollbar-hide";
 
@@ -11,8 +11,8 @@
   --color-my-secondary: #8d99ae;
   --color-my-accent: #f2b705;
 
-  --font-family-display: "Montserrat", sans-serif;
-  --font-family-body: "Lato", sans-serif;
+  --font-family-display: 'Montserrat', sans-serif;
+  --font-family-body: 'Lato', sans-serif;
 }
 
 @theme inline {

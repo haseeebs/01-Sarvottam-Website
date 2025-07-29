@@ -1,68 +1,68 @@
-import React from "react";
+import React from 'react';
 import {
   ArrowsRightLeftIcon,
   CircleStackIcon,
   CogIcon,
-} from "@heroicons/react/24/outline";
+} from '@heroicons/react/24/outline';
 
 // Dummy data for other services, as none was provided in the JSON
 const otherServices = [
   {
-    name: "Pipeline & River Crossing",
+    name: 'Pipeline & River Crossing',
     description:
-      "Specialized techniques for installing pipelines under rivers, roads, and other obstacles with minimal environmental impact.",
-    href: "/services/pipeline-crossing",
+      'Specialized techniques for installing pipelines under rivers, roads, and other obstacles with minimal environmental impact.',
+    href: '/services/pipeline-crossing',
     icon: ArrowsRightLeftIcon,
   },
   {
-    name: "Auger Boring",
+    name: 'Auger Boring',
     description:
-      "A reliable method for installing steel casings in a wide range of ground conditions, ideal for utility conduits.",
-    href: "/services/boring",
+      'A reliable method for installing steel casings in a wide range of ground conditions, ideal for utility conduits.',
+    href: '/services/boring',
     icon: CogIcon,
   },
   {
-    name: "Microtunneling",
+    name: 'Microtunneling',
     description:
-      "Precision-guided pipe jacking for installing pipelines with extreme accuracy over long distances and challenging alignments.",
-    href: "/services/microtunneling",
+      'Precision-guided pipe jacking for installing pipelines with extreme accuracy over long distances and challenging alignments.',
+    href: '/services/microtunneling',
     icon: CircleStackIcon,
   },
 ];
 
 const OtherServices = ({ title }) => {
   return (
-    <div className="bg-gray-100 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+    <div className='bg-gray-100 py-24 sm:py-32'>
+      <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+        <div className='mx-auto max-w-2xl lg:text-center'>
+          <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
             {title}
           </h2>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
           {otherServices.map((service) => (
             <a
               key={service.name}
               href={service.href}
-              className="group block rounded-lg bg-white p-8 shadow-sm ring-1 ring-inset ring-gray-200 transition-all duration-300 ease-in-out hover:shadow-lg hover:ring-blue-600"
+              className='group block rounded-lg bg-white p-8 shadow-sm ring-1 ring-gray-200 transition-all duration-300 ease-in-out ring-inset hover:shadow-lg hover:ring-blue-600'
             >
               <div>
-                <span className="inline-flex rounded-lg bg-blue-100 p-3 ring-4 ring-white">
+                <span className='inline-flex rounded-lg bg-blue-100 p-3 ring-4 ring-white'>
                   <service.icon
-                    className="h-8 w-8 text-blue-800"
-                    aria-hidden="true"
+                    className='h-8 w-8 text-blue-800'
+                    aria-hidden='true'
                   />
                 </span>
               </div>
-              <div className="mt-6">
-                <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">
+              <div className='mt-6'>
+                <h3 className='text-lg leading-8 font-semibold tracking-tight text-gray-900'>
                   {service.name}
                 </h3>
-                <p className="mt-2 text-base leading-7 text-gray-600">
+                <p className='mt-2 text-base leading-7 text-gray-600'>
                   {service.description}
                 </p>
-                <p className="mt-6 text-sm font-semibold text-blue-700 transition-opacity duration-300 group-hover:opacity-100 lg:opacity-0">
-                  Learn More <span aria-hidden="true">→</span>
+                <p className='mt-6 text-sm font-semibold text-blue-700 transition-opacity duration-300 group-hover:opacity-100 lg:opacity-0'>
+                  Learn More <span aria-hidden='true'>→</span>
                 </p>
               </div>
             </a>

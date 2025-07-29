@@ -1,28 +1,28 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // Layout Component
-import MainLayout from "./components/layout/MainLayout";
+import MainLayout from './components/layout/MainLayout';
 
 // Page Components
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import EquipmentPage from "./pages/EquipmentPage";
-import ProjectsPage from "./pages/ProjectsPage";
-import ClientsPage from "./pages/ClientsPage";
-import ContactPage from "./pages/ContactPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import EquipmentPage from './pages/EquipmentPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ClientsPage from './pages/ClientsPage';
+import ContactPage from './pages/ContactPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 // Service Page Components
-import ServicesPage from "./pages/services/ServicesPage";
-import CrossingPage from "./pages/services/CrossingPage";
-import PushingJackingPage from "./pages/services/PushingJackingPage";
-import BoringPage from "./pages/services/BoringPage";
-import OtherServicesPage from "./pages/services/OtherServicesPage";
+import ServicesPage from './pages/services/ServicesPage';
+import CrossingPage from './pages/services/CrossingPage';
+import PushingJackingPage from './pages/services/PushingJackingPage';
+import BoringPage from './pages/services/BoringPage';
+import OtherServicesPage from './pages/services/OtherServicesPage';
 
 // Router Configuration
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <MainLayout />,
     errorElement: <NotFoundPage />,
     children: [
@@ -32,55 +32,55 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "about",
+        path: 'about',
         element: <AboutPage />,
       },
       {
-        path: "equipment",
+        path: 'equipment',
         element: <EquipmentPage />,
       },
       {
-        path: "projects",
+        path: 'projects',
         element: <ProjectsPage />,
       },
       {
-        path: "clients",
+        path: 'clients',
         element: <ClientsPage />,
       },
       {
-        path: "contact",
+        path: 'contact',
         element: <ContactPage />,
       },
 
       // Services Pages (Nested Structure)
       {
-        path: "services",
+        path: 'services',
         children: [
           {
             index: true,
             element: <ServicesPage />,
           },
           {
-            path: "pipeline-crossing",
+            path: 'pipeline-crossing',
             element: <CrossingPage />,
           },
           {
-            path: "pushing-jacking",
+            path: 'pushing-jacking',
             element: <PushingJackingPage />,
           },
           {
-            path: "auger-boring",
+            path: 'auger-boring',
             element: <BoringPage />,
           },
           {
-            path: "other",
+            path: 'other',
             element: <OtherServicesPage />,
           },
         ],
       },
 
       {
-        path: "*",
+        path: '*',
         element: <NotFoundPage />,
       },
     ],

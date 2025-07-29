@@ -1,30 +1,30 @@
-import React from "react";
+import React from 'react';
 
 const WhyChooseUs = ({
   title,
   imageSrc,
   imageAlt,
-  imagePosition = "right",
+  imagePosition = 'right',
   children,
 }) => {
   return (
-    <section className="bg-white py-16 sm:py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-sans font-bold text-3xl md:text-4xl text-blue-800 mb-16">
+    <section className='bg-white py-16 sm:py-24'>
+      <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
+        <h2 className='mb-16 text-center font-sans text-3xl font-bold text-blue-800 md:text-4xl'>
           {title}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className='grid grid-cols-1 items-center gap-12 md:grid-cols-2'>
           {/* Content Column */}
-          <div className={imagePosition === "left" ? "md:order-last" : ""}>
+          <div className={imagePosition === 'left' ? 'md:order-last' : ''}>
             {children}
           </div>
 
           {/* Image Column */}
-          <div className={imagePosition === "left" ? "md:order-first" : ""}>
+          <div className={imagePosition === 'left' ? 'md:order-first' : ''}>
             <img
               src={imageSrc}
               alt={imageAlt}
-              className="w-full h-auto rounded-lg shadow-xl"
+              className='h-auto w-full rounded-lg shadow-xl'
             />
           </div>
         </div>

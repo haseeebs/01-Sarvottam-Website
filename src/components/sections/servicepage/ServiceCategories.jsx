@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react';
 
 // This is a sub-component. In a real project, it might be in its own file.
 const ServiceCard = ({ imageUrl, title, description, link }) => {
   return (
-    <div className="bg-white rounded-lg border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out flex flex-col">
+    <div className='flex flex-col rounded-lg border border-slate-200 bg-white shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl'>
       {/* Visual/Image part */}
-      <div className="aspect-video">
+      <div className='aspect-video'>
         <img
           src={imageUrl}
           alt={`Visual for ${title}`}
-          className="w-full h-full object-cover rounded-t-lg"
+          className='h-full w-full rounded-t-lg object-cover'
         />
       </div>
       {/* Content part */}
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="font-sans font-bold text-xl text-blue-800 mb-3">
+      <div className='flex flex-grow flex-col p-6'>
+        <h3 className='mb-3 font-sans text-xl font-bold text-blue-800'>
           {title}
         </h3>
-        <p className="font-sans text-base text-slate-700 mb-5 flex-grow">
+        <p className='mb-5 flex-grow font-sans text-base text-slate-700'>
           {description}
         </p>
         <a
           href={link}
-          className="font-sans font-bold text-base text-yellow-600 hover:text-yellow-500 transition-colors self-start"
+          className='self-start font-sans text-base font-bold text-yellow-600 transition-colors hover:text-yellow-500'
         >
           Learn More →
         </a>
@@ -33,12 +33,12 @@ const ServiceCard = ({ imageUrl, title, description, link }) => {
 
 const ServiceCategories = ({ title, services = [] }) => {
   return (
-    <div className="bg-slate-50 py-16 sm:py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-sans font-bold text-3xl md:text-4xl text-blue-800 mb-12">
+    <div className='bg-slate-50 py-16 sm:py-24'>
+      <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
+        <h2 className='mb-12 text-center font-sans text-3xl font-bold text-blue-800 md:text-4xl'>
           {title}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
           {services.map((service) => (
             <ServiceCard
               key={service.id}

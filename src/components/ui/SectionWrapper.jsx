@@ -1,8 +1,8 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 const SectionWrapper = ({ children, className }) => {
   return (
-    <section className={cn("container py-8 md:py-12 lg:py-16", className)}>
+    <section className={cn('container py-8 md:py-12 lg:py-16', className)}>
       {children}
     </section>
   );

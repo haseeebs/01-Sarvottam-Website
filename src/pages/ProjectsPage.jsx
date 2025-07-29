@@ -1,27 +1,27 @@
-import React from "react";
-import ProjectsPageHero from "@/components/sections/projectspage/ProjectsPageHero";
-import FeaturedProjects from "@/components/sections/projectspage/FeaturedProjects";
-import ProjectPortfolio from "@/components/sections/projectspage/ProjectPortfolio";
-import ClientLogos from "@/components/sections/projectspage/ClientLogos";
-import StartProjectCTA from "@/components/sections/projectspage/StartProjectCTA";
+import React from 'react';
+import ProjectsPageHero from '@/components/sections/projectspage/ProjectsPageHero';
+import FeaturedProjects from '@/components/sections/projectspage/FeaturedProjects';
+import ProjectPortfolio from '@/components/sections/projectspage/ProjectPortfolio';
+import ClientLogos from '@/components/sections/projectspage/ClientLogos';
+import StartProjectCTA from '@/components/sections/projectspage/StartProjectCTA';
 
 // Content ko manage karne ke liye ek alag object banaya gaya hai
 const projectsPageContent = {
   hero: {
-    headline: "A Proven Track Record of Landmark Infrastructure Projects",
-    body: "Our portfolio showcases our ability to deliver on complex and high-stakes projects across India. Notable achievements include the successful completion of the Pawati + Shipralink Project and our critical role in the L&T Narmada Shipra Project. These projects highlight our technical expertise in trenchless solutions and our capacity to partner with industry leaders on projects of national importance.",
+    headline: 'A Proven Track Record of Landmark Infrastructure Projects',
+    body: 'Our portfolio showcases our ability to deliver on complex and high-stakes projects across India. Notable achievements include the successful completion of the Pawati + Shipralink Project and our critical role in the L&T Narmada Shipra Project. These projects highlight our technical expertise in trenchless solutions and our capacity to partner with industry leaders on projects of national importance.',
   },
   featuredProjects: {
-    title: "Landmark Project Highlights",
+    title: 'Landmark Project Highlights',
   },
   portfolio: {
-    title: "Our Complete Portfolio",
+    title: 'Our Complete Portfolio',
   },
   clients: {
-    title: "Trusted by Industry Leaders",
+    title: 'Trusted by Industry Leaders',
   },
   cta: {
-    title: "Have a similar project in mind?",
+    title: 'Have a similar project in mind?',
   },
 };
 

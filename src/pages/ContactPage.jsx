@@ -1,14 +1,14 @@
-import React from "react";
-import ContactPageHero from "@/components/sections/contactpage/ContactPageHero";
-import ContactFormAndDetails from "@/components/sections/contactpage/ContactFormAndDetails";
-import ContactFAQ from "@/components/sections/contactpage/ContactFAQ";
+import React from 'react';
+import ContactPageHero from '@/components/sections/contactpage/ContactPageHero';
+import ContactFormAndDetails from '@/components/sections/contactpage/ContactFormAndDetails';
+import ContactFAQ from '@/components/sections/contactpage/ContactFAQ';
 
 // Content derived from the provided JSON data
 const pageData = {
   hero: {
-    headline: "Contact Our Experts to Discuss Your Next Project",
+    headline: 'Contact Our Experts to Discuss Your Next Project',
     body: "Let's build the future together. Whether you require a detailed quote, a technical consultation for an upcoming tender, or wish to explore a partnership, our team is ready to assist. Reach out to us to leverage our 15 years of experience in underground pipeline, crossing, and trenchless technology services for your project's success.",
-    cta: "Request a Quote Today",
+    cta: 'Request a Quote Today',
   },
   formAndDetails: {
     title: "Let's Build the Future Together",
@@ -16,36 +16,36 @@ const pageData = {
       "Let's build the future together. Whether you require a detailed quote, a technical consultation for an upcoming tender, or wish to explore a partnership, our team is ready to assist. Reach out to us to leverage our 15 years of experience in underground pipeline, crossing, and trenchless technology services for your project's success.",
     contactInfo: [
       {
-        type: "Address",
-        value: "Sarvottam Enterprises, Office Address, City, State, PIN",
+        type: 'Address',
+        value: 'Sarvottam Enterprises, Office Address, City, State, PIN',
       },
       {
-        type: "Phone",
-        value: "+91-9876543210",
+        type: 'Phone',
+        value: '+91-9876543210',
       },
       {
-        type: "Email",
-        value: "contact@sarvottamenterprises.com",
+        type: 'Email',
+        value: 'contact@sarvottamenterprises.com',
       },
     ],
   },
   faq: {
-    title: "Frequently Asked Questions",
+    title: 'Frequently Asked Questions',
     items: [
       {
-        question: "How do I request a detailed quote?",
+        question: 'How do I request a detailed quote?',
         answer:
-          "Please fill out the contact form with your project details, including scope, location, and any technical documents. Our team will review it and get back to you promptly.",
+          'Please fill out the contact form with your project details, including scope, location, and any technical documents. Our team will review it and get back to you promptly.',
       },
       {
-        question: "Do you offer technical consultations for tenders?",
+        question: 'Do you offer technical consultations for tenders?',
         answer:
-          "Yes, we leverage our 15 years of experience to provide technical consultations to help you prepare for complex project tenders. Mention this in the contact form message.",
+          'Yes, we leverage our 15 years of experience to provide technical consultations to help you prepare for complex project tenders. Mention this in the contact form message.',
       },
       {
-        question: "What is your primary service area?",
+        question: 'What is your primary service area?',
         answer:
-          "We operate on projects across India, specializing in challenging terrains and critical infrastructure corridors.",
+          'We operate on projects across India, specializing in challenging terrains and critical infrastructure corridors.',
       },
     ],
   },
