@@ -10,7 +10,7 @@ const CompanyPrinciples = ({ principles }) => {
   };
 
   return (
-    <SectionWrapper className='bg-gray-100'>
+    <div className='bg-gray-100'>
       <h2 className='font-display text-primary text-center text-4xl font-bold'>
         Our Core Principles
       </h2>
@@ -33,7 +33,7 @@ const CompanyPrinciples = ({ principles }) => {
           );
         })}
       </div>
-    </SectionWrapper>
+    </div>
   );
 };
 

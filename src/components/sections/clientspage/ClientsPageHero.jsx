@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ClientsPageHero = ({ headline, body, cta }) => {
   return (
@@ -13,12 +14,12 @@ const ClientsPageHero = ({ headline, body, cta }) => {
               {body}
             </p>
             <div className='mt-10 flex items-center justify-center gap-x-6'>
-              <a
-                href='#'
-                className='rounded-md bg-amber-500 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500'
+              <Link
+                to='#'
+                className='bg-my-accent hover:bg-my-accent/90 focus-visible:outline-my-accent rounded-md px-6 py-3 text-base font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
               >
                 {cta}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

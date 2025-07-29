@@ -2,10 +2,7 @@ import React from 'react';
 
 const CrossingServicesHero = ({ content, imageUrl }) => {
   // Props se content extract karna
-  const { breadcrumbs, headline, body, cta } = content;
-
-  // Breadcrumbs ko display ke liye taiyaar karna
-  const breadcrumbItems = breadcrumbs ? breadcrumbs.split(' > ') : [];
+  const { headline, body, cta } = content;
 
   return (
     <section className='bg-gray-50 py-16 sm:py-20 lg:py-24'>
@@ -25,28 +22,6 @@ const CrossingServicesHero = ({ content, imageUrl }) => {
 
           {/* Text content section (Desktop par left mein, mobile par neeche) */}
           <div className='text-center lg:order-1 lg:text-left'>
-            {/* Breadcrumbs */}
-            {breadcrumbItems.length > 0 && (
-              <div className='font-sans text-sm text-gray-500'>
-                {breadcrumbItems.map((item, index) => (
-                  <React.Fragment key={index}>
-                    <span
-                      className={
-                        index === breadcrumbItems.length - 1
-                          ? 'font-semibold text-gray-800'
-                          : ''
-                      }
-                    >
-                      {item}
-                    </span>
-                    {index < breadcrumbItems.length - 1 && (
-                      <span className='mx-2'>></span>
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
-            )}
-
             {/* Headline */}
             <h1 className='text-my-primary mt-2 font-serif text-4xl font-bold tracking-tight sm:text-5xl'>
               {headline}

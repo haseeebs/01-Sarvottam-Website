@@ -27,10 +27,7 @@ const Footer = () => {
           {/* Left Column: Company Info & Socials */}
           <div className='space-y-8'>
             {/* Component 2 se company ka naam aur styling */}
-            <h2
-              className='text-3xl font-bold text-white'
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
-            >
+            <h2 className='font-family-body text-3xl font-bold text-white'>
               Sarvottam
             </h2>
             {/* Component 2 se description aur styling */}
@@ -45,10 +42,7 @@ const Footer = () => {
           <div className='mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3 xl:col-span-2 xl:mt-0'>
             {/* Company Links */}
             <div>
-              <h3
-                className='text-sm font-semibold tracking-wider text-white uppercase'
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
-              >
+              <h3 className='font-family-display text-sm font-semibold tracking-wider text-white uppercase'>
                 Company
               </h3>
               <ul role='list' className='mt-6 space-y-4'>
@@ -67,10 +61,7 @@ const Footer = () => {
 
             {/* Services Links */}
             <div className='mt-10 sm:mt-0'>
-              <h3
-                className='text-sm font-semibold tracking-wider text-white uppercase'
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
-              >
+              <h3 className='font-family-display text-sm font-semibold tracking-wider text-white uppercase'>
                 Services
               </h3>
               <ul role='list' className='mt-6 space-y-4'>
@@ -89,10 +80,7 @@ const Footer = () => {
 
             {/* Contact Info - Isko humne alag se add kiya hai Component 2 se */}
             <div className='mt-10 sm:mt-0'>
-              <h3
-                className='text-sm font-semibold tracking-wider text-white uppercase'
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
-              >
+              <h3 className='font-family-body text-sm font-semibold tracking-wider text-white uppercase'>
                 Contact
               </h3>
               <ul className='text-my-secondary mt-6 space-y-4 text-base'>

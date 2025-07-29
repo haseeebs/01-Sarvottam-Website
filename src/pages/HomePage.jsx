@@ -1,11 +1,22 @@
 import React from 'react';
 import { ClientLogosSection } from '@/components/sections/homepage/ClientLogosSection';
-import FinalCTASection from '@/components/sections/homepage/FinalCTASection';
 import HomepageHero from '@/components/sections/homepage/HomepageHeroSection';
 import ProjectsShowcaseSection from '@/components/sections/homepage/ProjectsShowcaseSection';
 import ServicesHighlightSection from '@/components/sections/homepage/ServicesHighlightSection';
 import ValuePropositionSection from '@/components/sections/homepage/ValuePropositionSection';
-import heroImage1 from '@/assets/images/Hero-image-1.jpg';
+import heroImage1 from '@/assets/images/Hero-image-2.jpg';
+import WhyChooseUs from '@/components/sections/servicepage/WhyChooseUs';
+import CtaSection from '@/components/sections/CTASection';
+
+const splitSectionContent = {
+  title: 'Precision and Safety for Critical Corridors',
+  // Passing the highlights array to the body prop for a list view
+  body: [
+    'Minimal Disruption to active transport corridors.',
+    'Advanced techniques for hard rock and unstable soil.',
+    'Uncompromising commitment to safety and compliance.',
+  ],
+};
 
 const HomePage = () => {
   return (
@@ -19,9 +30,15 @@ const HomePage = () => {
       />
       <ClientLogosSection />
       <ServicesHighlightSection />
+
+      <WhyChooseUs
+        title={splitSectionContent.title}
+        body={splitSectionContent.body}
+      />
+
       <ValuePropositionSection />
       <ProjectsShowcaseSection />
-      <FinalCTASection />
+      <CtaSection />
     </>
   );
 };

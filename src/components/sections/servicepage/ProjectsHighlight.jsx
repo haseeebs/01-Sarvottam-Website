@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 // NOTE: For a functional slider, a library like Swiper.js is recommended.
 // Installation: `npm install swiper`
 // This component is structured to be easily integrated with Swiper.
@@ -63,39 +65,13 @@ const ProjectsHighlight = ({ title, projects = [] }) => {
             aria-label='Previous project'
             className='absolute top-1/2 left-0 flex hidden h-10 w-10 -translate-x-12 -translate-y-1/2 transform items-center justify-center rounded-full bg-white/80 shadow-md backdrop-blur-sm transition-colors hover:bg-white lg:flex'
           >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              className='h-6 w-6 text-slate-700'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M15 19l-7-7 7-7'
-              />
-            </svg>
+            <ChevronLeft className='h-6 w-6 text-slate-700' />
           </button>
           <button
             aria-label='Next project'
             className='absolute top-1/2 right-0 flex hidden h-10 w-10 translate-x-12 -translate-y-1/2 transform items-center justify-center rounded-full bg-white/80 shadow-md backdrop-blur-sm transition-colors hover:bg-white lg:flex'
           >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              className='h-6 w-6 text-slate-700'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M9 5l7 7-7 7'
-              />
-            </svg>
+            <ChevronRight className='h-6 w-6 text-slate-700' />
           </button>
         </div>
       </div>

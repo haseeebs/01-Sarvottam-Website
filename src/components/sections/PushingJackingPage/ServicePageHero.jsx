@@ -1,13 +1,6 @@
 const ServicePageHero = ({ headline, body, cta }) => {
   return (
-    <div
-      className='relative w-full bg-cover bg-center font-sans'
-      // Replace with your actual image path for the RCC box and hydraulic jacks
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1519443834782-61ac4d785311?q=80&w=1974&auto=format&fit=crop')",
-      }}
-    >
+    <div className='relative w-full bg-cover bg-center font-sans'>
       {/* Corporate Blue Overlay */}
       <div className='bg-opacity-60 bg-my-primary absolute inset-0'></div>
 

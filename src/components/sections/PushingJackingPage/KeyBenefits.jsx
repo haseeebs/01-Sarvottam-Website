@@ -3,25 +3,25 @@ const KeyBenefits = ({ title, features }) => {
     <div className='bg-gray-50 py-16 font-sans sm:py-24'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl text-center'>
-          <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+          <h2 className='text-my-primary text-3xl font-bold tracking-tight sm:text-4xl'>
             {title}
           </h2>
         </div>
         <div className='mx-auto mt-16 max-w-lg sm:mt-20 lg:mt-24 lg:max-w-none'>
-          <div className='grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-3'>
+          <div className='grid grid-cols-1 gap-y-12 sm:gap-x-8 lg:grid-cols-3'>
             {features.map((feature) => (
-              <div key={feature.name} className='text-center sm:text-left'>
-                <div className='flex items-center justify-center sm:justify-start'>
+              <div key={feature.name} className='sm:text-left'>
+                <div className='flex items-center sm:justify-start'>
                   {/* The Icon component should be passed as a prop */}
                   <feature.Icon
-                    className='h-12 w-12 text-amber-500'
+                    className='text-my-accent h-12 w-12'
                     aria-hidden='true'
                   />
                 </div>
-                <h3 className='mt-5 text-xl leading-7 font-semibold text-gray-900'>
+                <h3 className='text-my-primary mt-5 text-xl leading-7 font-semibold'>
                   {feature.name}
                 </h3>
-                <p className='mt-2 text-base leading-7 text-gray-600'>
+                <p className='text-my-secondary mt-2 text-base leading-7'>
                   {feature.description}
                 </p>
               </div>

@@ -1,10 +1,12 @@
 import React from 'react';
 import AboutPageHero from '@/components/sections/aboutpage/AboutPageHero';
 import CompanyPrinciples from '@/components/sections/aboutpage/CompanyPrinciples';
-import CompanyHistory from '@/components/sections/aboutpage/CompanyHistory';
 import ExpertiseHighlights from '@/components/sections/aboutpage/ExpertiseHighlights';
 import ClientLogos from '@/components/sections/aboutpage/ClientLogos';
-import AboutPageCTA from '@/components/sections/aboutpage/AboutPageCTA';
+import CtaSection2 from '@/components/sections/CtaSection2';
+import LogoCloud from '@/components/sections/LogoCloud';
+import LogoCloudWithHeading from '@/components/sections/LogoCloudWithHeading';
+import heroImage1 from '@/assets/images/Hero-image-1.jpg';
 
 const AboutPage = () => {
   const heroContent = {
@@ -15,12 +17,12 @@ const AboutPage = () => {
   };
   const principlesData = [
     {
-      title: 'Vishwas (Trust)',
+      title: 'Trust',
       description:
         'Building lasting partnerships on a foundation of reliability and transparency.',
     },
     {
-      title: 'Dridh Sankalp (Determination)',
+      title: 'Determination',
       description:
         'Overcoming the most difficult challenges with unwavering commitment and perseverance.',
     },
@@ -30,13 +32,7 @@ const AboutPage = () => {
         'Delivering superior quality and innovative solutions that set industry standards.',
     },
   ];
-  const historyPointsData = [
-    '2009: Sarvottam Enterprises was founded with a mission to tackle complex infrastructure projects.',
-    '2012: Completed our first major river-crossing project, establishing our expertise.',
-    '2015: Became a government-approved contractor, opening doors to large-scale public works.',
-    '2020: Expanded services to include hard rock drilling and unstable soil solutions.',
-    'Present: Celebrating 15 years of trust, growth, and engineering success across the nation.',
-  ];
+
   const expertiseStats = [
     { value: '15+', label: 'Years Experience' },
     { value: 'Govt.', label: 'Approved Contractor' },
@@ -60,24 +56,21 @@ const AboutPage = () => {
     <>
       <AboutPageHero
         content={heroContent}
-        imageUrl='https://images.unsplash.com/photo-1581092921539-a0a4556551b8?q=80&w=1974&auto=format&fit=crop'
+        imageUrl={heroImage1}
         imageAlt='Senior engineer at a project site'
       />
       <CompanyPrinciples principles={principlesData} />
-      <CompanyHistory
-        title='Our 15-Year Journey'
-        historyPoints={historyPointsData}
-        imageUrl='https://images.unsplash.com/photo-1521790797524-2c4094a41312?q=80&w=2070&auto=format&fit=crop'
-        imageAlt='A visual timeline of company projects from past to present'
-      />
       <ExpertiseHighlights stats={expertiseStats} />
       <ClientLogos
         title='Trusted By Industry Leaders'
         clients={clientLogosData}
       />
-      <AboutPageCTA
+      <LogoCloud />
+      <LogoCloudWithHeading />
+      <CtaSection2
         title="Let's Build the Future, Together."
         buttonText='Request a Quote'
+        buttonLink='#'
       />
     </>
   );

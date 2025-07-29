@@ -14,10 +14,7 @@ const HomepageHero = ({ headline, body, cta, imageSrc, imageAlt }) => {
             </h1>
 
             {/* Body (p) - Text Component 2 se aur structure Component 1 se */}
-            <p
-              className='text-my-secondary mt-8 text-lg font-medium sm:text-xl/8'
-              style={{ fontFamily: 'Lato, sans-serif' }}
-            >
+            <p className='text-my-secondary font-family-body mt-8 text-lg font-medium sm:text-xl/8'>
               {body}
             </p>
 

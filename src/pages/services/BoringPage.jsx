@@ -1,136 +1,169 @@
 import React from 'react';
-import ServicePageHero from '@/components/sections/boringpage/ServicePageHero';
-import BoringTypesGrid from '@/components/sections/boringpage/BoringTypesGrid';
-import RockBoringSpecialists from '@/components/sections/boringpage/RockBoringSpecialists';
-import EquipmentSpotlight from '@/components/sections/boringpage/EquipmentSpotlight';
-import PrimaryCTA from '@/components/sections/boringpage/PrimaryCTA';
-import OtherServices from '@/components/sections/boringpage/OtherServices';
 
-// JSON data ko ek constant mein store kiya gaya hai
-const pageData = [
-  {
-    taskName: 'Build Hero Component',
-    componentName: 'Hero.jsx',
-    context: {
-      content: {
-        headline: 'Advanced Pipe Jacking & Box Pushing Contractors',
-        subheadline:
-          'Our pushing and jacking services are engineered for maximum power and surgical precision, enabling complex underground infrastructure projects without surface disruption.',
-        cta: 'Plan Your Pushing & Jacking Project',
-      },
-    },
-  },
-  {
-    taskName: 'Build TwoColumnContent Component',
-    componentName: 'TwoColumnContent.jsx',
-    context: {
-      content: {
-        services: [
-          {
-            name: 'Box Pushing (RCC/Precast)',
-            description:
-              'Ideal for creating underpasses, culverts, and tunnels under railways and highways with minimal traffic disruption. We use powerful hydraulic systems to push precast concrete box segments into place with millimeter accuracy.',
-          },
-          {
-            name: 'Pipe Pushing & Jacking',
-            description:
-              'A trenchless method for installing pipelines and conduits. We handle a wide range of diameters for water mains, sewer lines, and utility casings, ensuring environmental preservation and structural integrity.',
-          },
-        ],
-      },
-    },
-  },
-  {
-    taskName: 'Build FeatureGrid Component',
-    componentName: 'FeatureGrid.jsx',
-    context: {
-      content: {
-        title: 'Our Core Strengths',
-        benefits: [
-          {
-            name: 'Experienced Team',
-            description:
-              'Our crew consists of seasoned engineers and operators with a proven track record of successfully completing challenging projects.',
-          },
-          {
-            name: 'Powerful Machinery',
-            description:
-              'We deploy a state-of-the-art fleet of hydraulic jacks and boring machines capable of handling immense loads and difficult ground conditions.',
-          },
-          {
-            name: 'Precise Execution',
-            description:
-              'Combining advanced surveying technology with expert control, we ensure every push and jack meets exact project specifications.',
-          },
-        ],
-      },
-    },
-  },
-  {
-    taskName: 'Build ProjectSlider Component',
-    componentName: 'ProjectSlider.jsx',
-    context: {
-      content: {
-        title: 'Pushing & Jacking Projects in Action',
-      },
-    },
-  },
-  {
-    taskName: 'Build CallToAction Component',
-    componentName: 'CallToAction.jsx',
-    context: {
-      content: {
-        title: 'Ready to Execute a Demanding Project?',
-        buttonText: 'Plan Your Pushing & Jacking Project',
-      },
-    },
-  },
-  {
-    taskName: 'Build CardGrid Component',
-    componentName: 'CardGrid.jsx',
-    context: {
-      content: {
-        title: 'Explore Our Other Services',
-      },
-    },
-  },
-];
+// Apne project ke aitebar se sahi path dein
+import ServicePageHero from '@/components/sections/PushingJackingPage/ServicePageHero';
+import ServiceBreakdown from '@/components/sections/PushingJackingPage/ServiceBreakdown';
+import KeyBenefits from '@/components/sections/PushingJackingPage/KeyBenefits';
+import ProjectShowcase from '@/components/sections/ProjectShowcase';
+import PrimaryCTA from '@/components/sections/PushingJackingPage/PrimaryCTA';
+import OtherServices from '@/components/sections/PushingJackingPage/OtherServices';
+
+// 'lucide-react' se zaroori icons import karein
+// npm install lucide-react
+import {
+  GitBranchPlus,
+  Mountain,
+  Gauge,
+  Tally3,
+  ScanLine,
+  TrainFrontTunnel,
+} from 'lucide-react';
 
 const BoringPage = () => {
-  // Data ko destructure karke variables mein assign karna for better readability
-  const heroContent = pageData[0].context.content;
-  const twoColumnContent = pageData[1].context.content;
-  const featureGridContent = pageData[2].context.content;
-  const projectSliderContent = pageData[3].context.content;
-  const ctaContent = pageData[4].context.content;
-  const cardGridContent = pageData[5].context.content;
+  // Data for ServicePageHero
+  const heroContent = {
+    headline: 'Precision Auger Boring & Pipe Ramming Services',
+    body: 'Humari auger boring aur pipe ramming services zameen ke neeche steel casing pipes install karne ke liye ek behtareen trenchless solution faraham karti hain. Yeh tareeqa roads, railways, aur deegar hassas ilaqon ke neeche kaam karne ke liye ideal hai, jahan oopri satah par kam se kam kharabi matloob ho.',
+    cta: 'Get a Quote for Your Boring Project',
+  };
+
+  // Data for BoringTypesGrid (assuming it's similar to ServiceBreakdown)
+  const boringTypesContent = {
+    service1: {
+      title: 'Auger Boring',
+      description:
+        'Yeh ek mustanad (proven) tareeqa hai jo aam mitti se lekar naram chattanon tak, mukhtalif qisam ki zameeni halaton mein steel casing pipes install karne ke liye istemal hota hai. Humara aala darjay ka saaz-o-samaan (equipment) azeem durusti (accuracy) ko yaqeeni banata hai.',
+    },
+    service2: {
+      title: 'Pipe Ramming',
+      description:
+        'Jab zameen pathreeli (cobbles/boulders) ho, to pipe ramming ek behtareen intikhab hai. Is technique mein, ek pneumatic hammer pipe ko zameen mein dhakelta hai, jo raastay mein anay wali rukawaton ko hata deta hai. Yeh short-distance crossings ke liye khaas taur par mufeed hai.',
+    },
+    imageSrc:
+      'https://placehold.co/800x800/e2e8f0/334155?text=Boring+Schematic', // Placeholder image
+  };
+
+  // Data for KeyBenefits (or RockBoringSpecialists)
+  const keyBenefitsContent = {
+    title: 'Why Choose Our Boring Services?',
+    features: [
+      {
+        name: 'Minimal Surface Disruption',
+        description:
+          'Humare trenchless tareeqay traffic, karobar, aur mahol par asar ko kam se kam rakhte hain.',
+        Icon: GitBranchPlus,
+      },
+      {
+        name: 'Versatile Ground Capability',
+        description:
+          'Hum naram mitti se lekar sakht chattanon tak, har qisam ki zameeni halat se nimatne ke liye tayyar hain.',
+        Icon: Mountain,
+      },
+      {
+        name: 'High Accuracy & Control',
+        description:
+          'Advanced guidance systems ki madad se hum pipeline ki line aur grade ko behtareen durusti ke saath control karte hain.',
+        Icon: Gauge,
+      },
+    ],
+  };
+
+  // Data for ProjectShowcase (or EquipmentSpotlight)
+  const projectShowcaseContent = {
+    title: 'Our Boring Projects',
+    projects: [
+      {
+        id: 1,
+        title: 'Highway 7 Gas Line Casing',
+        location: 'Mumbai, Maharashtra',
+        category: 'Auger Boring',
+        imageSrc:
+          'https://images.unsplash.com/photo-1618882083389-3545b2b7b752?q=80&w=2070&auto=format&fit=crop', // Replace with actual project image
+      },
+      {
+        id: 2,
+        title: 'Railway Culvert Installation',
+        location: 'Ahmedabad, Gujarat',
+        category: 'Pipe Ramming',
+        imageSrc:
+          'https://images.unsplash.com/photo-1557022765-7170c1737e3d?q=80&w=2070&auto=format&fit=crop', // Replace with actual project image
+      },
+      {
+        id: 3,
+        title: 'City Sewer Line Project',
+        location: 'Delhi, NCR',
+        category: 'Auger Boring',
+        imageSrc:
+          'https://images.unsplash.com/photo-1506935354899-351a705191a8?q=80&w=2070&auto=format&fit=crop', // Replace with actual project image
+      },
+    ],
+  };
+
+  // Data for PrimaryCTA
+  const primaryCtaContent = {
+    title: 'Have a Boring Project in Mind?',
+    buttonText: 'Discuss Your Requirements',
+  };
+
+  // Data for OtherServices
+  const otherServicesContent = {
+    title: 'Explore Our Other Trenchless Solutions',
+    services: [
+      {
+        name: 'Pushing & Jacking',
+        description:
+          'Bade size ke concrete boxes aur pipes ke liye, jo underpass aur bari pipelines ke liye istemal hotay hain.',
+        to: '/services/pushing-jacking',
+        Icon: TrainFrontTunnel,
+      },
+      {
+        name: 'Microtunneling',
+        description:
+          'Shehri ilaqon mein nazuk (critical) sewer aur water lines ke liye advanced, remote-controlled tunneling.',
+        to: '/services/microtunneling',
+        Icon: ScanLine,
+      },
+      {
+        name: 'Pipeline Crossing',
+        description:
+          'Daryao, nahron aur deegar mushkil ilaqon ke paar pipelines install karne ke liye makhsoos hal.',
+        to: '/services/pipeline-crossing',
+        Icon: Tally3,
+      },
+    ],
+  };
 
   return (
     <div>
       <ServicePageHero
         headline={heroContent.headline}
-        subheadline={heroContent.subheadline}
+        body={heroContent.body} // Maine prop ka naam `body` rakha hai, agar aapka component `subheadline` expect karta hai to isay badal lein
         cta={heroContent.cta}
       />
-
-      {/* Note: Mapping component names to the data provided. */}
-      {/* 'BoringTypesGrid' is mapped to 'TwoColumnContent' data */}
-      <BoringTypesGrid services={twoColumnContent.services} />
-
-      {/* 'RockBoringSpecialists' is mapped to 'FeatureGrid' data */}
-      <RockBoringSpecialists
-        title={featureGridContent.title}
-        benefits={featureGridContent.benefits}
+      {/* Aapke component ke aitebar se props ke naam adjust karein */}
+      <ServiceBreakdown
+        service1={boringTypesContent.service1}
+        service2={boringTypesContent.service2}
+        imageSrc={boringTypesContent.imageSrc}
       />
-
-      {/* 'EquipmentSpotlight' is mapped to 'ProjectSlider' data */}
-      <EquipmentSpotlight title={projectSliderContent.title} />
-
-      {/* 'PrimaryCTA' is mapped to 'CallToAction' data */}
-      <PrimaryCTA title={ctaContent.title} buttonText={ctaContent.buttonText} />
-
-      {/* 'OtherServices' is mapped to 'CardGrid' data */}
-      <OtherServices title={cardGridContent.title} />
+      {/* Aapke component ke aitebar se props ke naam adjust karein */}
+      <KeyBenefits
+        title={keyBenefitsContent.title}
+        features={keyBenefitsContent.features}
+      />
+      {/* Aapke component ke aitebar se props ke naam adjust karein */}
+      <ProjectShowcase
+        title={projectShowcaseContent.title}
+        projects={projectShowcaseContent.projects}
+      />
+      <PrimaryCTA
+        title={primaryCtaContent.title}
+        buttonText={primaryCtaContent.buttonText}
+      />
+      <OtherServices
+        title={otherServicesContent.title}
+        services={otherServicesContent.services}
+      />
     </div>
   );
 };

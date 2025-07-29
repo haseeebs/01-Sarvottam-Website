@@ -1,14 +1,12 @@
 import React from 'react';
-import CrossingServicesHero from '@/components/sections/CrossingPage/CrossingServicesHero';
 import CoreServiceOfferings from '@/components/sections/CrossingPage/CoreServiceOfferings';
-import WhyChooseUs from '@/components/sections/CrossingPage/WhyChooseUs';
 import RelatedProjects from '@/components/sections/CrossingPage/RelatedProjects';
 import ClientLogos from '@/components/sections/CrossingPage/ClientLogos';
-import CrossingServicesCTA from '@/components/sections/CrossingPage/CrossingServicesCTA';
+import ServicePageHero from '@/components/sections/PushingJackingPage/ServicePageHero';
+import CtaSection2 from '@/components/sections/CtaSection2';
 
 // Data for the page, extracted from the JSON
 const heroContent = {
-  breadcrumbs: 'Home > Services > Crossing Services',
   headline: 'Expert Tunnel & Pipeline Crossing Services...',
   body: 'We are premier railway and highway line...',
   cta: 'Get a Quote for Your Crossing Project',
@@ -21,16 +19,6 @@ const featureGridContent = {
     { name: 'Sewer Line Crossing', icon: 'pipe' },
     { name: 'Water Line Crossing', icon: 'water_drop' },
     { name: 'Gas Line Installation', icon: 'flame' },
-  ],
-};
-
-const splitSectionContent = {
-  title: 'Precision and Safety for Critical Corridors',
-  // Passing the highlights array to the body prop for a list view
-  body: [
-    'Minimal Disruption to active transport corridors.',
-    'Advanced techniques for hard rock and unstable soil.',
-    'Uncompromising commitment to safety and compliance.',
   ],
 };
 
@@ -79,20 +67,21 @@ const logoCloudContent = {
 
 const ctaContent = {
   title: 'Have a Critical Crossing Project?',
-  button_text: 'Get a Quote for Your Crossing Project',
+  buttonText: 'Get a Quote for Your Crossing Project',
+  buttonLink: '#',
 };
 
 const CrossingPage = () => {
   return (
     <div>
-      <CrossingServicesHero content={heroContent} />
+      <ServicePageHero
+        headline={heroContent.headline}
+        body={heroContent.body}
+        cta={heroContent.cta}
+      />
       <CoreServiceOfferings
         title={featureGridContent.title}
         features={featureGridContent.features}
-      />
-      <WhyChooseUs
-        title={splitSectionContent.title}
-        body={splitSectionContent.body}
       />
       <RelatedProjects
         title={cardGridContent.title}
@@ -102,9 +91,9 @@ const CrossingPage = () => {
         title={logoCloudContent.title}
         logos={logoCloudContent.logos}
       />
-      <CrossingServicesCTA
+      <CtaSection2
         title={ctaContent.title}
-        button_text={ctaContent.button_text}
+        buttonText={ctaContent.buttonText}
       />
     </div>
   );

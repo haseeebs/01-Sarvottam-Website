@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PartnershipCTA = ({ title, cta }) => {
   return (
@@ -9,12 +10,12 @@ const PartnershipCTA = ({ title, cta }) => {
             {title}
           </h2>
           <div className='flex-shrink-0'>
-            <a
-              href='#'
+            <Link
+              to='#'
               className='rounded-md bg-amber-500 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500'
             >
               {cta}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
