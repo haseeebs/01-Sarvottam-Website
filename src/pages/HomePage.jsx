@@ -1,13 +1,15 @@
 import React from 'react';
 import HomepageHero from '@/components/sections/homepage/HomepageHeroSection';
 import ProjectsShowcaseSection from '@/components/sections/homepage/ProjectsShowcaseSection';
-import ServicesHighlightSection from '@/components/sections/homepage/ServicesHighlightSection';
 import ValuePropositionSection from '@/components/sections/homepage/ValuePropositionSection';
 import heroImage1 from '@/assets/images/Hero-image-2.jpg';
 import boxpushingImg from '@/assets/images/Box-pushing.jpg';
 import pipelineImg from '@/assets/images/NormalImg-1.jpg';
-import CTA from '@/components/sections/CTA';
-import ClientLogosNew from '@/components/sections/ClientLogos';
+import CTA from '@/components/common/CTA';
+import ClientLogosNew from '@/components/common/ClientLogos';
+import ServiceSection from '@/components/common/ServiceSection';
+import ServicesHighlightSectionVariant2 from '@/components/common/ServiceSectionV2';
+import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
 
 const services = [
   {
@@ -42,7 +44,10 @@ const HomePage = () => {
         imageAlt='Trenchless Technology Project'
       />
       <ClientLogosNew layout='marquee' />
-      <ServicesHighlightSection services={services} />
+
+      <ServiceSection services={services} />
+      <ServicesHighlightSectionVariant2 services={services} />
+      <ExpertiseHighlights />
 
       <ValuePropositionSection />
       <ProjectsShowcaseSection />

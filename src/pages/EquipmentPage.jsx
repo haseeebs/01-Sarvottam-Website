@@ -2,7 +2,7 @@ import React from 'react';
 import EquipmentPageHero from '@/components/sections/equipmentpage/EquipmentPageHero';
 import EquipmentGallery from '@/components/sections/equipmentpage/EquipmentGallery';
 import FleetAdvantages from '@/components/sections/equipmentpage/FleetAdvantages';
-import CTA from '@/components/sections/CTA';
+import CTA from '@/components/common/CTA';
 
 // In a real application, this data would likely come from a CMS or API.
 const pageData = {

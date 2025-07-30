@@ -1,8 +1,8 @@
 import React from 'react';
 import CoreServiceOfferings from '@/components/sections/CrossingPage/CoreServiceOfferings';
 import RelatedProjects from '@/components/sections/CrossingPage/RelatedProjects';
-import ServicePageHero from '@/components/sections/PushingJackingPage/ServicePageHero';
-import CTA from '@/components/sections/CTA';
+import ServicePageHero from '@/components/common/ServicePageHero';
+import CTA from '@/components/common/CTA';
 
 // Data for the page, extracted from the JSON
 const heroContent = {

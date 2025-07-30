@@ -4,7 +4,7 @@ import GovernmentClients from '@/components/sections/clientspage/GovernmentClien
 import CorporateClients from '@/components/sections/clientspage/CorporateClients';
 import PartnershipProof from '@/components/sections/clientspage/PartnershipProof';
 import ClientTestimonials from '@/components/sections/clientspage/ClientTestimonials';
-import CTA from '@/components/sections/CTA';
+import CTA from '@/components/common/CTA';
 
 // Data for the components, structured for clarity
 const pageData = {

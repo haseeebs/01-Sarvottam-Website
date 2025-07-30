@@ -1,11 +1,10 @@
 import React from 'react';
 
 // Apne project ke aitebar se sahi path dein
-import ServicePageHero from '@/components/sections/PushingJackingPage/ServicePageHero';
-import ServiceBreakdown from '@/components/sections/PushingJackingPage/ServiceBreakdown';
-import KeyBenefits from '@/components/sections/PushingJackingPage/KeyBenefits';
-import ProjectShowcase from '@/components/sections/ProjectShowcase';
-import OtherServices from '@/components/sections/PushingJackingPage/OtherServices';
+import ServicePageHero from '@/components/common/ServicePageHero';
+import ServiceBreakdown from '@/components/common/ServiceBreakdown';
+import KeyBenefits from '@/components/common/KeyBenefits';
+import OtherServices from '@/components/common/OtherServices';
 
 // 'lucide-react' se zaroori icons import karein
 // npm install lucide-react
@@ -17,7 +16,8 @@ import {
   ScanLine,
   TrainFrontTunnel,
 } from 'lucide-react';
-import CTA from '@/components/sections/CTA';
+import CTA from '@/components/common/CTA';
+import { ProjectShowcaseSection } from '@/components/common/ProjectShowcaseSection';
 
 const BoringPage = () => {
   // Data for ServicePageHero
@@ -152,7 +152,7 @@ const BoringPage = () => {
         features={keyBenefitsContent.features}
       />
       {/* Aapke component ke aitebar se props ke naam adjust karein */}
-      <ProjectShowcase
+      <ProjectShowcaseSection
         title={projectShowcaseContent.title}
         projects={projectShowcaseContent.projects}
       />

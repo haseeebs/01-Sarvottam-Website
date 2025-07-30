@@ -1,9 +1,8 @@
 import React from 'react';
-import ServicePageHero from '@/components/sections/PushingJackingPage/ServicePageHero';
-import ServiceBreakdown from '@/components/sections/PushingJackingPage/ServiceBreakdown';
-import KeyBenefits from '@/components/sections/PushingJackingPage/KeyBenefits';
-import ProjectShowcase from '@/components/sections/ProjectShowcase';
-import OtherServices from '@/components/sections/PushingJackingPage/OtherServices';
+import ServicePageHero from '@/components/common/ServicePageHero';
+import ServiceBreakdown from '@/components/common/ServiceBreakdown';
+import KeyBenefits from '@/components/common/KeyBenefits';
+import OtherServices from '@/components/common/OtherServices';
 
 // Assume you are using a library like 'lucide-react' for icons.
 // npm install lucide-react
@@ -15,7 +14,8 @@ import {
   ScanLine,
   Tally3,
 } from 'lucide-react';
-import CTA from '@/components/sections/CTA';
+import CTA from '@/components/common/CTA';
+import { ProjectShowcaseSection } from '@/components/common/ProjectShowcaseSection';
 
 const PushingJackingPage = () => {
   // Data for ServicePageHero
@@ -147,7 +147,7 @@ const PushingJackingPage = () => {
         title={keyBenefitsContent.title}
         features={keyBenefitsContent.features}
       />
-      <ProjectShowcase
+      <ProjectShowcaseSection
         title={projectShowcaseContent.title}
         projects={projectShowcaseContent.projects}
       />

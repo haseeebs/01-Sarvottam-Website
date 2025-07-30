@@ -1,10 +1,10 @@
 import React from 'react';
 import AboutPageHero from '@/components/sections/aboutpage/AboutPageHero';
-import ExpertiseHighlights from '@/components/sections/aboutpage/ExpertiseHighlights';
+import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
 import heroImage1 from '@/assets/images/Hero-image-1.jpg';
 import TeamImg from '@/assets/images/TeamImg.jpg';
-import CTA from '@/components/sections/CTA';
-import ClientLogosNew from '@/components/sections/ClientLogos';
+import CTA from '@/components/common/CTA';
+import ClientLogosNew from '@/components/common/ClientLogos';
 
 const AboutPage = () => {
   const heroContent = {
@@ -14,13 +14,6 @@ const AboutPage = () => {
     cta: 'Discuss Your Project Requirements',
   };
 
-  const expertiseStats = [
-    { value: '15+', label: 'Years Experience' },
-    { value: 'Govt.', label: 'Approved Contractor' },
-    { value: 'Tough', label: 'Terrains Mastered' },
-    { value: '100%', label: 'Safety Compliance' },
-  ];
-
   return (
     <>
       <AboutPageHero
@@ -28,7 +21,7 @@ const AboutPage = () => {
         imageUrl={heroImage1}
         imageAlt='Senior engineer at a project site'
       />
-      <ExpertiseHighlights stats={expertiseStats} />
+      <ExpertiseHighlights />
       <ClientLogosNew grayscale />
       <CTA
         variant='image-left'

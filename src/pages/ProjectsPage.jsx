@@ -1,8 +1,7 @@
 import React from 'react';
 import ProjectsPageHero from '@/components/sections/projectspage/ProjectsPageHero';
 import FeaturedProjects from '@/components/sections/projectspage/FeaturedProjects';
-import ProjectPortfolio from '@/components/sections/projectspage/ProjectPortfolio';
-import StartProjectCTA from '@/components/sections/projectspage/StartProjectCTA';
+import CTA from '@/components/common/CTA';
 
 // Content ko manage karne ke liye ek alag object banaya gaya hai
 const projectsPageContent = {
@@ -35,11 +34,11 @@ const ProjectsPage = () => {
         title={projectsPageContent.featuredProjects.title}
         // Note: Individual project data is assumed to be inside the component itself
       />
-      <ProjectPortfolio
-        title={projectsPageContent.portfolio.title}
-        // Note: Filter and project data is assumed to be inside the component
+      <CTA
+        title={projectsPageContent.cta.title}
+        buttonText='Contact Us Today'
+        description="Let's discuss how our expertise can bring your vision to life."
       />
-      <StartProjectCTA title={projectsPageContent.cta.title} />
     </div>
   );
 };

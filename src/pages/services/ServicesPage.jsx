@@ -1,10 +1,15 @@
 import React from 'react';
-import ServicesPageHero from '@/components/sections/servicepage/ServicesPageHero';
 import ServiceCategories from '@/components/sections/servicepage/ServiceCategories';
 import WhyChooseUs from '@/components/sections/servicepage/WhyChooseUs';
 import ServiceProcess from '@/components/sections/servicepage/ServiceProcess';
 import ProjectsHighlight from '@/components/sections/servicepage/ProjectsHighlight';
-import CTA from '@/components/sections/CTA';
+import CTA from '@/components/common/CTA';
+import ServicePageHero from '@/components/common/ServicePageHero';
+
+const heroContent = {
+  headline: 'Comprehensive Trenchless Engineering & Underground Solutions',
+  body: 'Sarvottam Enterprises offers a full spectrum of specialized underground construction services designed for modern infrastructure needs. Our expertise in trenchless engineering solutions minimizes surface disruption and environmental impact. From critical pipeline crossings under railways and highways to large-scale boring and jacking, our services are categorized to meet the specific technical demands of our clients, including government agencies and major private contractors.',
+};
 
 const serviceCategoriesData = {
   title: 'Our Service Portfolio',
@@ -107,9 +112,9 @@ const projectsData = {
 const ServicePage = () => {
   return (
     <div>
-      <ServicesPageHero
-        headline='Comprehensive Trenchless Engineering & Underground Solutions'
-        body='Sarvottam Enterprises offers a full spectrum of specialized underground construction services designed for modern infrastructure needs. Our expertise in trenchless engineering solutions minimizes surface disruption and environmental impact. From critical pipeline crossings under railways and highways to large-scale boring and jacking, our services are categorized to meet the specific technical demands of our clients, including government agencies and major private contractors.'
+      <ServicePageHero
+        headline={heroContent.headline}
+        body={heroContent.body}
       />
 
       <ServiceCategories

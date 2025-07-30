@@ -1,6 +1,13 @@
 import React from 'react';
 
-const ExpertiseHighlights = ({ stats }) => {
+const expertiseStats = [
+  { value: '15+', label: 'Years Experience' },
+  { value: 'Govt.', label: 'Approved Contractor' },
+  { value: 'Tough', label: 'Terrains Mastered' },
+  { value: '100%', label: 'Safety Compliance' },
+];
+
+const ExpertiseHighlights = ({ stats = expertiseStats }) => {
   return (
     <div className='bg-my-primary py-16 sm:py-24'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
