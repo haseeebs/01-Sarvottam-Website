@@ -1,7 +1,7 @@
 import React from 'react';
 import CoreServiceOfferings from '@/components/sections/CrossingPage/CoreServiceOfferings';
 import RelatedProjects from '@/components/sections/CrossingPage/RelatedProjects';
-import ServicePageHero from '@/components/common/ServicePageHero';
+import ServicePageHero from '@/components/common/PageHero';
 import CTA from '@/components/common/CTA';
 
 // Data for the page, extracted from the JSON
@@ -61,7 +61,8 @@ const ctaContent = {
 const CrossingPage = () => {
   return (
     <div>
-      <ServicePageHero
+      <PageHero
+        intent='light'
         headline={heroContent.headline}
         body={heroContent.body}
         cta={heroContent.cta}

@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactPageHero from '@/components/sections/contactpage/ContactPageHero';
+import PageHero from '@/components/common/PageHero';
 import ContactFormAndDetails from '@/components/sections/contactpage/ContactFormAndDetails';
 import ContactFAQ from '@/components/sections/contactpage/ContactFAQ';
 
@@ -54,7 +54,7 @@ const pageData = {
 const ContactPage = () => {
   return (
     <div>
-      <ContactPageHero
+      <PageHero
         headline={pageData.hero.headline}
         body={pageData.hero.body}
         cta={pageData.hero.cta}

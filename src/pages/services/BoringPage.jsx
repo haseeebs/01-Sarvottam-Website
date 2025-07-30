@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Apne project ke aitebar se sahi path dein
-import ServicePageHero from '@/components/common/ServicePageHero';
+import ServicePageHero from '@/components/common/PageHero';
 import ServiceBreakdown from '@/components/common/ServiceBreakdown';
 import KeyBenefits from '@/components/common/KeyBenefits';
 import OtherServices from '@/components/common/OtherServices';
@@ -135,7 +135,8 @@ const BoringPage = () => {
 
   return (
     <div>
-      <ServicePageHero
+      <PageHero
+        intent='light'
         headline={heroContent.headline}
         body={heroContent.body} // Maine prop ka naam `body` rakha hai, agar aapka component `subheadline` expect karta hai to isay badal lein
         cta={heroContent.cta}

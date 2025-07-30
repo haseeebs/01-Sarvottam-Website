@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectsPageHero from '@/components/sections/projectspage/ProjectsPageHero';
 import FeaturedProjects from '@/components/sections/projectspage/FeaturedProjects';
 import CTA from '@/components/common/CTA';
+import PageHero from '@/components/common/PageHero';
 
 // Content ko manage karne ke liye ek alag object banaya gaya hai
 const projectsPageContent = {
@@ -26,7 +27,8 @@ const projectsPageContent = {
 const ProjectsPage = () => {
   return (
     <div>
-      <ProjectsPageHero
+      <PageHero
+        intent='light'
         headline={projectsPageContent.hero.headline}
         body={projectsPageContent.hero.body}
       />

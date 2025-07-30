@@ -54,7 +54,7 @@ const pageContent = {
 const OtherServicesPage = () => {
   return (
     <div>
-      <ServicePageHero
+      <PageHero
         headline={pageContent.hero.headline}
         body={pageContent.hero.body}
         cta={pageContent.hero.cta}

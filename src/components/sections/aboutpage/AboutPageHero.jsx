@@ -7,7 +7,7 @@ const AboutPageHero = ({ content, imageUrl, imageAlt }) => {
 
   return (
     // Component 1 ka main structure, Component 2 se background color (bg-gray-50)
-    <section className='relative bg-gray-50'>
+    <section className='relative'>
       <div className='mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8'>
         {/* === LEFT COLUMN (TEXT CONTENT) === */}
         {/* Component 1 se column structure (col-span, padding, etc.) */}
@@ -19,7 +19,7 @@ const AboutPageHero = ({ content, imageUrl, imageAlt }) => {
             </h1>
 
             {/* Body (p) - Component 2 se style aur content */}
-            <p className='font-body text-my-primary mt-6 text-lg leading-relaxed'>
+            <p className='font-family-body text-my-primary mt-6 text-lg leading-relaxed'>
               {content.body}
             </p>
 

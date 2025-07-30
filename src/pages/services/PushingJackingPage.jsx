@@ -1,5 +1,5 @@
 import React from 'react';
-import ServicePageHero from '@/components/common/ServicePageHero';
+import ServicePageHero from '@/components/common/PageHero';
 import ServiceBreakdown from '@/components/common/ServiceBreakdown';
 import KeyBenefits from '@/components/common/KeyBenefits';
 import OtherServices from '@/components/common/OtherServices';
@@ -133,7 +133,8 @@ const PushingJackingPage = () => {
 
   return (
     <div>
-      <ServicePageHero
+      <PageHero
+        intent='light'
         headline={heroContent.headline}
         body={heroContent.body}
         cta={heroContent.cta}

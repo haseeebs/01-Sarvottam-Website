@@ -4,7 +4,7 @@ import WhyChooseUs from '@/components/sections/servicepage/WhyChooseUs';
 import ServiceProcess from '@/components/sections/servicepage/ServiceProcess';
 import ProjectsHighlight from '@/components/sections/servicepage/ProjectsHighlight';
 import CTA from '@/components/common/CTA';
-import ServicePageHero from '@/components/common/ServicePageHero';
+import PageHero from '@/components/common/PageHero';
 
 const heroContent = {
   headline: 'Comprehensive Trenchless Engineering & Underground Solutions',
@@ -112,7 +112,8 @@ const projectsData = {
 const ServicePage = () => {
   return (
     <div>
-      <ServicePageHero
+      <PageHero
+        intent='light'
         headline={heroContent.headline}
         body={heroContent.body}
       />
@@ -121,7 +122,6 @@ const ServicePage = () => {
         title={serviceCategoriesData.title}
         services={serviceCategoriesData.services}
       />
-
       <WhyChooseUs
         title={whyChooseUsData.title}
         imageSrc={whyChooseUsData.imageSrc}
@@ -163,17 +163,14 @@ const ServicePage = () => {
           </ul>
         </div>
       </WhyChooseUs>
-
       <ServiceProcess
         title={serviceProcessData.title}
         steps={serviceProcessData.steps}
       />
-
       <ProjectsHighlight
         title={projectsData.title}
         projects={projectsData.projects}
       />
-
       <CTA
         title='Ready to Discuss Your Technical Requirements?'
         buttonText='Request a Quote'
