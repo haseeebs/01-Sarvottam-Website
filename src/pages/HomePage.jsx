@@ -8,7 +8,6 @@ import pipelineImg from '@/assets/images/NormalImg-1.jpg';
 import CTA from '@/components/common/CTA';
 import ClientLogosNew from '@/components/common/ClientLogos';
 import ServiceSection from '@/components/common/ServiceSection';
-import ServicesHighlightSectionVariant2 from '@/components/common/ServiceSectionV2';
 import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
 
 const services = [
@@ -46,7 +45,6 @@ const HomePage = () => {
       <ClientLogosNew layout='marquee' />
 
       <ServiceSection services={services} />
-      <ServicesHighlightSectionVariant2 services={services} />
       <ExpertiseHighlights />
 
       <ValuePropositionSection />

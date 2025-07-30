@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils'; // Assuming cn is in your utils
 import { buttonVariants } from '@/components/ui/Button'; // Adjust the import path to your Button component
 
-const ServicesHighlightSection = ({ services }) => {
+const ServiceSection = ({ services }) => {
   return (
     <div className='bg-creative-scatter bg-gray-50'>
       <div className='mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-20 lg:px-8'>
@@ -62,4 +62,4 @@ const ServicesHighlightSection = ({ services }) => {
   );
 };
 
-export default ServicesHighlightSection;
+export default ServiceSection;

@@ -63,7 +63,7 @@ const PageHero = ({
       className={twMerge(heroVariants({ intent }), className)}
       {...props}
     >
-      <div className='relative mx-auto max-w-7xl px-4 py-16 sm:py-24 lg:px-8'>
+      <div className='relative mx-auto max-w-7xl px-4 py-8 sm:py-16 lg:px-8'>
         <div
           className={twMerge(
             'grid items-center gap-12',

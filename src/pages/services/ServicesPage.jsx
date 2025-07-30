@@ -1,10 +1,10 @@
 import React from 'react';
-import ServiceCategories from '@/components/sections/servicepage/ServiceCategories';
 import WhyChooseUs from '@/components/sections/servicepage/WhyChooseUs';
 import ServiceProcess from '@/components/sections/servicepage/ServiceProcess';
 import ProjectsHighlight from '@/components/sections/servicepage/ProjectsHighlight';
 import CTA from '@/components/common/CTA';
 import PageHero from '@/components/common/PageHero';
+import ServiceListSection from '@/components/common/ServiceListSection';
 
 const heroContent = {
   headline: 'Comprehensive Trenchless Engineering & Underground Solutions',
@@ -16,7 +16,7 @@ const serviceCategoriesData = {
   services: [
     {
       id: 1,
-      imageUrl:
+      imgSrc:
         'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Tunnel & Pipeline Crossing',
       description:
@@ -25,7 +25,7 @@ const serviceCategoriesData = {
     },
     {
       id: 2,
-      imageUrl:
+      imgSrc:
         'https://images.pexels.com/photos/224924/pexels-photo-224924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Horizontal Directional Drilling (HDD)',
       description:
@@ -34,21 +34,12 @@ const serviceCategoriesData = {
     },
     {
       id: 3,
-      imageUrl:
+      imgSrc:
         'https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Auger Boring & Pipe Jacking',
       description:
         'Precise, powerful techniques for installing large-diameter steel pipes and concrete culverts over long distances.',
       link: '/services/auger-boring',
-    },
-    {
-      id: 4,
-      imageUrl:
-        'https://images.pexels.com/photos/38275/hdri-hdr-pipeline-plumbing-38275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      title: 'Utility Installation & Relocation',
-      description:
-        'Comprehensive services for the installation of new utilities and relocation of existing ones for infrastructure projects.',
-      link: '/services/utility-installation',
     },
   ],
 };
@@ -87,21 +78,21 @@ const projectsData = {
   projects: [
     {
       id: 1,
-      imageUrl:
+      imgSrc:
         'https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       projectName: 'NH-48 Underpass, Gurgaon',
       serviceType: 'Box Pushing',
     },
     {
       id: 2,
-      imageUrl:
+      imgSrc:
         'https://images.pexels.com/photos/834607/pexels-photo-834607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       projectName: 'City Metro Line Crossing, Delhi',
       serviceType: 'Auger Boring',
     },
     {
       id: 3,
-      imageUrl:
+      imgSrc:
         'https://images.pexels.com/photos/433333/pexels-photo-433333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       projectName: 'Riverbed Gas Pipeline, Yamuna',
       serviceType: 'Horizontal Directional Drilling',
@@ -117,11 +108,11 @@ const ServicePage = () => {
         headline={heroContent.headline}
         body={heroContent.body}
       />
-
-      <ServiceCategories
+      <ServiceListSection
         title={serviceCategoriesData.title}
         services={serviceCategoriesData.services}
       />
+
       <WhyChooseUs
         title={whyChooseUsData.title}
         imageSrc={whyChooseUsData.imageSrc}
