@@ -36,8 +36,8 @@ const HomePage = () => {
   return (
     <>
       <HomepageHero
-        headline='Pioneering Trenchless Technology in India for Over 15 Years'
-        body='For over 15 years, Sarvottam Enterprises has been the trusted partner...'
+        headline='The Expertise to Cross Any Obstacle. The Machinery to Guarantee It.'
+        body='Your Trusted Partner for High-Stakes Government & Private Infrastructure Projects.'
         cta='Request a Quote'
         imageSrc={heroImage1}
         imageAlt='Trenchless Technology Project'
@@ -56,7 +56,6 @@ const HomePage = () => {
         buttonText='Request a Quote'
         buttonLink='/contact?subject=QuoteRequest'
         buttonStyle='solid-accent'
-        // imgUrl prop yahan de sakte hain, warna default image istemal hogi
       />
     </>
   );

@@ -27,6 +27,15 @@ const defaultLogos = [
     name: 'Afcons Infrastructure',
     logoUrl: 'https://logo.clearbit.com/afcons.com',
   },
+  {
+    name: 'Dilip Buildcon',
+    logoUrl:
+      'https://upload.wikimedia.org/wikipedia/commons/d/dd/Dilip_Buildcon_Logo.png',
+  },
+  {
+    name: 'Tata',
+    logoUrl: 'https://cdn.worldvectorlogo.com/logos/tata-logo.svg',
+  },
 ];
 
 /**

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { cn } from '@/lib/utils'; // Assuming cn is in your utils
-import { buttonVariants } from '@/components/ui/Button'; // Adjust the import path to your Button component
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ui/Button';
 
 const ServiceSection = ({ services }) => {
   return (

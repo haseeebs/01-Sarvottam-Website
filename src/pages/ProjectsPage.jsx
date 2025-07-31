@@ -1,43 +1,72 @@
 import React from 'react';
-import ProjectsPageHero from '@/components/sections/projectspage/ProjectsPageHero';
-import FeaturedProjects from '@/components/sections/projectspage/FeaturedProjects';
+import { Link } from 'react-router-dom';
 import CTA from '@/components/common/CTA';
 import PageHero from '@/components/common/PageHero';
+import { allProjects } from '@/data/projectData'; // Apni master file import karein
+import FeaturedProjectsSection from '@/components/sections/projectspage/FeaturedProjects';
 
-// Content ko manage karne ke liye ek alag object banaya gaya hai
-const projectsPageContent = {
-  hero: {
-    headline: 'A Proven Track Record of Landmark Infrastructure Projects',
-    body: 'Our portfolio showcases our ability to deliver on complex and high-stakes projects across India. Notable achievements include the successful completion of the Pawati + Shipralink Project and our critical role in the L&T Narmada Shipra Project. These projects highlight our technical expertise in trenchless solutions and our capacity to partner with industry leaders on projects of national importance.',
-  },
-  featuredProjects: {
-    title: 'Landmark Project Highlights',
-  },
-  portfolio: {
-    title: 'Our Complete Portfolio',
-  },
-  clients: {
-    title: 'Trusted by Industry Leaders',
-  },
-  cta: {
-    title: 'Have a similar project in mind?',
-  },
-};
+// Yeh component baaki sabhi projects ko ek simple grid mein dikhayega
+const AllProjectsGrid = ({ projects }) => (
+  <section className='bg-white py-16 md:py-24'>
+    <div className='container mx-auto px-4 md:px-6'>
+      <div className='mb-12 text-center'>
+        <h2 className='text-my-primary text-3xl font-bold md:text-4xl'>
+          Our Comprehensive Portfolio
+        </h2>
+      </div>
+      <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className='flex h-full flex-col rounded-sm bg-slate-50 p-6 shadow-md'
+          >
+            <p className='text-xs font-semibold tracking-wider text-amber-500 uppercase'>
+              {project.category}
+            </p>
+            <h3 className='text-my-primary mt-1 text-xl font-bold'>
+              {project.title}
+            </h3>
+            <p className='mt-1 text-sm text-gray-500'>{project.location}</p>
+            <p className='mt-4 flex-grow text-sm text-gray-600'>
+              {project.challenge}
+            </p>
+            <p className='mt-4 text-sm font-semibold text-gray-800'>
+              Client: {project.client}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 const ProjectsPage = () => {
+  const heroContent = {
+    headline: 'A Proven Track Record of Landmark Infrastructure Projects',
+    body: 'Our portfolio showcases our ability to deliver on complex, high-stakes projects across India, partnering with industry leaders and deploying advanced trenchless solutions.',
+  };
+
+  // Featured aur baaki projects ko alag karein
+  const featuredProjects = allProjects.filter((p) => p.isFeatured);
+  console.log(featuredProjects);
+  const otherProjects = allProjects.filter((p) => !p.isFeatured);
+
   return (
     <div>
       <PageHero
         intent='light'
-        headline={projectsPageContent.hero.headline}
-        body={projectsPageContent.hero.body}
+        headline={heroContent.headline}
+        body={heroContent.body}
       />
-      <FeaturedProjects
-        title={projectsPageContent.featuredProjects.title}
-        // Note: Individual project data is assumed to be inside the component itself
-      />
+
+      {/* Section 1: Featured Projects ko poori detail mein dikhayein */}
+      <FeaturedProjectsSection projects={featuredProjects} />
+
+      {/* Section 2: Baaki sabhi projects ko grid mein dikhayein */}
+      <AllProjectsGrid projects={otherProjects} />
+
       <CTA
-        title={projectsPageContent.cta.title}
+        title='Have a similar project in mind?'
         buttonText='Contact Us Today'
         description="Let's discuss how our expertise can bring your vision to life."
       />

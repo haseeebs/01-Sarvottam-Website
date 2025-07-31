@@ -1,7 +1,6 @@
 import React from 'react';
 import WhyChooseUs from '@/components/sections/servicepage/WhyChooseUs';
 import ServiceProcess from '@/components/sections/servicepage/ServiceProcess';
-import ProjectsHighlight from '@/components/sections/servicepage/ProjectsHighlight';
 import CTA from '@/components/common/CTA';
 import PageHero from '@/components/common/PageHero';
 import ServiceListSection from '@/components/common/ServiceListSection';
@@ -158,10 +157,8 @@ const ServicePage = () => {
         title={serviceProcessData.title}
         steps={serviceProcessData.steps}
       />
-      <ProjectsHighlight
-        title={projectsData.title}
-        projects={projectsData.projects}
-      />
+
+      {/* Past Projects Show karna */}
       <CTA
         title='Ready to Discuss Your Technical Requirements?'
         buttonText='Request a Quote'

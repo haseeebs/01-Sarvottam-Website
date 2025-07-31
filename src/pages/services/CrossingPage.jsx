@@ -1,64 +1,60 @@
 import React from 'react';
-import CoreServiceOfferings from '@/components/sections/CrossingPage/CoreServiceOfferings';
-import RelatedProjects from '@/components/sections/CrossingPage/RelatedProjects';
-import ServicePageHero from '@/components/common/PageHero';
+
+import KeyBenefits from '@/components/common/KeyBenefits';
+import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
 import CTA from '@/components/common/CTA';
 
-// Data for the page, extracted from the JSON
-const heroContent = {
-  headline: 'Expert Tunnel & Pipeline Crossing Services...',
-  body: 'We are premier railway and highway line...',
-  cta: 'Get a Quote for Your Crossing Project',
-};
-
-const featureGridContent = {
-  title: 'Our Crossing Capabilities',
-  features: [
-    { name: 'Tunnel Crossing', icon: 'tunnel' },
-    { name: 'Sewer Line Crossing', icon: 'pipe' },
-    { name: 'Water Line Crossing', icon: 'water_drop' },
-    { name: 'Gas Line Installation', icon: 'flame' },
-  ],
-};
-
-const cardGridContent = {
-  title: 'Our Proven Experience in Crossing Projects',
-  // Sample projects based on the JSON structure
-  projects: [
-    {
-      image_url:
-        'https://images.unsplash.com/photo-1542621334-a254cf477633?q=80&w=1287&auto=format&fit=crop',
-      title: 'GAIL Gas Line Crossing, Mumbai',
-      tags: 'Pipeline Crossing, Hard Rock',
-    },
-    {
-      image_url:
-        'https://images.unsplash.com/photo-1521790797524-24016a155556?q=80&w=1287&auto=format&fit=crop',
-      title: 'Railway Underpass, Bengaluru',
-      tags: 'Tunnel Boring, Urban Area',
-    },
-    {
-      image_url:
-        'https://images.unsplash.com/photo-1605705335934-f6598586b3a1?q=80&w=1287&auto=format&fit=crop',
-      title: 'NH-44 Water Main Relocation',
-      tags: 'Water Line, Highway Crossing',
-    },
-    {
-      image_url:
-        'https://images.unsplash.com/photo-1599481238623-7140000a6848?q=80&w=1287&auto=format&fit=crop',
-      title: 'City Sewer System Expansion, Pune',
-      tags: 'Sewer Line, Micro-tunneling',
-    },
-  ],
-};
-
-const ctaContent = {
-  title: 'Have a Critical Crossing Project?',
-  buttonText: 'Get a Quote for Your Crossing Project',
-  buttonLink: '#',
-};
+// Lucide React se Icons import karein
+import { TrainFrontTunnel, Layers, Droplets, Flame } from 'lucide-react';
+import PageHero from '@/components/common/PageHero';
+import { allProjects } from '@/data/projectData';
 
 const CrossingPage = () => {
+  const crossingProjects = allProjects.filter((p) => p.category === 'Crossing');
+
+  const heroContent = {
+    headline: 'Expert Tunnel & Pipeline Crossing Services',
+    body: 'We are premier railway and highway line crossing contractors, specializing in trenchless methods that preserve surface integrity and ensure project timelines. From busy urban corridors to remote terrains, we deliver with precision.',
+    cta: 'Get a Quote for Your Crossing Project',
+  };
+
+  // 2. Data for KeyBenefits (CoreServiceOfferings ka naya version)
+  const keyBenefitsContent = {
+    title: 'Our Crossing Capabilities',
+    features: [
+      {
+        name: 'Tunnel Crossing',
+        description:
+          'Creating stable and secure underpasses for railways and highways using advanced boring and jacking technologies.',
+        Icon: TrainFrontTunnel,
+      },
+      {
+        name: 'Sewer Line Crossing',
+        description:
+          'Installing critical sewer infrastructure beneath active corridors with minimal environmental and community impact.',
+        Icon: Layers, // Yahan 'Layers' icon istemal kiya gaya hai
+      },
+      {
+        name: 'Water Line Crossing',
+        description:
+          'Reliable installation of main water lines across challenging terrains like rivers, canals, and highways.',
+        Icon: Droplets,
+      },
+      {
+        name: 'Gas Line Installation',
+        description:
+          'Safe and compliant installation of high-pressure gas pipelines under sensitive and high-traffic areas.',
+        Icon: Flame,
+      },
+    ],
+  };
+
+  // 6. Data for PrimaryCTA (CrossingServicesCTA ka naya version)
+  const CtaContent = {
+    title: 'Have a Critical Crossing Project?',
+    buttonText: 'Get a Quote Today',
+  };
+
   return (
     <div>
       <PageHero
@@ -67,21 +63,15 @@ const CrossingPage = () => {
         body={heroContent.body}
         cta={heroContent.cta}
       />
-      <CoreServiceOfferings
-        title={featureGridContent.title}
-        features={featureGridContent.features}
+      <KeyBenefits
+        title={keyBenefitsContent.title}
+        features={keyBenefitsContent.features}
       />
-      <RelatedProjects
-        title={cardGridContent.title}
-        projects={cardGridContent.projects}
+      <ProjectShowcaseSection
+        title={'Our Proven Experience in Crossing Projects'}
+        projects={crossingProjects}
       />
-      <CTA
-        variant='inline'
-        title={ctaContent.title}
-        buttonText={ctaContent.buttonText}
-        buttonLink='#'
-        buttonStyle='outline-amber'
-      />
+      <CTA title={CtaContent.title} buttonText={CtaContent.buttonText} />
     </div>
   );
 };

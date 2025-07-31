@@ -1,5 +1,5 @@
 import React from 'react';
-import EquipmentPageHero from '@/components/sections/equipmentpage/EquipmentPageHero';
+import PageHero from '@/components/common/PageHero';
 import EquipmentGallery from '@/components/sections/equipmentpage/EquipmentGallery';
 import FleetAdvantages from '@/components/sections/equipmentpage/FleetAdvantages';
 import CTA from '@/components/common/CTA';
@@ -117,10 +117,7 @@ const EquipmentPage = () => {
     <div>
       {/* NOTE: Child components must be updated to accept these props. */}
 
-      <EquipmentPageHero
-        headline={pageData.hero.headline}
-        body={pageData.hero.body}
-      />
+      <PageHero headline={pageData.hero.headline} body={pageData.hero.body} />
 
       <EquipmentGallery
         title={pageData.gallery.title}

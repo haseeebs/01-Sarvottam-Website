@@ -1,101 +1,120 @@
-import * as React from 'react';
-import { cva } from 'class-variance-authority';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp, Building } from 'lucide-react';
 
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/Button'; // Assuming Button.jsx is in the same directory
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/Card'; // Assuming Card.jsx is in the same directory
-
-const showcaseSectionVariants = cva('w-full', {
-  variants: {
-    background: {
-      default: 'bg-transparent',
-      muted: 'bg-muted/20',
-    },
-    spacing: {
-      default: 'py-16 md:py-24',
-      compact: 'py-12 md:py-16',
-    },
-  },
-  defaultVariants: {
-    background: 'default',
-    spacing: 'default',
-  },
-});
-
-const ProjectShowcaseSection = React.forwardRef(
-  (
-    {
-      className,
-      background,
-      spacing,
-      title,
-      projects,
-      ctaButtonText = 'View Project',
-      ...props
-    },
-    ref,
-  ) => {
-    return (
-      <section
-        ref={ref}
-        className={cn(
-          showcaseSectionVariants({ background, spacing, className }),
-        )}
-        {...props}
-      >
-        <div className='container px-4 md:px-6'>
-          <div className='mb-10 flex flex-col items-center justify-center space-y-4 text-center md:mb-16'>
-            <h2 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-              {title}
-            </h2>
-          </div>
-          {projects?.length > 0 ? (
-            <div className='mx-auto grid max-w-7xl grid-cols-1 items-start gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-              {projects.map((project) => (
-                <Card
-                  key={project.id}
-                  className='group flex h-full w-full flex-col transition-all hover:-translate-y-1 hover:shadow-xl'
-                >
-                  <img
-                    src={project.imageSrc}
-                    alt={`Image of ${project.title}`}
-                    className='aspect-video w-full rounded-t-sm object-cover'
-                  />
-                  <div className='flex flex-1 flex-col justify-between p-6'>
-                    <div className='space-y-2'>
-                      <p className='text-my-accent text-sm font-medium tracking-widest uppercase'>
-                        {project.category}
-                      </p>
-                      <CardTitle className='text-xl'>{project.title}</CardTitle>
-                      <CardDescription>{project.location}</CardDescription>
-                    </div>
-                    <div className='pt-6'>
-                      <Button variant='outline' className='w-full'>
-                        {ctaButtonText}
-                      </Button>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          ) : (
-            <div className='text-muted-foreground text-center'>
-              No projects to display.
-            </div>
-          )}
-        </div>
-      </section>
-    );
-  },
+const FallbackDisplay = ({ clientName }) => (
+  <div className='flex h-full min-h-[250px] w-full items-center justify-center rounded-sm bg-slate-200 p-4'>
+    <div className='text-center text-slate-500'>
+      <Building className='mx-auto h-12 w-12' />
+      <p className='mt-2 text-lg font-semibold'>{clientName}</p>
+      {/* <p className='text-xs'>Project Image Not Available</p> */}
+    </div>
+  </div>
 );
 
-ProjectShowcaseSection.displayName = 'ProjectShowcaseSection';
+const ProjectAccordionItem = ({ project, isExpanded, onToggle }) => {
+  return (
+    <div className='overflow-hidden rounded-sm bg-slate-50 shadow-lg'>
+      {/* Accordion Header */}
+      <div
+        className='grid cursor-pointer grid-cols-1 items-center gap-6 p-6 md:grid-cols-2 md:gap-12'
+        onClick={onToggle}
+      >
+        {/* Image/Fallback Section */}
+        <div className='w-full'>
+          {project.imageSrc ? (
+            <img
+              src={project.imageSrc}
+              alt={`Image of ${project.title}`}
+              className='aspect-video w-full rounded-sm object-cover shadow-md'
+            />
+          ) : (
+            <FallbackDisplay clientName={project.client} />
+          )}
+        </div>
+        {/* Title & Toggle Button Section */}
+        <div className='flex flex-col'>
+          <p className='text-sm font-semibold tracking-wider text-amber-500 uppercase'>
+            {project.subCategory}
+          </p>
+          <h3 className='text-my-primary mt-1 text-2xl font-bold'>
+            {project.title}
+          </h3>
+          <button className='mt-4 flex items-center font-bold text-amber-600'>
+            {isExpanded ? 'Hide Details' : 'View Details'}
+            {isExpanded ? (
+              <ChevronUp className='ml-2 h-5 w-5' />
+            ) : (
+              <ChevronDown className='ml-2 h-5 w-5' />
+            )}
+          </button>
+        </div>
+      </div>
 
-export { ProjectShowcaseSection, showcaseSectionVariants };
+      {/* Accordion Body (Collapsible Content) */}
+      {isExpanded && (
+        <div className='px-6 pb-6 md:px-12 md:pb-8'>
+          <div className='space-y-4 border-t border-gray-200 pt-4'>
+            <div>
+              <h4 className='font-bold text-gray-800'>Challenge:</h4>
+              <p className='mt-1 text-base text-gray-600'>
+                {project.challenge}
+              </p>
+            </div>
+            <div>
+              <h4 className='font-bold text-gray-800'>Our Solution:</h4>
+              <p className='mt-1 text-base text-gray-600'>{project.solution}</p>
+            </div>
+            {project.testimonial && (
+              <figure className='border-t border-gray-200 pt-4'>
+                <blockquote className='text-gray-700 italic'>
+                  “{project.testimonial.quote}”
+                </blockquote>
+                <figcaption className='mt-2 text-right text-sm font-semibold text-gray-900'>
+                  — {project.testimonial.author}
+                </figcaption>
+              </figure>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const ProjectShowcaseSection = ({ title, projects = [] }) => {
+  const [expandedId, setExpandedId] = useState(null);
+
+  if (!projects || projects.length === 0) return null;
+
+  const handleToggle = (id) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+
+  return (
+    <section className='bg-white py-16 sm:py-24'>
+      <div className='container mx-auto px-4 md:px-6'>
+        <div className='mb-12 text-center'>
+          <h2 className='text-my-primary text-3xl font-bold tracking-tight sm:text-4xl'>
+            {title}
+          </h2>
+          <p className='mx-auto mt-4 max-w-2xl text-lg text-gray-600'>
+            Explore our landmark projects that demonstrate our deep expertise
+            and commitment to excellence.
+          </p>
+        </div>
+        <div className='space-y-8'>
+          {projects.map((project) => (
+            <ProjectAccordionItem
+              key={project.id}
+              project={project}
+              isExpanded={expandedId === project.id}
+              onToggle={() => handleToggle(project.id)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectShowcaseSection;

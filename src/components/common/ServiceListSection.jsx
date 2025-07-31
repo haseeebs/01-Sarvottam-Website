@@ -35,7 +35,7 @@ const ServiceListSection = ({ title, services }) => {
                 <img
                   src={service.imgSrc}
                   alt={service.title}
-                  className='h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105'
+                  className='h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.02]'
                   style={{ willChange: 'transform' }}
                 />
               </div>

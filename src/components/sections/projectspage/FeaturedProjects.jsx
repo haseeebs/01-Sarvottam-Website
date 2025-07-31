@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const projectsData = [
+const projects = [
   {
     id: 1,
     title: 'Pawati + Shipralink Project',
@@ -30,62 +30,52 @@ const projectsData = [
   },
 ];
 
-const FeaturedProjects = ({ title, projects = projectsData }) => {
-  return (
-    <section className='bg-[#F4F6F8] py-16 md:py-24'>
-      <div className='mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8'>
-        <div className='mb-16 text-center md:mb-24'>
-          <h2 className='font-display text-my-primary text-3xl font-bold md:text-4xl'>
-            {title}
-          </h2>
-        </div>
-
-        <div className='space-y-16 md:space-y-24'>
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className='grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12'
-            >
-              {/* Image Column */}
-              <div className={index % 2 !== 0 ? 'md:order-last' : ''}>
+const FeaturedProjectsSection = ({ projects }) => (
+  <section className='bg-slate-50 py-16 md:py-24'>
+    <div className='container mx-auto px-4 md:px-6'>
+      <div className='mb-12 text-center md:mb-16'>
+        <h2 className='text-my-primary text-3xl font-bold md:text-4xl'>
+          Landmark Project Highlights
+        </h2>
+      </div>
+      <div className='space-y-16'>
+        {projects.map((project, index) => (
+          <div
+            key={project.id}
+            className='grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12'
+          >
+            <div className={index % 2 !== 0 ? 'md:order-last' : ''}>
+              {project.imageSrc ? (
                 <img
                   className='aspect-video h-auto w-full rounded-sm object-cover shadow-md'
-                  src={project.imageUrl}
+                  src={project.imageSrc}
                   alt={`Image for ${project.title}`}
                 />
-              </div>
-
-              {/* Text Column */}
-              <div className='flex flex-col items-start'>
-                <h3 className='font-display text-my-accent text-[28px] font-bold'>
-                  {project.title}
-                </h3>
-                <p className='font-body text-my-primary mt-4 max-w-prose text-base'>
-                  {project.description}
-                </p>
-                <div className='mt-5 space-y-2'>
-                  {project.stats.map((stat) => (
-                    <p key={stat.label} className='font-body text-sm'>
-                      <span className='text-my-secondary font-bold'>
-                        {stat.label}:
-                      </span>
-                      <span className='text-my-primary ml-2'>{stat.value}</span>
-                    </p>
-                  ))}
+              ) : (
+                <div className='flex h-full min-h-[250px] w-full items-center justify-center rounded-sm bg-slate-200 text-slate-500'>
+                  <p className='font-semibold'>{project.client}</p>
                 </div>
-                <Link
-                  to={project.caseStudyUrl}
-                  className='font-display text-my-primary mt-6 inline-block text-base font-bold underline-offset-4 hover:underline'
-                >
-                  View Case Study →
-                </Link>
-              </div>
+              )}
             </div>
-          ))}
-        </div>
+            <div className='flex flex-col items-start'>
+              <h3 className='text-my-accent text-2xl font-bold'>
+                {project.title}
+              </h3>
+              <p className='text-my-primary mt-4 max-w-prose text-base'>
+                {project.challenge}
+              </p>
+              <Link
+                to='#'
+                className='text-my-primary mt-6 inline-block text-base font-bold underline-offset-4 hover:underline'
+              >
+                Learn More →
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
-export default FeaturedProjects;
+export default FeaturedProjectsSection;

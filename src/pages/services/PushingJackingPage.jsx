@@ -1,24 +1,18 @@
 import React from 'react';
-import ServicePageHero from '@/components/common/PageHero';
 import ServiceBreakdown from '@/components/common/ServiceBreakdown';
 import KeyBenefits from '@/components/common/KeyBenefits';
-import OtherServices from '@/components/common/OtherServices';
 
-// Assume you are using a library like 'lucide-react' for icons.
-// npm install lucide-react
-import {
-  Users,
-  Wrench,
-  Crosshair,
-  TrainFrontTunnel,
-  ScanLine,
-  Tally3,
-} from 'lucide-react';
+import { Users, Wrench, Crosshair } from 'lucide-react';
 import CTA from '@/components/common/CTA';
-import { ProjectShowcaseSection } from '@/components/common/ProjectShowcaseSection';
+import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
+import PageHero from '@/components/common/PageHero';
+import { allProjects } from '@/data/projectData';
 
 const PushingJackingPage = () => {
-  // Data for ServicePageHero
+  const pushingJackingProjects = allProjects.filter(
+    (p) => p.category === 'Pushing & Jacking',
+  );
+
   const heroContent = {
     headline: 'Advanced Pipe Jacking & Box Pushing Contractors',
     body: 'Our pushing and jacking services are engineered for projects requiring heavy-duty underground passage. We specialize in Box Pushing (RCC/Precast) for creating railway underbridges and pedestrian subways, alongside Pipe Pushing and Jacking for large-diameter water and sewer pipelines. Our experienced team and powerful machinery ensure precise execution for even the most demanding projects.',
@@ -66,69 +60,10 @@ const PushingJackingPage = () => {
     ],
   };
 
-  // Data for ProjectShowcase
-  const projectShowcaseContent = {
-    title: 'Pushing & Jacking Projects in Action',
-    projects: [
-      {
-        id: 1,
-        title: 'NH-44 Railway Underbridge',
-        location: 'Panipat, Haryana',
-        category: 'Pushing & Jacking',
-        imageSrc:
-          'https://images.unsplash.com/photo-1599676793332-95f743534d49?q=80&w=1974&auto=format&fit=crop',
-      },
-      {
-        id: 2,
-        title: 'City Water Main Upgrade',
-        location: 'Jaipur, Rajasthan',
-        category: 'Pushing & Jacking',
-        imageSrc:
-          'https://images.unsplash.com/photo-1557022765-7170c1737e3d?q=80&w=2070&auto=format&fit=crop',
-      },
-      {
-        id: 3,
-        title: 'Pedestrian Subway Construction',
-        location: 'Nagpur, Maharashtra',
-        category: 'Pushing & Jacking',
-        imageSrc:
-          'https://images.unsplash.com/photo-1506935354899-351a705191a8?q=80&w=2070&auto=format&fit=crop',
-      },
-    ],
-  };
-
   // Data for CTA
   const CTAContent = {
     title: 'Ready to Execute a Demanding Project?',
     buttonText: 'Plan Your Pushing & Jacking Project',
-  };
-
-  // Data for OtherServices
-  const otherServicesContent = {
-    title: 'Explore Our Other Services',
-    services: [
-      {
-        name: 'Auger Boring & Pipe Ramming',
-        description:
-          'Precision boring for medium-diameter steel casings under roadways and railways.',
-        to: '/services/boring',
-        Icon: TrainFrontTunnel,
-      },
-      {
-        name: 'Microtunneling',
-        description:
-          'Advanced, remotely-controlled tunneling for critical sewer and water line installations in urban areas.',
-        to: '/services/microtunneling',
-        Icon: ScanLine,
-      },
-      {
-        name: 'Pipeline Crossing Solutions',
-        description:
-          'Specialized solutions for safely installing pipelines across rivers, canals, and other challenging terrains.',
-        to: '/services/pipeline-crossing',
-        Icon: Tally3,
-      },
-    ],
   };
 
   return (
@@ -149,14 +84,10 @@ const PushingJackingPage = () => {
         features={keyBenefitsContent.features}
       />
       <ProjectShowcaseSection
-        title={projectShowcaseContent.title}
-        projects={projectShowcaseContent.projects}
+        title={'Pushing & Jacking Projects in Action'}
+        projects={pushingJackingProjects}
       />
       <CTA title={CTAContent.title} buttonText={CTAContent.buttonText} />
-      <OtherServices
-        title={otherServicesContent.title}
-        services={otherServicesContent.services}
-      />
     </div>
   );
 };

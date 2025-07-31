@@ -1,26 +1,17 @@
 import React from 'react';
 
-// Apne project ke aitebar se sahi path dein
-import ServicePageHero from '@/components/common/PageHero';
 import ServiceBreakdown from '@/components/common/ServiceBreakdown';
 import KeyBenefits from '@/components/common/KeyBenefits';
-import OtherServices from '@/components/common/OtherServices';
 
-// 'lucide-react' se zaroori icons import karein
-// npm install lucide-react
-import {
-  GitBranchPlus,
-  Mountain,
-  Gauge,
-  Tally3,
-  ScanLine,
-  TrainFrontTunnel,
-} from 'lucide-react';
+import { GitBranchPlus, Mountain, Gauge } from 'lucide-react';
 import CTA from '@/components/common/CTA';
-import { ProjectShowcaseSection } from '@/components/common/ProjectShowcaseSection';
+import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
+import PageHero from '@/components/common/PageHero';
+import { allProjects } from '@/data/projectData';
 
 const BoringPage = () => {
-  // Data for ServicePageHero
+  const boringProjects = allProjects.filter((p) => p.category === 'Boring');
+
   const heroContent = {
     headline: 'Precision Auger Boring & Pipe Ramming Services',
     body: 'Humari auger boring aur pipe ramming services zameen ke neeche steel casing pipes install karne ke liye ek behtareen trenchless solution faraham karti hain. Yeh tareeqa roads, railways, aur deegar hassas ilaqon ke neeche kaam karne ke liye ideal hai, jahan oopri satah par kam se kam kharabi matloob ho.',
@@ -68,69 +59,10 @@ const BoringPage = () => {
     ],
   };
 
-  // Data for ProjectShowcase (or EquipmentSpotlight)
-  const projectShowcaseContent = {
-    title: 'Our Boring Projects',
-    projects: [
-      {
-        id: 1,
-        title: 'Highway 7 Gas Line Casing',
-        location: 'Mumbai, Maharashtra',
-        category: 'Auger Boring',
-        imageSrc:
-          'https://images.unsplash.com/photo-1618882083389-3545b2b7b752?q=80&w=2070&auto=format&fit=crop', // Replace with actual project image
-      },
-      {
-        id: 2,
-        title: 'Railway Culvert Installation',
-        location: 'Ahmedabad, Gujarat',
-        category: 'Pipe Ramming',
-        imageSrc:
-          'https://images.unsplash.com/photo-1557022765-7170c1737e3d?q=80&w=2070&auto=format&fit=crop', // Replace with actual project image
-      },
-      {
-        id: 3,
-        title: 'City Sewer Line Project',
-        location: 'Delhi, NCR',
-        category: 'Auger Boring',
-        imageSrc:
-          'https://images.unsplash.com/photo-1506935354899-351a705191a8?q=80&w=2070&auto=format&fit=crop', // Replace with actual project image
-      },
-    ],
-  };
-
   // Data for CTA
   const CTAContent = {
     title: 'Have a Boring Project in Mind?',
     buttonText: 'Discuss Your Requirements',
-  };
-
-  // Data for OtherServices
-  const otherServicesContent = {
-    title: 'Explore Our Other Trenchless Solutions',
-    services: [
-      {
-        name: 'Pushing & Jacking',
-        description:
-          'Bade size ke concrete boxes aur pipes ke liye, jo underpass aur bari pipelines ke liye istemal hotay hain.',
-        to: '/services/pushing-jacking',
-        Icon: TrainFrontTunnel,
-      },
-      {
-        name: 'Microtunneling',
-        description:
-          'Shehri ilaqon mein nazuk (critical) sewer aur water lines ke liye advanced, remote-controlled tunneling.',
-        to: '/services/microtunneling',
-        Icon: ScanLine,
-      },
-      {
-        name: 'Pipeline Crossing',
-        description:
-          'Daryao, nahron aur deegar mushkil ilaqon ke paar pipelines install karne ke liye makhsoos hal.',
-        to: '/services/pipeline-crossing',
-        Icon: Tally3,
-      },
-    ],
   };
 
   return (
@@ -154,14 +86,10 @@ const BoringPage = () => {
       />
       {/* Aapke component ke aitebar se props ke naam adjust karein */}
       <ProjectShowcaseSection
-        title={projectShowcaseContent.title}
-        projects={projectShowcaseContent.projects}
+        title={'Specialized Boring & Drilling Projects'}
+        projects={boringProjects}
       />
       <CTA title={CTAContent.title} buttonText={CTAContent.buttonText} />
-      <OtherServices
-        title={otherServicesContent.title}
-        services={otherServicesContent.services}
-      />
     </div>
   );
 };

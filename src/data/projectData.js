@@ -1,0 +1,105 @@
+export const allProjects = [
+    {
+        id: 1,
+        isFeatured: true,
+        category: 'Crossing',
+        subCategory: 'Multi-Terrain Water Supply',
+        title: 'L&T Narmada Kshipra Link Project (Kundaliya)',
+        location: 'Rajgarh, Madhya Pradesh',
+        client: 'Larsen & Toubro (L&T)',
+        challenge:
+            'To execute extensive pipe crossings for a critical water supply project, navigating varied terrains including hard rock excavation up to 3 meters deep for a wide range of pipe sizes (150mm to 1600mm).',
+        solution:
+            'We deployed multiple methods suited for each challenge, including crane-assisted placement and trenchless pipe pushing. Our ability to handle diverse DI and MS pipes met the stringent quality standards of L&T.',
+        imageSrc: null, // TODO: Add real image
+        keyStats: [
+            { label: 'Pipe Diameters', value: '150mm to 1600mm' },
+            { label: 'Terrain Handled', value: 'Hard Rock & Mixed Soil' },
+            { label: 'Technology', value: 'Trenchless + Open Cut' },
+        ],
+        testimonial: {
+            quote:
+                "Sarvottam's capability to handle diverse pipe sizes and challenging ground conditions was critical to our project's success.",
+            author: 'Project Manager, L&T Water & Effluent Treatment',
+        },
+    },
+    {
+        id: 2,
+        isFeatured: true,
+        category: 'Pushing & Jacking',
+        subCategory: 'Highway Crossing',
+        title: 'Kalisindh Lift Irrigation Scheme - Phase II',
+        location: 'Madhya Pradesh',
+        client: 'Megha Engineering & Infrastructures Ltd (MEIL)',
+        challenge:
+            'To install a vast range of MS encasing pipes (from 400mm to a massive 3900mm) for National & State Highway crossings, requiring expertise in all soil types, including hard rock.',
+        solution:
+            "Leveraging advanced jacking and pushing techniques, our team executed the pipe tunneling with high precision. We successfully managed the exceptionally wide range of pipe diameters as per MEIL's directives.",
+        imageSrc: 'path/to/real/kalisindh-project-image.jpg',
+        keyStats: [
+            { label: 'Pipe Diameters', value: '400mm to 3900mm' },
+            { label: 'Technology', value: 'Jacking & Pushing' },
+        ],
+        testimonial: null, // TODO: Pending from client
+    },
+    {
+        id: 3,
+        isFeatured: false,
+        category: 'Pushing & Jacking',
+        subCategory: 'Urban Infrastructure',
+        title: 'Digha-Kankarbagh Sewer Network Project',
+        location: 'Patna, Bihar',
+        client: 'VA Tech Wabag Ltd',
+        challenge:
+            'Laying a large 1600mm diameter RCC sewer pipe for 141 meters in a dense urban zone of Patna using a trenchless method to minimize public disruption and meet a tight 3-month schedule.',
+        solution:
+            'Our team successfully executed all associated civil works and employed the jack pushing method to install the pipeline, completing the project on schedule and demonstrating our efficiency in urban infrastructure projects.',
+        imageSrc: null, // TODO: Add real image
+        keyStats: [
+            { label: 'Pipe Diameters', value: '1600mm RCC' },
+            { label: 'Crossing Length', value: '141 Meters' },
+            { label: 'Technology', value: 'Trenchless (Jack Pushing)' },
+        ],
+        testimonial: null,
+    },
+    {
+        id: 4,
+        isFeatured: false,
+        category: 'Boring',
+        subCategory: 'Horizontal Directional Drilling (HDD)',
+        title: 'Mohanpura LBS Pipeline Project',
+        location: 'Mohanpura, Madhya Pradesh',
+        client: 'Jain Irrigation Systems Ltd.',
+        challenge:
+            'Installing MS casing pipes (600mm to 2000mm) for a highway crossing using the HDD method through unpredictable mixed ground conditions, including soft soil, murram, and hard rock.',
+        solution:
+            'Our team expertly deployed the HDD method for both boring and pushing the casing pipe, managing all required machinery to successfully complete the 100-meter crossing across the varied strata.',
+        imageSrc: 'path/to/real/mohanpura-project-image.jpg',
+        keyStats: [
+            { label: 'Pipe Diameters', value: '600mm to 2000mm' },
+            { label: 'Terrain Handled', value: 'Mixed (Soil, Murram, Hard Rock)' },
+            { label: 'Technology', value: 'HDD' },
+        ],
+        testimonial: null,
+    },
+    {
+        id: 5,
+        isFeatured: true,
+        category: 'Crossing',
+        subCategory: 'Trenchless Technology',
+        title: 'Pawati + Shipralink Project',
+        location: 'Madhya Pradesh',
+        client: 'Larsen & Toubro (L&T)',
+        challenge:
+            'This project involved complex pipeline crossings under critical infrastructure, ensuring minimal disruption and maximum efficiency.',
+        solution:
+            'Our expertise in trenchless solutions was critical for the successful execution of this high-stakes project.',
+        imageSrc: null, // TODO: Add real image
+        keyStats: [
+            { label: 'Role', value: 'Execution Partner' },
+            { label: 'Technology', value: 'Trenchless Solutions' },
+            { label: 'Pipe Diameters', value: 'Varied Sizes' },
+        ],
+        testimonial: null,
+    },
+];

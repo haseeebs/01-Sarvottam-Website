@@ -1,5 +1,4 @@
 import React from 'react';
-import ServicePageHero from '@/components/sections/otherservicepage/ServicePageHero';
 import SupportServicesGrid from '@/components/sections/otherservicepage/SupportServicesGrid';
 import IntegratedApproach from '@/components/sections/otherservicepage/IntegratedApproach';
 import CoreServicesLink from '@/components/sections/otherservicepage/CoreServicesLink';
