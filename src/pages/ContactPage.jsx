@@ -16,8 +16,8 @@ const pageData = {
       "Let's build the future together. Whether you require a detailed quote, a technical consultation for an upcoming tender, or wish to explore a partnership, our team is ready to assist. Reach out to us to leverage our 15 years of experience in underground pipeline, crossing, and trenchless technology services for your project's success.",
     contactInfo: [
       {
-        type: 'Address',
-        value: 'Sarvottam Enterprises, Office Address, City, State, PIN',
+        type: 'Phone',
+        value: '+91-7974636790',
       },
       {
         type: 'Phone',

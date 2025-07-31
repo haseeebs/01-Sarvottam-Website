@@ -1,7 +1,23 @@
 import React from 'react';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
+import { MapPin, Phone, Mail, Loader2, CheckCircle, Send } from 'lucide-react';
 
+import { Button } from '@/components/ui/Button';
+import { Input } from '@/components/ui/input'; // Assuming these are also styled with your theme
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+
+// The main component
 const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
+  const [state, handleSubmit] = useForm('YOUR_FORM_ID_HERE');
+
   const serviceOptions = [
     'General Inquiry',
     'Crossing Services',
@@ -12,50 +28,57 @@ const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
   ];
 
   const iconMap = {
-    Address: (
-      <MapPin
-        className='mt-1 h-6 w-6 flex-shrink-0 text-amber-500'
-        aria-hidden='true'
-      />
-    ),
-    Phone: (
-      <Phone
-        className='mt-1 h-6 w-6 flex-shrink-0 text-amber-500'
-        aria-hidden='true'
-      />
-    ),
-    Email: (
-      <Mail
-        className='mt-1 h-6 w-6 flex-shrink-0 text-amber-500'
-        aria-hidden='true'
-      />
-    ),
+    // ✨ Icons now inherit color, but we can keep accent for emphasis
+    Address: <MapPin className='text-my-accent size-6' aria-hidden='true' />,
+    Phone: <Phone className='text-my-accent size-6' aria-hidden='true' />,
+    Email: <Mail className='text-my-accent size-6' aria-hidden='true' />,
   };
 
+  // --- ✨ UX ENHANCEMENT: On-Brand Success State ---
+  // A more visually pleasing and branded success message.
+  if (state.succeeded) {
+    return (
+      <div className='bg-my-secondary/10 font-body flex min-h-[600px] flex-col items-center justify-center rounded-lg p-12 text-center'>
+        <CheckCircle className='text-my-accent mb-4 size-16' />
+        <h3 className='font-display text-my-primary text-3xl font-bold'>
+          Thank You!
+        </h3>
+        <p className='text-my-secondary mt-2 max-w-md text-lg'>
+          Your message has been sent successfully. We appreciate you reaching
+          out and will be in touch shortly.
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <section id='contact' className='bg-white py-16 sm:py-24'>
-      <div className='container mx-auto px-4'>
-        <div className='grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-2'>
-          {/* Info Column: Appears first on mobile, second (right) on desktop */}
-          <div className='order-1 lg:order-2'>
-            <h3 className='text-3xl font-bold tracking-tight text-gray-900'>
+    // ✨ Applied body font to the entire section for consistency
+    <section
+      id='contact'
+      className='bg-background font-body w-full overflow-hidden'
+    >
+      <div className='relative lg:grid lg:grid-cols-2'>
+        {/* --- ✨ Left Column: Strong Brand Presence --- */}
+        <div className='bg-my-primary px-6 py-16 text-white sm:px-10 lg:px-12'>
+          <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg'>
+            <h2 className='font-display text-my-accent text-3xl font-bold tracking-tight'>
               {title}
-            </h3>
-            <p className='mt-6 text-lg leading-7 text-gray-600'>{bodyText}</p>
-            <dl className='mt-10 space-y-6 text-base leading-7 text-gray-600'>
+            </h2>
+            {/* ✨ Used a lighter, more readable text color on the dark background */}
+            <p className='text-my-secondary/80 mt-6 text-lg leading-8'>
+              {bodyText}
+            </p>
+            <dl className='mt-10 space-y-8 text-base leading-7 text-slate-100'>
               {contactInfo.map((item) => (
-                <div key={item.type} className='flex gap-x-4'>
+                // ✅ FIX: Use a unique value like item.value for the key
+                <div key={item.value} className='flex gap-x-4'>
                   <dt className='flex-none'>
                     <span className='sr-only'>{item.type}</span>
                     {iconMap[item.type]}
                   </dt>
-                  <dd className='text-gray-800'>
+                  <dd>
                     <a
-                      className={
-                        item.type === 'Email' || item.type === 'Phone'
-                          ? 'hover:text-amber-600'
-                          : ''
-                      }
+                      className='hover:text-my-accent focus:ring-my-accent focus:ring-offset-my-primary font-semibold transition-colors focus:ring-2 focus:ring-offset-4 focus:outline-none'
                       href={
                         item.type === 'Email'
                           ? `mailto:${item.value}`
@@ -71,122 +94,129 @@ const ContactFormAndDetails = ({ title, bodyText, contactInfo }) => {
               ))}
             </dl>
           </div>
+        </div>
 
-          {/* Form Column: Appears second on mobile, first (left) on desktop */}
-          <div className='order-2 lg:order-1'>
-            <form action='#' method='POST' className='space-y-6'>
+        {/* --- ✨ Right Column: Clean & Functional Form --- */}
+        <div className='px-6 py-16 sm:px-10 lg:px-12'>
+          <div className='mx-auto max-w-xl lg:mx-0 lg:max-w-lg'>
+            <h3 className='font-display text-my-primary text-2xl font-bold tracking-tight'>
+              Send us a Message
+            </h3>
+            <form onSubmit={handleSubmit} className='mt-8 space-y-6'>
               <div className='grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2'>
-                <div>
-                  <label
+                {/* ✨ Applied theme fonts and colors to all form fields */}
+                <div className='space-y-2'>
+                  <Label
                     htmlFor='name'
-                    className='block text-sm leading-6 font-bold text-gray-900'
+                    className='text-my-primary/90 font-semibold'
                   >
                     Name
-                  </label>
-                  <div className='mt-2.5'>
-                    <input
-                      type='text'
-                      name='name'
-                      id='name'
-                      autoComplete='name'
-                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
-                    />
-                  </div>
+                  </Label>
+                  <Input id='name' type='text' name='name' required />
+                  <ValidationError
+                    prefix='Name'
+                    field='name'
+                    errors={state.errors}
+                    className='text-destructive text-sm font-medium'
+                  />
                 </div>
-                <div>
-                  <label
+                <div className='space-y-2'>
+                  <Label
                     htmlFor='company'
-                    className='block text-sm leading-6 font-bold text-gray-900'
+                    className='text-my-primary/90 font-semibold'
                   >
                     Company
-                  </label>
-                  <div className='mt-2.5'>
-                    <input
-                      type='text'
-                      name='company'
-                      id='company'
-                      autoComplete='organization'
-                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
-                    />
-                  </div>
+                  </Label>
+                  <Input id='company' type='text' name='company' />
                 </div>
-                <div>
-                  <label
+                <div className='space-y-2'>
+                  <Label
                     htmlFor='email'
-                    className='block text-sm leading-6 font-bold text-gray-900'
+                    className='text-my-primary/90 font-semibold'
                   >
                     Email
-                  </label>
-                  <div className='mt-2.5'>
-                    <input
-                      type='email'
-                      name='email'
-                      id='email'
-                      autoComplete='email'
-                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
-                    />
-                  </div>
+                  </Label>
+                  <Input id='email' type='email' name='email' required />
+                  <ValidationError
+                    prefix='Email'
+                    field='email'
+                    errors={state.errors}
+                    className='text-destructive text-sm font-medium'
+                  />
                 </div>
-                <div>
-                  <label
+                <div className='space-y-2'>
+                  <Label
                     htmlFor='phone'
-                    className='block text-sm leading-6 font-bold text-gray-900'
+                    className='text-my-primary/90 font-semibold'
                   >
                     Phone
-                  </label>
-                  <div className='mt-2.5'>
-                    <input
-                      type='tel'
-                      name='phone'
-                      id='phone'
-                      autoComplete='tel'
-                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
-                    />
-                  </div>
+                  </Label>
+                  <Input id='phone' type='tel' name='phone' />
+                  <ValidationError
+                    prefix='Phone'
+                    field='phone'
+                    errors={state.errors}
+                    className='text-destructive text-sm font-medium'
+                  />
                 </div>
-                <div className='sm:col-span-2'>
-                  <label
+                <div className='space-y-2 sm:col-span-2'>
+                  <Label
                     htmlFor='service-of-interest'
-                    className='block text-sm leading-6 font-bold text-gray-900'
+                    className='text-my-primary/90 font-semibold'
                   >
                     Service of Interest
-                  </label>
-                  <div className='mt-2.5'>
-                    <select
-                      id='service-of-interest'
-                      name='service-of-interest'
-                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
-                    >
+                  </Label>
+                  <Select name='service-of-interest'>
+                    <SelectTrigger id='service-of-interest'>
+                      <SelectValue placeholder='Select a service' />
+                    </SelectTrigger>
+                    <SelectContent>
                       {serviceOptions.map((option) => (
-                        <option key={option}>{option}</option>
+                        <SelectItem key={option} value={option}>
+                          {option}
+                        </SelectItem>
                       ))}
-                    </select>
-                  </div>
+                    </SelectContent>
+                  </Select>
                 </div>
-                <div className='sm:col-span-2'>
-                  <label
+                <div className='sm:col--span-2 space-y-2'>
+                  <Label
                     htmlFor='message'
-                    className='block text-sm leading-6 font-bold text-gray-900'
+                    className='text-my-primary/90 font-semibold'
                   >
                     Message
-                  </label>
-                  <div className='mt-2.5'>
-                    <textarea
-                      name='message'
-                      id='message'
-                      rows='4'
-                      className='block w-full rounded-sm border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-slate-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-amber-500 focus:ring-inset sm:text-sm sm:leading-6'
-                    ></textarea>
-                  </div>
+                  </Label>
+                  <Textarea id='message' name='message' rows={4} required />
+                  <ValidationError
+                    prefix='Message'
+                    field='message'
+                    errors={state.errors}
+                    className='text-destructive text-sm font-medium'
+                  />
                 </div>
               </div>
+
+              {/* --- ✨ CTA Button: The Star of the Show --- */}
               <div className='mt-8'>
-                <button
+                <Button
                   type='submit'
-                  className='text-my-primary w-full rounded-sm bg-amber-500 px-3.5 py-3 text-center text-base font-bold shadow-sm transition-colors duration-200 hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600'
+                  variant='primary' // ✨ Using our new, high-impact variant
+                  size='lg' // ✨ Larger size for more presence
+                  disabled={state.submitting}
+                  className='w-full font-bold'
                 >
-                  Send Inquiry
-                </button>
+                  {state.submitting ? (
+                    <>
+                      <Loader2 className='animate-spin' />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <Send />
+                    </>
+                  )}
+                </Button>
               </div>
             </form>
           </div>

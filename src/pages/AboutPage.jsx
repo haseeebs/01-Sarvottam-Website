@@ -29,7 +29,7 @@ const AboutPage = () => {
         buttonText='Request a Quote'
         buttonLink='#'
         description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.'
-        buttonStyle='solid-accent'
+        buttonVariant='primary'
         imgUrl={TeamImg}
       />
     </>

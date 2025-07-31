@@ -30,7 +30,7 @@ const ServiceSection = ({ services }) => {
                 // Apply button styles directly to the Link component
                 // We use the 'outline' variant and override some layout properties
                 className={cn(
-                  buttonVariants({ variant: 'outline' }),
+                  buttonVariants({ variant: 'outline-primary' }),
                   'group h-auto flex-col items-stretch justify-start overflow-hidden p-0',
                 )}
               >

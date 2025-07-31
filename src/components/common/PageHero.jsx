@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { cva } from 'class-variance-authority';
 import { twMerge } from 'tailwind-merge';
+import { Button } from '../ui/Button';
 
 // Hero component ke variants
 const heroVariants = cva(
@@ -15,26 +16,6 @@ const heroVariants = cva(
       style: {
         'split-screen': 'grid md:grid-cols-2 gap-8 items-center',
         // Hum image position ko JSX mein handle karenge
-      },
-    },
-    defaultVariants: {
-      intent: 'light',
-    },
-  },
-);
-
-// Button ke liye alag CVA
-const buttonVariants = cva(
-  'inline-block rounded-sm px-10 py-3 text-base font-semibold shadow-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
-  {
-    variants: {
-      intent: {
-        light:
-          'bg-my-accent text-my-primary hover:bg-amber-300 focus-visible:outline-amber-400',
-        light:
-          'bg-my-accent text-my-primary hover:bg-amber-300 focus-visible:outline-amber-400',
-        dark: 'bg-my-accent text-my-primary hover:bg-amber-300 focus-visible:outline-amber-400',
-        // 'accent' variant yahan se hata diya gaya hai
       },
     },
     defaultVariants: {
@@ -99,9 +80,10 @@ const PageHero = ({
 
             {cta && (
               <div className='mt-10'>
-                <Link to={ctaLink} className={buttonVariants({ intent })}>
-                  {cta}
-                </Link>
+                {/* Change the variant here to use a different button style */}
+                <Button variant={'primary'} size={'lg'} asChild>
+                  <Link to={ctaLink}>{cta}</Link>
+                </Button>
               </div>
             )}
           </div>

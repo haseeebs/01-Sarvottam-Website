@@ -72,33 +72,6 @@ const serviceProcessData = {
   ],
 };
 
-const projectsData = {
-  title: 'See Our Services in Action',
-  projects: [
-    {
-      id: 1,
-      imgSrc:
-        'https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      projectName: 'NH-48 Underpass, Gurgaon',
-      serviceType: 'Box Pushing',
-    },
-    {
-      id: 2,
-      imgSrc:
-        'https://images.pexels.com/photos/834607/pexels-photo-834607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      projectName: 'City Metro Line Crossing, Delhi',
-      serviceType: 'Auger Boring',
-    },
-    {
-      id: 3,
-      imgSrc:
-        'https://images.pexels.com/photos/433333/pexels-photo-433333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      projectName: 'Riverbed Gas Pipeline, Yamuna',
-      serviceType: 'Horizontal Directional Drilling',
-    },
-  ],
-};
-
 const ServicePage = () => {
   return (
     <div>
@@ -160,9 +133,12 @@ const ServicePage = () => {
 
       {/* Past Projects Show karna */}
       <CTA
-        title='Ready to Discuss Your Technical Requirements?'
+        variant='inline'
+        title="Let's Build the Future, Together."
         buttonText='Request a Quote'
-        buttonLink='/contact'
+        buttonLink='#'
+        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.'
+        buttonVariant='primary'
       />
     </div>
   );

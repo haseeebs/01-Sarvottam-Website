@@ -1,6 +1,5 @@
 import React from 'react';
 import HomepageHero from '@/components/sections/homepage/HomepageHeroSection';
-import ProjectsShowcaseSection from '@/components/sections/homepage/ProjectsShowcaseSection';
 import ValuePropositionSection from '@/components/sections/homepage/ValuePropositionSection';
 import heroImage1 from '@/assets/images/Hero-image-2.jpg';
 import boxpushingImg from '@/assets/images/Box-pushing.jpg';
@@ -9,6 +8,7 @@ import CTA from '@/components/common/CTA';
 import ClientLogosNew from '@/components/common/ClientLogos';
 import ServiceSection from '@/components/common/ServiceSection';
 import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
+import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
 
 const services = [
   {
@@ -48,14 +48,14 @@ const HomePage = () => {
       <ExpertiseHighlights />
 
       <ValuePropositionSection />
-      <ProjectsShowcaseSection />
+      <ProjectShowcaseSection />
       <CTA
         variant='image-left'
         title='Ready to Discuss Your Next Infrastructure Challenge?'
         description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.'
         buttonText='Request a Quote'
         buttonLink='/contact?subject=QuoteRequest'
-        buttonStyle='solid-accent'
+        buttonVariant='primary'
       />
     </>
   );
