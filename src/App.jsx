@@ -12,7 +12,7 @@ import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 // Service Page Components
-import CrossingPage from './pages/services/CrossingPage';
+import HDDPage from './pages/services/HDDPage';
 import PushingJackingPage from './pages/services/PushingJackingPage';
 import BoringPage from './pages/services/BoringPage';
 
@@ -50,8 +50,8 @@ const router = createBrowserRouter([
         path: 'services',
         children: [
           {
-            path: 'pipeline-crossing',
-            element: <CrossingPage />,
+            path: 'hdd',
+            element: <HDDPage />,
           },
           {
             path: 'pushing-jacking',

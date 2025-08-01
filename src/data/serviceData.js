@@ -1,5 +1,6 @@
 import {
-    Route, // for Crossings
+    GitMerge, // for HDD paths
+    Milestone, // for HDD precision
     Layers, // for Multi-utility pipelines
     Box, // for Box Pushing
     Unplug, // for Pipe Jacking (metaphor for connecting)
@@ -7,21 +8,21 @@ import {
     Hammer, // for Pipe Ramming
 } from 'lucide-react';
 
-const crossingContent = {
+const hddContent = {
     service1: {
-        title: 'Seamless Railway & Highway Crossings',
+        title: 'Steerable, Long-Distance Crossings',
         description:
-            'We specialize in the critical task of installing infrastructure beneath active railways and highways. Our trenchless methodology ensures zero disruption to surface traffic and operations, allowing for the precision installation of robust casing pipes while maintaining complete structural integrity.',
-        Icon: Route, // Icon yahan add kiya
+            'HDD is the premier solution for installing pipelines over long distances and complex paths. Our advanced guidance systems allow us to navigate beneath rivers, congested urban areas, and environmentally sensitive zones with surgical precision.',
+        Icon: GitMerge,
     },
     service2: {
-        title: 'Multi-Utility Pipeline Installation',
+        title: 'Minimal Surface & Environmental Impact',
         description:
-            'From critical water mains and vital sewer lines to high-pressure gas conduits, every crossing is executed to the highest standards of safety and technical compliance. The result is a secure, durable underground network engineered for long-term performance and reliability.',
-        Icon: Layers, // Icon yahan add kiya
+            'The key advantage of HDD is its minimal footprint. With only small entry and exit points, we preserve landscapes, avoid traffic disruption, and significantly reduce restoration costs, making it the ideal choice for high-stakes projects.',
+        Icon: Milestone,
     },
     imageSrc:
-        'https://images.unsplash.com/photo-1593349122524-7446587c69da?q=80&w=2070&auto=format&fit=crop', // Relevant image for crossings
+        'https://images.unsplash.com/photo-1629930784483-53d712a833a6?q=80&w=2940&auto=format&fit=crop', // Relevant image for HDD
 };
 
 const boxpushingContent = {
@@ -58,4 +59,4 @@ const boringContent = {
         'https://images.unsplash.com/photo-1619463261749-51d2047a5137?q=80&w=2940&auto=format&fit=crop', // Relevant image for boring
 };
 
-export { crossingContent, boxpushingContent, boringContent };
+export { hddContent, boxpushingContent, boringContent };

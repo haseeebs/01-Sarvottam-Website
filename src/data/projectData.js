@@ -2,7 +2,7 @@ export const allProjects = [
     {
         id: 1,
         isFeatured: true,
-        category: 'Crossing',
+        category: 'Pushing & Jacking',
         subCategory: 'Multi-Terrain Water Supply',
         title: 'L&T Lift Irrigation (Kundaliya)',
         location: 'Rajgarh, Madhya Pradesh',
@@ -68,7 +68,7 @@ export const allProjects = [
     {
         id: 4,
         isFeatured: false,
-        category: 'Boring',
+        category: 'HDD', // Changed to be more specific
         subCategory: 'Horizontal Directional Drilling (HDD)',
         title: 'Mohanpura LBS Pipeline Project',
         location: 'Mohanpura, Madhya Pradesh',
@@ -89,7 +89,7 @@ export const allProjects = [
     {
         id: 5,
         isFeatured: true,
-        category: 'Crossing',
+        category: 'Pushing & Jacking',
         subCategory: 'Trenchless Technology',
         title: 'Parwati + Shipralink Project',
         location: 'Madhya Pradesh',
@@ -106,20 +106,38 @@ export const allProjects = [
         ],
         testimonial: null,
     },
+    {
+        id: 6,
+        isFeatured: false,
+        category: 'Auger Boring',
+        subCategory: 'Urban Utility Installation',
+        title: 'City Gas Distribution Network',
+        location: 'Bhopal, Madhya Pradesh',
+        client: 'Local Gas Authority',
+        challenge: 'Installing steel casing pipes for a gas distribution network in a congested urban area without disrupting traffic.',
+        solution: 'Utilized precision auger boring to accurately install pipes under busy roads, completing the project ahead of schedule with minimal surface impact.',
+        imageSrc: 'https://images.unsplash.com/photo-1619463261749-51d2047a5137?q=80&w=2940&auto=format&fit=crop',
+        keyStats: [
+            { label: 'Technology', value: 'Auger Boring' },
+            { label: 'Infrastructure', value: 'Urban Roads' },
+        ],
+        testimonial: null,
+    },
 ];
 
 import boxpushingImg from '@/assets/images/Box-pushing.jpg';
 import augerboringImg from '@/assets/images/Auger-boring.jpg';
-import pipelineImg from '@/assets/images/NormalImg-1.jpg';
+// -import pipelineImg from '@/assets/images/NormalImg-1.jpg';
+import hddImg from '@/assets/images/Hero-image-2.jpg';
 
 export const services = [
     {
-        title: 'Tunnel & Pipeline Crossing',
-        link: '/services/pipeline-crossing',
-        imgSrc: pipelineImg,
-        imgAlt: 'Specialized equipment for tunnel and pipeline crossing.',
+        title: 'Horizontal Directional Drilling (HDD)',
+        link: '/services/hdd',
+        imgSrc: hddImg,
+        imgAlt: 'Horizontal Directional Drilling rig in action for a major project.',
         description:
-            'We install tunnel and pipeline crossings beneath active railways and highways using advanced trenchless methods. This approach guarantees minimal surface disruption, ensuring your critical infrastructure remains fully operational.',
+            'For long-distance crossings under rivers, highways, or sensitive areas, our HDD service provides a steerable, trenchless solution with pinpoint accuracy and minimal environmental impact.',
     },
     {
         title: 'Box Pushing & Pipe Jacking',
@@ -130,11 +148,12 @@ export const services = [
             'We construct underground underpasses (RUBs) and culverts with precision-guided box pushing and pipe jacking. This method accelerates project completion and enhances site safety by eliminating the need for open-cut excavation.',
     },
     {
-        title: 'Precision Boring Services',
+        title: 'Auger Boring',
         link: '/services/auger-boring',
         imgSrc: augerboringImg,
         imgAlt: 'Auger boring machine for precision underground services.',
         description:
-            'Install utility conduits for water, sewer, and cables with pinpoint accuracy using advanced auger and horizontal boring. Our trenchless approach is ideal for difficult ground, minimizing environmental impact and restoration costs.',
+            'Ideal for straight-line utility installations of steel casing pipes under roads and railways. Our auger boring method is a reliable and cost-effective trenchless solution for various ground conditions.',
     },
 ];
+// --- END OF FILE src/data/projectData.js ---

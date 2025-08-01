@@ -5,11 +5,14 @@ export const primaryNav = [
         path: '#',
         dropdown: [
             {
-                name: 'Tunnel & Pipeline Crossing',
-                path: '/services/pipeline-crossing',
+                name: 'Horizontal Directional Drilling',
+                path: '/services/hdd',
             },
-            { name: 'Box Pushing & Pipe Jacking', path: '/services/pushing-jacking' },
             { name: 'Auger Boring', path: '/services/auger-boring' },
+            {
+                name: 'Box Pushing & Pipe Jacking',
+                path: '/services/pushing-jacking'
+            },
         ],
     },
     { name: 'Projects', path: '/projects' },
@@ -26,11 +29,14 @@ export const footerNav = {
     ],
     services: [
         {
-            name: 'Tunnel & Pipeline Crossing',
-            path: '/services/pipeline-crossing',
+            name: 'Horizontal Directional Drilling (HDD)',
+            path: '/services/hdd',
         },
-        { name: 'Box Pushing & Pipe Jacking', path: '/services/pushing-jacking' },
         { name: 'Auger Boring', path: '/services/auger-boring' },
+        {
+            name: 'Box Pushing & Pipe Jacking',
+            path: '/services/pushing-jacking'
+        },
     ],
     contact: {
         email: 'sarvottamenterprisesjackpush@gmail.com',

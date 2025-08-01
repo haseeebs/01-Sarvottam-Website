@@ -51,7 +51,7 @@ const ServiceBreakdown = ({
           </div>
 
           {/* Image Column */}
-          <div className='order-first md:order-last'>
+          <div className='border-my-primary order-first rounded-md border-2 md:order-last'>
             <img
               src={imageSrc}
               alt={
