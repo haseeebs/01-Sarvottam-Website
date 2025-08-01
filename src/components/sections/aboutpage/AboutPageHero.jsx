@@ -9,7 +9,7 @@ const AboutPageHero = ({ content, imageUrl, imageAlt }) => {
 
   return (
     <section className='relative'>
-      <div className='mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8'>
+      <div className='mx-auto min-h-screen max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8'>
         <div className='px-6 pt-10 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 lg:pt-12 lg:pb-20 xl:col-span-6'>
           <div className='mx-auto max-w-lg text-center md:mx-0 md:text-left'>
             <h1 className='font-display text-my-primary text-4xl font-bold sm:text-[42px] sm:leading-tight'>
@@ -17,7 +17,12 @@ const AboutPageHero = ({ content, imageUrl, imageAlt }) => {
             </h1>
 
             <p className='font-family-body text-my-primary mt-6 text-lg leading-relaxed'>
-              {content.body}
+              ...our skilled and experienced team is adept at navigating the
+              complexities of government tenders and{' '}
+              <Link to='/projects' className='font-bold hover:underline'>
+                <i>delivering results</i>
+              </Link>{' '}
+              that meet the highest standards of quality and safety.
             </p>
 
             <div className='mt-8 flex justify-center md:justify-start'>

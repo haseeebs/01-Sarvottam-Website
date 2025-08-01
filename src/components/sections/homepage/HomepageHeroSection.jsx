@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/Button';
 
 const HomepageHero = ({ children, body, cta, imageSrc, imageAlt }) => {
   return (
-    <div className='bg-my-primary relative'>
+    <div className='bg-my-primary relative min-h-screen'>
       <div className='mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8'>
         <div className='px-6 pt-10 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 lg:pt-12 lg:pb-20 xl:col-span-6'>
           <div className='mx-auto max-w-lg lg:mx-0'>
