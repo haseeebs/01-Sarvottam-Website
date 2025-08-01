@@ -87,6 +87,13 @@ const pageData = {
         imageUrl:
           'https://images.unsplash.com/photo-1621992300039-f9c381f1816f?q=80&w=2940&auto=format&fit=crop',
       },
+      {
+        id: 10, // Unique ID
+        name: 'Hydraulic Rock Splitter',
+        category: 'Excavation & Breakers',
+        imageUrl:
+          'https://images.unsplash.com/photo-1599303217595-3004b901615f?q=80&w=1974&auto=format&fit=crop', // Placeholder - aap isko a-one image se badal sakte hain
+      },
     ],
   },
   advantages: {

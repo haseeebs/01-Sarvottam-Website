@@ -4,7 +4,7 @@ export const allProjects = [
         isFeatured: true,
         category: 'Crossing',
         subCategory: 'Multi-Terrain Water Supply',
-        title: 'L&T Narmada Kshipra Link Project (Kundaliya)',
+        title: 'L&T Lift Irrigation (Kundaliya)',
         location: 'Rajgarh, Madhya Pradesh',
         client: 'Larsen & Toubro (L&T)',
         challenge:
@@ -12,9 +12,9 @@ export const allProjects = [
         solution:
             'We deployed multiple methods suited for each challenge, including crane-assisted placement and trenchless pipe pushing. Our ability to handle diverse DI and MS pipes met the stringent quality standards of L&T.',
         imageSrc:
-            'https://images.unsplash.com/photo-1593349122524-7446587c69da?q=80&w=2070&auto=format&fit=crop', // Placeholder
+            'https://images.unsplash.com/photo-1593349122524-7446587c69da?q=80&w=2070&auto=format&fit=crop',
         keyStats: [
-            { label: 'Pipe Diameters', value: '150mm to 1600mm' },
+            { label: 'Pipe Diameters', value: '600mm and above' },
             { label: 'Terrain Handled', value: 'Hard Rock & Mixed Soil' },
             { label: 'Technology', value: 'Trenchless + Open Cut' },
         ],
@@ -39,7 +39,7 @@ export const allProjects = [
         imageSrc:
             'https://images.unsplash.com/photo-1519408436233-34502b183a26?q=80&w=2070&auto=format&fit=crop', // Placeholder
         keyStats: [
-            { label: 'Pipe Diameters', value: '600mm to 3900mm' },
+            { label: 'Pipe Diameters', value: '600mm and above' },
             { label: 'Technology', value: 'Jacking & Pushing' },
             { label: 'Infrastructure', value: 'NH & SH Crossings' },
         ],

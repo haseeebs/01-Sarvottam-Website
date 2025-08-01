@@ -51,7 +51,7 @@ const EquipmentGallery = ({ title, categories = [], equipment = [] }) => {
               // Updates the active category on click.
               onClick={() => setActiveCategory(category)}
               // Applies conditional styling for the active button.
-              className={`font-body rounded-full px-4 py-2 text-sm font-bold transition-colors duration-300 sm:text-base ${
+              className={`font-body cursor-pointer rounded-sm px-4 py-2 text-sm font-bold transition-colors duration-300 sm:text-base ${
                 activeCategory === category
                   ? 'bg-my-primary text-white shadow-md'
                   : 'bg-gray-100 text-gray-800 hover:bg-gray-200'

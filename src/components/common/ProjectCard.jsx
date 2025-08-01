@@ -5,7 +5,7 @@ import { MapPin, Building2, Quote, Star } from 'lucide-react';
 
 const ProjectCard = ({ project }) => {
   return (
-    <Card className='overflow-hidden transition-shadow duration-300 hover:shadow-lg'>
+    <Card className='border-my-primary overflow-hidden rounded-md border-2 transition-shadow duration-300 hover:shadow-lg'>
       <div className='relative'>
         <img
           src={project.imageSrc || '/placeholder.svg'}
@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => {
           className='h-48 w-full object-cover'
         />
         {project.isFeatured && (
-          <Badge className='absolute top-3 left-3 bg-orange-500 hover:bg-orange-600'>
+          <Badge className='bg-my-accent/90 hover:bg-my-accent absolute top-3 left-3 cursor-pointer'>
             <Star className='mr-1 h-3 w-3' />
             Featured
           </Badge>
@@ -85,7 +85,7 @@ const ProjectCard = ({ project }) => {
         )}
 
         {project.testimonial && project.testimonial.quote && (
-          <div className='rounded-lg bg-gray-50 p-3'>
+          <div className='bg-my-secondary/20 rounded-sm p-3'>
             <div className='flex items-start gap-2'>
               <Quote className='mt-1 h-4 w-4 flex-shrink-0 text-gray-400' />
               <div>
