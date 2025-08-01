@@ -17,6 +17,7 @@ const PushingJackingPage = () => {
     headline: 'Advanced Pipe Jacking & Box Pushing Contractors',
     body: 'Our pushing and jacking services are engineered for projects requiring heavy-duty underground passage. We specialize in Box Pushing (RCC/Precast) for creating railway underbridges and pedestrian subways, alongside Pipe Pushing and Jacking for large-diameter water and sewer pipelines. Our experienced team and powerful machinery ensure precise execution for even the most demanding projects.',
     cta: 'Plan Your Pushing & Jacking Project',
+    ctaLink: '/contact?subject=PushingJackingProject',
   };
 
   // Data for ServiceBreakdown
@@ -32,7 +33,7 @@ const PushingJackingPage = () => {
         'A trenchless method for installing large-diameter pipelines for water, sewage, or utility conduits. This technique minimizes environmental impact and is perfect for crossing roads, railways, and other sensitive areas without open-cut excavation.',
     },
     imageSrc:
-      'https://placehold.co/800x800/e2e8f0/334155?text=Technical+Schematic',
+      'https://images.unsplash.com/photo-1599303217595-3004b901615f?q=80&w=1974&auto=format&fit=crop',
   };
 
   // Data for KeyBenefits
@@ -64,6 +65,7 @@ const PushingJackingPage = () => {
   const CTAContent = {
     title: 'Ready to Execute a Demanding Project?',
     buttonText: 'Inquire About Pushing & Jacking service',
+    buttonLink: '/contact?subject=PushingJackingInquiry',
   };
 
   return (
@@ -73,6 +75,7 @@ const PushingJackingPage = () => {
         headline={heroContent.headline}
         body={heroContent.body}
         cta={heroContent.cta}
+        ctaLink={heroContent.ctaLink}
       />
       <ServiceBreakdown
         service1={serviceBreakdownContent.service1}
@@ -87,7 +90,11 @@ const PushingJackingPage = () => {
         title={'Pushing & Jacking Projects in Action'}
         projects={pushingJackingProjects}
       />
-      <CTA title={CTAContent.title} buttonText={CTAContent.buttonText} />
+      <CTA
+        title={CTAContent.title}
+        buttonText={CTAContent.buttonText}
+        buttonLink={CTAContent.buttonLink}
+      />
     </div>
   );
 };

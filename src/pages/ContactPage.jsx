@@ -9,23 +9,24 @@ const pageData = {
     headline: 'Contact Our Experts to Discuss Your Next Project',
     body: "Let's build the future together. Whether you require a detailed quote, a technical consultation for an upcoming tender, or wish to explore a partnership, our team is ready to assist. Reach out to us to leverage our 15 years of experience in underground pipeline, crossing, and trenchless technology services for your project's success.",
     cta: 'Request a Quote Today',
+    ctaLink: '#contact',
   },
   formAndDetails: {
-    title: "Let's Build the Future Together",
+    title: 'Get In Touch',
     bodyText:
-      "Let's build the future together. Whether you require a detailed quote, a technical consultation for an upcoming tender, or wish to explore a partnership, our team is ready to assist. Reach out to us to leverage our 15 years of experience in underground pipeline, crossing, and trenchless technology services for your project's success.",
+      "We're here to help and answer any question you might have. We look forward to hearing from you.",
     contactInfo: [
       {
         type: 'Phone',
-        value: '+91-7974636790',
+        value: '+91 777 180 6888',
       },
       {
         type: 'Phone',
-        value: '+91-9876543210',
+        value: '+91 79746 36790',
       },
       {
         type: 'Email',
-        value: 'contact@sarvottamenterprises.com',
+        value: 'sarvottamenterprisesjackpush@gmail.com',
       },
     ],
   },
@@ -35,7 +36,7 @@ const pageData = {
       {
         question: 'How do I request a detailed quote?',
         answer:
-          'Please fill out the contact form with your project details, including scope, location, and any technical documents. Our team will review it and get back to you promptly.',
+          'Please fill out the contact form with your project details, including scope, location, and any technical documents. Our team will review it and get back to you promptly. You can also connect with us on WhatsApp for a faster response.',
       },
       {
         question: 'Do you offer technical consultations for tenders?',
@@ -55,9 +56,11 @@ const ContactPage = () => {
   return (
     <div>
       <PageHero
+        intent='light'
         headline={pageData.hero.headline}
         body={pageData.hero.body}
         cta={pageData.hero.cta}
+        ctaLink={pageData.hero.ctaLink}
       />
       <ContactFormAndDetails
         title={pageData.formAndDetails.title}

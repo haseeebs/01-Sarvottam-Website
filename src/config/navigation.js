@@ -3,9 +3,11 @@ export const primaryNav = [
     {
         name: 'Services',
         path: '#',
-
         dropdown: [
-            { name: 'Tunnel & Pipeline Crossing', path: '/services/pipeline-crossing' },
+            {
+                name: 'Tunnel & Pipeline Crossing',
+                path: '/services/pipeline-crossing',
+            },
             { name: 'Box Pushing & Pipe Jacking', path: '/services/pushing-jacking' },
             { name: 'Auger Boring', path: '/services/auger-boring' },
         ],
@@ -23,7 +25,10 @@ export const footerNav = {
         { name: 'Our Equipment', path: '/equipment' },
     ],
     services: [
-        { name: 'Tunnel & Pipeline Crossing', path: '/services/pipeline-crossing' },
+        {
+            name: 'Tunnel & Pipeline Crossing',
+            path: '/services/pipeline-crossing',
+        },
         { name: 'Box Pushing & Pipe Jacking', path: '/services/pushing-jacking' },
         { name: 'Auger Boring', path: '/services/auger-boring' },
     ],

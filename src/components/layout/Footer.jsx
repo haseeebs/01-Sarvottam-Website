@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { footerNav } from '@/config/navigation';
+import Logo from '@/assets/images/Logo.webp';
 
 const Footer = () => {
   return (
@@ -8,9 +9,13 @@ const Footer = () => {
       <div className='mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32'>
         <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
           <div className='space-y-8'>
-            <h2 className='font-family-body text-3xl font-bold text-white'>
-              Sarvottam
-            </h2>
+            <Link to='/'>
+              <img
+                className='h-16 w-auto'
+                src={Logo}
+                alt='Sarvottam Enterprises Logo'
+              />
+            </Link>
             <p className='text-my-secondary text-sm/6'>
               Pioneering trenchless technology with a foundation of trust and
               determination for over 15 years.

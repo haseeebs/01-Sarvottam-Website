@@ -10,7 +10,9 @@ const pageData = {
   hero: {
     headline:
       'Our State-of-the-Art Fleet: Heavy Machinery for Demanding Projects',
-    body: 'This page is pure proof of our technical strength. List the machinery with key specifications. Frame it not as a simple list, but as "Our Fleet," demonstrating our readiness for any challenge.',
+    body: 'Our robust fleet is the backbone of our operations. We own and maintain a wide range of specialized machinery, ensuring we are prepared for any project challenge, from trenchless boring to heavy-duty pipe jacking.',
+    cta: 'Discuss Your Project Needs',
+    ctaLink: '/contact?subject=EquipmentInquiry',
   },
   gallery: {
     title: 'Our Fleet',
@@ -113,15 +115,19 @@ const pageData = {
   cta: {
     title: 'Have a project that requires our specialized fleet?',
     buttonText: 'Request a Project Consultation',
+    buttonLink: '/contact?subject=FleetConsultation',
   },
 };
 
 const EquipmentPage = () => {
   return (
     <div>
-      {/* NOTE: Child components must be updated to accept these props. */}
-
-      <PageHero headline={pageData.hero.headline} body={pageData.hero.body} />
+      <PageHero
+        headline={pageData.hero.headline}
+        body={pageData.hero.body}
+        cta={pageData.hero.cta}
+        ctaLink={pageData.hero.ctaLink}
+      />
 
       <EquipmentGallery
         title={pageData.gallery.title}
@@ -134,7 +140,11 @@ const EquipmentPage = () => {
         features={pageData.advantages.features}
       />
 
-      <CTA title={pageData.cta.title} buttonText={pageData.cta.buttonText} />
+      <CTA
+        title={pageData.cta.title}
+        buttonText={pageData.cta.buttonText}
+        buttonLink={pageData.cta.buttonLink}
+      />
     </div>
   );
 };

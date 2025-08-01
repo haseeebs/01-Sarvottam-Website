@@ -23,7 +23,7 @@ const NavLink = ({ to, children, hasDropdown, onMouseEnter, onMouseLeave }) => (
   </div>
 );
 
-export default function Header() {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -115,4 +115,6 @@ export default function Header() {
       </div>
     </>
   );
-}
+};
+
+export default Header;

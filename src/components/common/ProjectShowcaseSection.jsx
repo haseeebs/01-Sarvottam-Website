@@ -1,130 +1,94 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Building } from 'lucide-react';
-import { Button } from '../ui/Button';
+import React, { useState, useMemo } from 'react';
+import { Badge } from '@/components/ui/badge';
+import ProjectCard from '@/components/common/ProjectCard';
+import { cn } from '@/lib/utils';
 
-const FallbackDisplay = ({ clientName }) => (
-  <div className='flex h-full min-h-[250px] w-full items-center justify-center rounded-sm bg-slate-200 p-4'>
-    <div className='text-center text-slate-500'>
-      <Building className='mx-auto h-12 w-12' />
-      <p className='mt-2 text-lg font-semibold'>{clientName}</p>
-      {/* <p className="text-xs">Project Image Not Available</p> */}
-    </div>
-  </div>
-);
+/**
+ * A reusable and theme-aligned component to showcase projects.
+ * @param {object} props
+ * @param {string} props.title - The main heading for the section.
+ * @param {string} [props.description] - A subtitle or description.
+ * @param {Array} props.projects - The array of project objects to display.
+ * @param {boolean} [props.showFilters=false] - Whether to display the category filter buttons.
+ * @param {string} [props.className] - Additional classes for the container.
+ */
+const ProjectShowcaseSection = ({
+  title,
+  description,
+  projects = [],
+  showFilters = false,
+  className,
+}) => {
+  // Agar filters dikhane hain, to hum categories nikalenge aur state manage karenge
+  const categories = useMemo(() => {
+    if (!showFilters) return [];
+    // 'All' ko pehle rakhenge, phir unique categories
+    return ['All', ...new Set(projects.map((p) => p.category))];
+  }, [projects, showFilters]);
 
-const ProjectAccordionItem = ({ project, isExpanded, onToggle }) => {
-  return (
-    <div className='overflow-hidden rounded-sm bg-slate-50 shadow-lg'>
-      <div
-        className='grid cursor-pointer grid-cols-1 items-center gap-6 p-6 md:grid-cols-2 md:gap-12'
-        onClick={onToggle}
-      >
-        <div className='w-full'>
-          {project.imageSrc ? (
-            <img
-              src={project.imageSrc}
-              alt={`Image of ${project.title}`}
-              className='aspect-video w-full rounded-sm object-cover shadow-md'
-            />
-          ) : (
-            <FallbackDisplay clientName={project.client} />
-          )}
-        </div>
-        <div className='flex flex-col'>
-          <p className='text-sm font-semibold tracking-wider text-amber-500 uppercase'>
-            {project.subCategory}
-          </p>
-          <h3 className='text-my-primary mt-1 text-2xl font-bold'>
-            {project.title}
-          </h3>
-          <Button variant={'ghost2'} size={'lg'} className='mt-8'>
-            {isExpanded ? 'Hide Details' : 'View Details'}
-            {isExpanded ? (
-              <ChevronUp className='ml-2 h-5 w-5' />
-            ) : (
-              <ChevronDown className='ml-2 h-5 w-5' />
-            )}
-          </Button>
-        </div>
-      </div>
-      {isExpanded && (
-        <div className='px-6 pb-6 md:px-12 md:pb-8'>
-          <div className='space-y-6 border-t border-gray-200 pt-6'>
-            <div>
-              <h4 className='font-bold text-gray-800'>Challenge:</h4>
-              <p className='mt-1 text-base text-gray-600'>
-                {project.challenge}
-              </p>
-            </div>
-            <div>
-              <h4 className='font-bold text-gray-800'>Our Solution:</h4>
-              <p className='mt-1 text-base text-gray-600'>{project.solution}</p>
-            </div>
-            {/* === YAHAN KEYSTATS ADD KIYE GAYE HAIN === */}
-            {project.keyStats && project.keyStats.length > 0 && (
-              <div>
-                <h4 className='font-bold text-gray-800'>Key Project Stats:</h4>
-                <dl className='mt-2 grid grid-cols-2 gap-x-6 gap-y-3'>
-                  {project.keyStats.map((stat) => (
-                    <div
-                      key={stat.label}
-                      className='rounded-sm bg-white p-3 shadow-sm'
-                    >
-                      <dt className='text-sm font-medium text-gray-500'>
-                        {stat.label}
-                      </dt>
-                      <dd className='text-my-primary text-base font-semibold'>
-                        {stat.value}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-            )}
-            {/* ========================================= */}
-            {project.testimonial && (
-              <figure className='border-t border-gray-200 pt-4'>
-                <blockquote className='text-gray-700 italic'>
-                  “{project.testimonial.quote}”
-                </blockquote>
-                <figcaption className='mt-2 text-right text-sm font-semibold text-gray-900'>
-                  — {project.testimonial.author}
-                </figcaption>
-              </figure>
-            )}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
+  const [activeCategory, setActiveCategory] = useState('All');
 
-const ProjectShowcaseSection = ({ title, projects = [] }) => {
-  const [expandedId, setExpandedId] = useState(null);
-  if (!projects || projects.length === 0) return null;
-  const handleToggle = (id) => setExpandedId(expandedId === id ? null : id);
+  // Active category ke hisab se projects filter honge
+  const filteredProjects = useMemo(() => {
+    if (!showFilters || activeCategory === 'All') {
+      return projects;
+    }
+    return projects.filter((project) => project.category === activeCategory);
+  }, [projects, activeCategory, showFilters]);
+
+  // Agar projects hi nahi hain to section render na karein
+  if (!projects || projects.length === 0) {
+    return null;
+  }
 
   return (
-    <section className='bg-white py-16 sm:py-24'>
-      <div className='container mx-auto px-4 md:px-6'>
-        <div className='mb-12 text-center'>
-          <h2 className='text-my-primary text-3xl font-bold tracking-tight sm:text-4xl'>
+    <section className={cn('bg-gray-50 py-16 sm:py-24', className)}>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        {/* Section Header */}
+        <div className='mx-auto max-w-3xl text-center'>
+          <h2 className='font-family-display text-my-primary text-3xl font-bold tracking-tight sm:text-4xl'>
             {title}
           </h2>
-          <p className='mx-auto mt-4 max-w-2xl text-lg text-gray-600'>
-            Explore our landmark projects that demonstrate our deep expertise
-            and commitment to excellence.
-          </p>
+          {description && (
+            <p className='font-family-body text-my-secondary mt-4 text-lg leading-relaxed'>
+              {description}
+            </p>
+          )}
         </div>
-        <div className='space-y-8'>
-          {projects.map((project) => (
-            <ProjectAccordionItem
-              key={project.id}
-              project={project}
-              isExpanded={expandedId === project.id}
-              onToggle={() => handleToggle(project.id)}
-            />
-          ))}
+
+        {/* Filter Controls (sirf agar showFilters true hai) */}
+        {showFilters && categories.length > 1 && (
+          <div className='mt-12 flex flex-wrap items-center justify-center gap-2'>
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={cn(
+                  'font-family-body rounded-sm px-4 py-2 text-sm font-semibold transition-all duration-200',
+                  activeCategory === category
+                    ? 'bg-my-primary text-white shadow-md'
+                    : 'text-my-primary border border-gray-300 bg-white hover:bg-gray-200',
+                )}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Projects Grid */}
+        <div className='mx-auto mt-16 max-w-none'>
+          {filteredProjects.length > 0 ? (
+            <div className='grid grid-cols-1 gap-8'>
+              {filteredProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+          ) : (
+            <div className='text-my-secondary text-center'>
+              <p>No projects found in this category.</p>
+            </div>
+          )}
         </div>
       </div>
     </section>

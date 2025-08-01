@@ -42,10 +42,10 @@ const FleetAdvantages = ({
                 className='flex flex-col items-center text-center lg:items-start lg:text-left'
               >
                 <dt className='flex flex-col items-center gap-y-4'>
-                  <div className='bg-my-primary/50 flex h-12 w-12 items-center justify-center rounded-sm'>
+                  <div className='bg-my-primary flex h-12 w-12 items-center justify-center rounded-sm'>
                     {/* The icon is now dynamically rendered based on the 'icon' property of each feature object */}
                     <feature.icon
-                      className='text-my-accent/90 h-6 w-6'
+                      className='text-my-accent h-6 w-6'
                       aria-hidden='true'
                     />
                   </div>

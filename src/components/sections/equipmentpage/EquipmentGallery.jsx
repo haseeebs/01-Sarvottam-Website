@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 
-const EquipmentCard = ({ name, imageUrl }) => (
+const EquipmentCard = ({ name, imageUrl, category }) => (
   <div className='group relative aspect-[4/3] w-full overflow-hidden rounded-sm shadow-lg'>
     <img
       src={imageUrl}
@@ -9,12 +9,15 @@ const EquipmentCard = ({ name, imageUrl }) => (
       className='h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110'
     />
     <div className='bg-opacity-70 bg-my-primary absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100'>
-      <h3 className='font-body text-xl font-bold text-white'>{name}</h3>
+      <p className='font-body text-my-accent/90 text-sm font-semibold tracking-wider uppercase'>
+        {category}
+      </p>
+      <h3 className='font-body mt-1 text-xl font-bold text-white'>{name}</h3>
       <Link
-        to='#'
-        className='font-body text-my-accent/90 hover:text-my-accent mt-2 text-base transition-colors'
+        to='/contact'
+        className='font-body text-my-accent/90 hover:text-my-accent mt-4 text-base font-bold transition-colors'
       >
-        View Details →
+        Inquire About This Equipment →
       </Link>
     </div>
   </div>
@@ -50,7 +53,7 @@ const EquipmentGallery = ({ title, categories = [], equipment = [] }) => {
               // Applies conditional styling for the active button.
               className={`font-body rounded-full px-4 py-2 text-sm font-bold transition-colors duration-300 sm:text-base ${
                 activeCategory === category
-                  ? 'bg-my-primary/50 text-white shadow-md'
+                  ? 'bg-my-primary text-white shadow-md'
                   : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
               }`}
             >
@@ -66,6 +69,7 @@ const EquipmentGallery = ({ title, categories = [], equipment = [] }) => {
               key={item.id}
               name={item.name}
               imageUrl={item.imageUrl}
+              category={item.category}
             />
           ))}
         </div>

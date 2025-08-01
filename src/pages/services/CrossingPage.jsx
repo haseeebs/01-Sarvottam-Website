@@ -16,6 +16,7 @@ const CrossingPage = () => {
     headline: 'Expert Tunnel & Pipeline Crossing Services',
     body: 'We are premier railway and highway line crossing contractors, specializing in trenchless methods that preserve surface integrity and ensure project timelines. From busy urban corridors to remote terrains, we deliver with precision.',
     cta: 'Get a Quote for Your Crossing Project',
+    ctaLink: '/contact?subject=CrossingProjectQuote',
   };
 
   const keyBenefitsContent = {
@@ -52,6 +53,7 @@ const CrossingPage = () => {
   const CtaContent = {
     title: 'Have a Critical Crossing Project?',
     buttonText: 'Inquire About Crossing service',
+    buttonLink: '/contact?subject=CrossingInquiry',
   };
 
   return (
@@ -61,6 +63,7 @@ const CrossingPage = () => {
         headline={heroContent.headline}
         body={heroContent.body}
         cta={heroContent.cta}
+        ctaLink={heroContent.ctaLink}
       />
       <KeyBenefits
         title={keyBenefitsContent.title}
@@ -70,7 +73,11 @@ const CrossingPage = () => {
         title={'Our Proven Experience in Crossing Projects'}
         projects={crossingProjects}
       />
-      <CTA title={CtaContent.title} buttonText={CtaContent.buttonText} />
+      <CTA
+        title={CtaContent.title}
+        buttonText={CtaContent.buttonText}
+        buttonLink={CtaContent.buttonLink}
+      />
     </div>
   );
 };

@@ -31,7 +31,7 @@ const ctaVariants = cva(
  * @param {React.ReactNode} props.title - CTA mein dikhaya jaane wala mukhya text ya title.
  * @param {string} [props.description] - Title ke neeche dikhaya jaane wala optional vivaran.
  * @param {string} props.buttonText - Button par dikhaya jaane wala text.
- * @param {string} [props.buttonLink='#'] - Button ka navigation link.
+ * @param {string} [props.buttonLink='/contact'] - Button ka navigation link.
  * @param {'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'} [props.buttonVariant='default'] - Button component ka variant.
  * @param {string} [props.imgUrl=CTAImg] - 'image-left' variant ke liye image ka URL.
  * @param {string} [props.className] - Bahar se di jaane wali extra CSS classes.
@@ -44,7 +44,7 @@ const CTA = React.forwardRef(
       title,
       description,
       buttonText,
-      buttonLink = '#',
+      buttonLink = '/contact',
       buttonVariant = 'primary',
       imgUrl = CTAImg,
       ...props

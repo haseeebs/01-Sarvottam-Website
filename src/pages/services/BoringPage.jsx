@@ -14,55 +14,54 @@ const BoringPage = () => {
 
   const heroContent = {
     headline: 'Precision Auger Boring & Pipe Ramming Services',
-    body: 'Humari auger boring aur pipe ramming services zameen ke neeche steel casing pipes install karne ke liye ek behtareen trenchless solution faraham karti hain. Yeh tareeqa roads, railways, aur deegar hassas ilaqon ke neeche kaam karne ke liye ideal hai, jahan oopri satah par kam se kam kharabi matloob ho.',
+    body: 'Our auger boring and pipe ramming services provide an excellent trenchless solution for installing steel casing pipes underground. This method is ideal for working under roads, railways, and other sensitive areas where minimal surface disruption is required.',
     cta: 'Get a Quote for Your Boring Project',
+    ctaLink: '/contact?subject=BoringProjectQuote',
   };
 
-  // Data for BoringTypesGrid (assuming it's similar to ServiceBreakdown)
   const boringTypesContent = {
     service1: {
       title: 'Auger Boring',
       description:
-        'Yeh ek mustanad (proven) tareeqa hai jo aam mitti se lekar naram chattanon tak, mukhtalif qisam ki zameeni halaton mein steel casing pipes install karne ke liye istemal hota hai. Humara aala darjay ka saaz-o-samaan (equipment) azeem durusti (accuracy) ko yaqeeni banata hai.',
+        'A proven method for installing steel casing pipes in various ground conditions, from common soil to soft rock. Our high-grade equipment ensures great accuracy.',
     },
     service2: {
       title: 'Pipe Ramming',
       description:
-        'Jab zameen pathreeli (cobbles/boulders) ho, to pipe ramming ek behtareen intikhab hai. Is technique mein, ek pneumatic hammer pipe ko zameen mein dhakelta hai, jo raastay mein anay wali rukawaton ko hata deta hai. Yeh short-distance crossings ke liye khaas taur par mufeed hai.',
+        'When the ground is rocky (cobbles/boulders), pipe ramming is an excellent choice. In this technique, a pneumatic hammer drives the pipe into the ground, displacing obstacles in its path. It is particularly useful for short-distance crossings.',
     },
     imageSrc:
-      'https://placehold.co/800x800/e2e8f0/334155?text=Boring+Schematic', // Placeholder image
+      'https://images.unsplash.com/photo-1619463261749-51d2047a5137?q=80&w=2940&auto=format&fit=crop',
   };
 
-  // Data for KeyBenefits (or RockBoringSpecialists)
   const keyBenefitsContent = {
     title: 'Why Choose Our Boring Services?',
     features: [
       {
         name: 'Minimal Surface Disruption',
         description:
-          'Humare trenchless tareeqay traffic, karobar, aur mahol par asar ko kam se kam rakhte hain.',
+          'Our trenchless methods minimize the impact on traffic, businesses, and the environment.',
         Icon: GitBranchPlus,
       },
       {
         name: 'Versatile Ground Capability',
         description:
-          'Hum naram mitti se lekar sakht chattanon tak, har qisam ki zameeni halat se nimatne ke liye tayyar hain.',
+          'We are equipped to handle all types of ground conditions, from soft soil to hard rock.',
         Icon: Mountain,
       },
       {
         name: 'High Accuracy & Control',
         description:
-          'Advanced guidance systems ki madad se hum pipeline ki line aur grade ko behtareen durusti ke saath control karte hain.',
+          'With advanced guidance systems, we control the line and grade of the pipeline with excellent precision.',
         Icon: Gauge,
       },
     ],
   };
 
-  // Data for CTA
   const CTAContent = {
     title: 'Have a Boring Project in Mind?',
     buttonText: 'Inquire About Boring service',
+    buttonLink: '/contact?subject=BoringInquiry',
   };
 
   return (
@@ -70,25 +69,28 @@ const BoringPage = () => {
       <PageHero
         intent='light'
         headline={heroContent.headline}
-        body={heroContent.body} // Maine prop ka naam `body` rakha hai, agar aapka component `subheadline` expect karta hai to isay badal lein
+        body={heroContent.body}
+        cta={heroContent.cta}
+        ctaLink={heroContent.ctaLink}
       />
-      {/* Aapke component ke aitebar se props ke naam adjust karein */}
       <ServiceBreakdown
         service1={boringTypesContent.service1}
         service2={boringTypesContent.service2}
         imageSrc={boringTypesContent.imageSrc}
       />
-      {/* Aapke component ke aitebar se props ke naam adjust karein */}
       <KeyBenefits
         title={keyBenefitsContent.title}
         features={keyBenefitsContent.features}
       />
-      {/* Aapke component ke aitebar se props ke naam adjust karein */}
       <ProjectShowcaseSection
         title={'Specialized Boring & Drilling Projects'}
         projects={boringProjects}
       />
-      <CTA title={CTAContent.title} buttonText={CTAContent.buttonText} />
+      <CTA
+        title={CTAContent.title}
+        buttonText={CTAContent.buttonText}
+        buttonLink={CTAContent.buttonLink}
+      />
     </div>
   );
 };
