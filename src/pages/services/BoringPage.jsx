@@ -62,7 +62,7 @@ const BoringPage = () => {
   // Data for CTA
   const CTAContent = {
     title: 'Have a Boring Project in Mind?',
-    buttonText: 'Discuss Your Requirements',
+    buttonText: 'Inquire About Boring service',
   };
 
   return (
@@ -71,7 +71,6 @@ const BoringPage = () => {
         intent='light'
         headline={heroContent.headline}
         body={heroContent.body} // Maine prop ka naam `body` rakha hai, agar aapka component `subheadline` expect karta hai to isay badal lein
-        cta={heroContent.cta}
       />
       {/* Aapke component ke aitebar se props ke naam adjust karein */}
       <ServiceBreakdown

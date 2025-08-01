@@ -63,7 +63,7 @@ const PushingJackingPage = () => {
   // Data for CTA
   const CTAContent = {
     title: 'Ready to Execute a Demanding Project?',
-    buttonText: 'Plan Your Pushing & Jacking Project',
+    buttonText: 'Inquire About Pushing & Jacking service',
   };
 
   return (

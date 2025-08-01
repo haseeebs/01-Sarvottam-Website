@@ -9,7 +9,7 @@ const expertiseStats = [
 
 const ExpertiseHighlights = ({ stats = expertiseStats }) => {
   return (
-    <div className='bg-my-primary py-16 sm:py-24'>
+    <div className='bg-my-primary border-b-1 py-16 sm:py-24'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:max-w-none'>
           <div className='grid grid-cols-1 gap-8 text-center sm:grid-cols-2 md:grid-cols-4'>

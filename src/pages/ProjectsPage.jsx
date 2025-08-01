@@ -41,8 +41,8 @@ const AllProjectsGrid = ({ projects }) => (
 
 const ProjectsPage = () => {
   const heroContent = {
-    headline: 'A Proven Track Record of Landmark Infrastructure Projects',
-    body: 'Our portfolio showcases our ability to deliver on complex, high-stakes projects across India, partnering with industry leaders and deploying advanced trenchless solutions.',
+    headline: 'Discuss Your Project with an Expert',
+    body: 'Our portfolio demonstrates a consistent track record of successful project delivery for esteemed clients like L&T and Indian Railways.',
   };
 
   // Featured aur baaki projects ko alag karein

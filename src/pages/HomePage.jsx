@@ -15,7 +15,7 @@ const HomePage = () => {
     <>
       <HomepageHero
         body='Your Trusted Partner for High-Stakes Government & Private Infrastructure Projects.'
-        cta='Request a Quote'
+        cta='Request a Project Quote'
         imageSrc={heroImage1}
         imageAlt='Trenchless Technology Project'
       >
@@ -30,13 +30,13 @@ const HomePage = () => {
       <ServiceSection services={services} />
       <ExpertiseHighlights />
 
-      <ValuePropositionSection />
+      {/* <ValuePropositionSection />  */}
       <ProjectShowcaseSection />
       <CTA
         variant='image-left'
         title='Ready to Discuss Your Next Infrastructure Challenge?'
         description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.'
-        buttonText='Request a Quote'
+        buttonText='Explore Our Projects'
         buttonLink='/contact?subject=QuoteRequest'
         buttonVariant='primary'
       />

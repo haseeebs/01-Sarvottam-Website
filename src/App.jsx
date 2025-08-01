@@ -12,11 +12,9 @@ import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 // Service Page Components
-import ServicesPage from './pages/services/ServicesPage';
 import CrossingPage from './pages/services/CrossingPage';
 import PushingJackingPage from './pages/services/PushingJackingPage';
 import BoringPage from './pages/services/BoringPage';
-import OtherServicesPage from './pages/services/OtherServicesPage';
 
 // Router Configuration
 const router = createBrowserRouter([
@@ -52,10 +50,6 @@ const router = createBrowserRouter([
         path: 'services',
         children: [
           {
-            index: true,
-            element: <ServicesPage />,
-          },
-          {
             path: 'pipeline-crossing',
             element: <CrossingPage />,
           },
@@ -66,10 +60,6 @@ const router = createBrowserRouter([
           {
             path: 'auger-boring',
             element: <BoringPage />,
-          },
-          {
-            path: 'other',
-            element: <OtherServicesPage />,
           },
         ],
       },

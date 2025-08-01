@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { footerNav } from '@/config/navigation'; // <-- NAYA IMPORT
+import { footerNav } from '@/config/navigation';
 
 const Footer = () => {
   return (
@@ -63,9 +63,6 @@ const Footer = () => {
               </h3>
               <ul className='text-my-secondary mt-6 space-y-4 text-base'>
                 <li>
-                  <p>{footerNav.contact.address}</p>
-                </li>
-                <li>
                   <a
                     href={`mailto:${footerNav.contact.email}`}
                     className='hover:text-white'
@@ -79,6 +76,14 @@ const Footer = () => {
                     className='hover:text-white'
                   >
                     {footerNav.contact.phone}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`tel:${footerNav.contact.phone2}`}
+                    className='hover:text-white'
+                  >
+                    {footerNav.contact.phone2}
                   </a>
                 </li>
               </ul>

@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/Button';
 import React from 'react';
+import { Button } from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
 
 const AboutPageHero = ({ content, imageUrl, imageAlt }) => {

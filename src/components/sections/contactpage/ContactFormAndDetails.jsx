@@ -301,7 +301,7 @@ const ContactFormAndDetails = ({
                       rel='noopener noreferrer'
                     >
                       <MessageCircle className='size-5' />
-                      Chat on WhatsApp
+                      Connect on WhatsApp
                     </a>
                   </Button>
                 </div>

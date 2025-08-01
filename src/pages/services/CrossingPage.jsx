@@ -51,7 +51,7 @@ const CrossingPage = () => {
   // 6. Data for PrimaryCTA (CrossingServicesCTA ka naya version)
   const CtaContent = {
     title: 'Have a Critical Crossing Project?',
-    buttonText: 'Get a Quote Today',
+    buttonText: 'Inquire About Crossing service',
   };
 
   return (

@@ -1,20 +1,18 @@
 export const primaryNav = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
     {
         name: 'Services',
-        path: '/services',
+        path: '#',
 
         dropdown: [
-            { name: 'All Services', path: '/services' },
             { name: 'Tunnel & Pipeline Crossing', path: '/services/pipeline-crossing' },
             { name: 'Box Pushing & Pipe Jacking', path: '/services/pushing-jacking' },
             { name: 'Auger Boring', path: '/services/auger-boring' },
-            { name: 'Other Support Services', path: '/services/other' },
         ],
     },
     { name: 'Projects', path: '/projects' },
     { name: 'Our Equipment', path: '/equipment' },
+    { name: 'About Us', path: '/about' },
     { name: 'Contact', path: '/contact' },
 ];
 
@@ -28,11 +26,10 @@ export const footerNav = {
         { name: 'Tunnel & Pipeline Crossing', path: '/services/pipeline-crossing' },
         { name: 'Box Pushing & Pipe Jacking', path: '/services/pushing-jacking' },
         { name: 'Auger Boring', path: '/services/auger-boring' },
-        { name: 'Other Support Services', path: '/services/other' },
     ],
     contact: {
-        address: '123 Infrastructure Lane, New Delhi, India 110001',
-        email: 'sarvottam24365@gmail.com',
+        email: 'sarvottamenterprisesjackpush@gmail.com',
         phone: '+91 777 180 6888',
+        phone2: '+91 79746 36790',
     },
 };

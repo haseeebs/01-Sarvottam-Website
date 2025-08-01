@@ -10,7 +10,7 @@ const pageData = {
   hero: {
     headline:
       'Our State-of-the-Art Fleet: Heavy Machinery for Demanding Projects',
-    body: 'Our investment in modern, heavy machinery is central to our operational excellence. Our fleet includes high-capacity Boring Machines like Horizontal Drilling Machines (HDD) with a 150mm - 590mm capacity, powerful Breakers for rock excavation, and a comprehensive range of deegar auzaar (other tools) required for specialized underground utility installation. This advanced equipment empowers us to undertake and execute high-value projects with precision and efficiency.',
+    body: 'This page is pure proof of our technical strength. List the machinery with key specifications. Frame it not as a simple list, but as "Our Fleet," demonstrating our readiness for any challenge.',
   },
   gallery: {
     title: 'Our Fleet',
