@@ -36,13 +36,15 @@ const KeyBenefits = ({ title, features }) => {
           >
             {featuresToShow.map((feature) => (
               <div key={feature.name} className='sm:text-left'>
-                <div className='flex items-center sm:justify-start'>
-                  {/* The Icon component should be passed as a prop */}
-                  <feature.Icon
-                    className='text-my-accent h-12 w-12'
-                    aria-hidden='true'
-                  />
-                </div>
+                {feature.Icon && (
+                  <div className='flex items-center sm:justify-start'>
+                    {/* The Icon component should be passed as a prop */}
+                    <feature.Icon
+                      className='text-my-accent h-12 w-12'
+                      aria-hidden='true'
+                    />
+                  </div>
+                )}
                 <h3 className='text-my-primary mt-5 text-xl leading-7 font-semibold'>
                   {feature.name}
                 </h3>

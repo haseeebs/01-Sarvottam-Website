@@ -7,6 +7,7 @@ import CTA from '@/components/common/CTA';
 import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
 import PageHero from '@/components/common/PageHero';
 import { allProjects } from '@/data/projectData';
+import { boxpushingContent } from '@/data/serviceData';
 
 const PushingJackingPage = () => {
   const pushingJackingProjects = allProjects.filter(
@@ -18,22 +19,6 @@ const PushingJackingPage = () => {
     body: 'Our pushing and jacking services are engineered for projects requiring heavy-duty underground passage. We specialize in Box Pushing (RCC/Precast) for creating railway underbridges and pedestrian subways, alongside Pipe Pushing and Jacking for large-diameter water and sewer pipelines. Our experienced team and powerful machinery ensure precise execution for even the most demanding projects.',
     cta: 'Plan Your Pushing & Jacking Project',
     ctaLink: '/contact?subject=PushingJackingProject',
-  };
-
-  // Data for ServiceBreakdown
-  const serviceBreakdownContent = {
-    service1: {
-      title: 'Box Pushing (RCC/Precast)',
-      description:
-        'Ideal for creating robust underpasses for railways or pedestrians. We use powerful hydraulic systems to push precast concrete box segments into place with minimal surface disruption, ensuring structural integrity and timely project completion.',
-    },
-    service2: {
-      title: 'Pipe Pushing & Jacking',
-      description:
-        'A trenchless method for installing large-diameter pipelines for water, sewage, or utility conduits. This technique minimizes environmental impact and is perfect for crossing roads, railways, and other sensitive areas without open-cut excavation.',
-    },
-    imageSrc:
-      'https://images.unsplash.com/photo-1599303217595-3004b901615f?q=80&w=1974&auto=format&fit=crop',
   };
 
   // Data for KeyBenefits
@@ -78,9 +63,9 @@ const PushingJackingPage = () => {
         ctaLink={heroContent.ctaLink}
       />
       <ServiceBreakdown
-        service1={serviceBreakdownContent.service1}
-        service2={serviceBreakdownContent.service2}
-        imageSrc={serviceBreakdownContent.imageSrc}
+        service1={boxpushingContent.service1}
+        service2={boxpushingContent.service2}
+        imageSrc={boxpushingContent.imageSrc}
       />
       <KeyBenefits
         title={keyBenefitsContent.title}

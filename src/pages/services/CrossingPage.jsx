@@ -8,6 +8,8 @@ import CTA from '@/components/common/CTA';
 import { TrainFrontTunnel, Layers, Droplets, Flame } from 'lucide-react';
 import PageHero from '@/components/common/PageHero';
 import { allProjects } from '@/data/projectData';
+import { crossingContent } from '@/data/serviceData';
+import ServiceBreakdown from '@/components/common/ServiceBreakdown';
 
 const CrossingPage = () => {
   const crossingProjects = allProjects.filter((p) => p.category === 'Crossing');
@@ -64,6 +66,11 @@ const CrossingPage = () => {
         body={heroContent.body}
         cta={heroContent.cta}
         ctaLink={heroContent.ctaLink}
+      />
+      <ServiceBreakdown
+        service1={crossingContent.service1}
+        service2={crossingContent.service2}
+        imageSrc={crossingContent.imageSrc}
       />
       <KeyBenefits
         title={keyBenefitsContent.title}
