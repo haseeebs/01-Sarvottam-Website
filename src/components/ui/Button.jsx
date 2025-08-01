@@ -38,7 +38,9 @@ const buttonVariants = cva(
         'ghost': 'hover:bg-my-primary/10 hover:text-my-primary',
 
         // 'link': Looks like a link but acts like a button
-        'link': 'text-my-primary underline-offset-4 hover:underline',
+        'link': 'text-my-secondary underline-offset-4 hover:underline',
+
+        'whatsapp': 'bg-[#25D366] text-white hover:bg-[#1DA851]',
       },
       size: {
         default: 'h-10 px-4 py-2',

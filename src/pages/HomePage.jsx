@@ -8,17 +8,23 @@ import ServiceSection from '@/components/common/ServiceSection';
 import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
 import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
 import { services } from '@/data/projectData';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
     <>
       <HomepageHero
-        headline='The Expertise to Cross Any Obstacle. The Machinery to Guarantee It.'
         body='Your Trusted Partner for High-Stakes Government & Private Infrastructure Projects.'
         cta='Request a Quote'
         imageSrc={heroImage1}
         imageAlt='Trenchless Technology Project'
-      />
+      >
+        The Expertise to Cross Any Obstacle. The{' '}
+        <Link to='/equipment'>
+          <i className='hover:text-my-accent underline'>Machinery</i>
+        </Link>{' '}
+        to Guarantee It.
+      </HomepageHero>
       <ClientLogosNew layout='marquee' />
 
       <ServiceSection services={services} />

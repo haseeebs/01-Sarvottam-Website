@@ -3,6 +3,7 @@ import PageHero from '@/components/common/PageHero';
 import EquipmentGallery from '@/components/sections/equipmentpage/EquipmentGallery';
 import FleetAdvantages from '@/components/sections/equipmentpage/FleetAdvantages';
 import CTA from '@/components/common/CTA';
+import { MapPin, Settings, Landmark } from 'lucide-react';
 
 // In a real application, this data would likely come from a CMS or API.
 const pageData = {
@@ -92,17 +93,20 @@ const pageData = {
       {
         name: 'High Capacity & Precision',
         description:
-          'Our advanced machinery ensures projects are completed with utmost accuracy and efficiency.',
+          'Our advanced machinery, like HDD rigs, ensures projects are completed with utmost accuracy and efficiency.',
+        icon: MapPin,
       },
       {
         name: 'Modern & Well-Maintained',
         description:
-          'We invest in the latest technology and rigorous maintenance to minimize downtime and maximize performance.',
+          'We invest in the latest technology and rigorous maintenance schedules to minimize downtime and maximize performance.',
+        icon: Settings,
       },
       {
         name: 'Ready for High-Value Projects',
         description:
-          'Our powerful and diverse fleet is capable of handling the most demanding infrastructure contracts.',
+          'Our powerful and diverse fleet is capable of handling the most demanding and complex infrastructure contracts.',
+        icon: Landmark,
       },
     ],
   },

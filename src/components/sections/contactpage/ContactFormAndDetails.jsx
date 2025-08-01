@@ -8,6 +8,7 @@ import {
   CheckCircle,
   Send,
   AlertCircle,
+  MessageCircle,
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/Button';
@@ -270,6 +271,38 @@ const ContactFormAndDetails = ({
                         <Send className='size-5 transition-transform group-hover:translate-x-1' />
                       </>
                     )}
+                  </Button>
+                </div>
+                {/* --- WHATSAPP BUTTON SECTION --- */}
+                <div className='mt-6 text-center'>
+                  <div className='relative'>
+                    <div
+                      className='absolute inset-0 flex items-center'
+                      aria-hidden='true'
+                    >
+                      <div className='w-full border-t border-gray-300' />
+                    </div>
+                    <div className='relative flex justify-center'>
+                      <span className='bg-white px-2 text-sm text-gray-500'>
+                        OR
+                      </span>
+                    </div>
+                  </div>
+
+                  <Button
+                    variant='whatsapp'
+                    size='lg'
+                    asChild
+                    className='group mt-6 flex w-full items-center justify-center gap-x-3 font-bold'
+                  >
+                    <a
+                      href='https://wa.me/917974636790?text=Hello!%20I%27m%20interested%20in%20your%20services.'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      <MessageCircle className='size-5' />
+                      Chat on WhatsApp
+                    </a>
                   </Button>
                 </div>
               </form>

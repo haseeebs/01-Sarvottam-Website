@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin, Settings, Landmark } from 'lucide-react';
 
-const features = [
+const defaultFeatures = [
   {
     name: 'High Capacity & Precision',
     description:
@@ -22,13 +22,16 @@ const features = [
   },
 ];
 
-const FleetAdvantages = () => {
+const FleetAdvantages = ({
+  title = 'Why Our Equipment Makes a Difference',
+  features = defaultFeatures,
+}) => {
   return (
     <div className='bg-slate-50 py-24 sm:py-32'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:text-center'>
           <h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-            Why Our Equipment Makes a Difference
+            {title} {/* Title is rendered from props */}
           </h2>
         </div>
         <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
@@ -40,6 +43,7 @@ const FleetAdvantages = () => {
               >
                 <dt className='flex flex-col items-center gap-y-4'>
                   <div className='bg-my-primary/50 flex h-12 w-12 items-center justify-center rounded-sm'>
+                    {/* The icon is now dynamically rendered based on the 'icon' property of each feature object */}
                     <feature.icon
                       className='text-my-accent/90 h-6 w-6'
                       aria-hidden='true'
