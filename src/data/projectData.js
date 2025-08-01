@@ -37,7 +37,7 @@ export const allProjects = [
             "Leveraging advanced jacking and pushing techniques, our team executed the pipe tunneling with high precision. We successfully managed the exceptionally wide range of pipe diameters as per MEIL's directives.",
         imageSrc: 'path/to/real/kalisindh-project-image.jpg',
         keyStats: [
-            { label: 'Pipe Diameters', value: '400mm to 3900mm' },
+            { label: 'Pipe Diameters', value: '600mm to 3900mm' },
             { label: 'Technology', value: 'Jacking & Pushing' },
         ],
         testimonial: null, // TODO: Pending from client
@@ -87,7 +87,7 @@ export const allProjects = [
         isFeatured: true,
         category: 'Crossing',
         subCategory: 'Trenchless Technology',
-        title: 'Pawati + Shipralink Project',
+        title: 'Parwati + Shipralink Project',
         location: 'Madhya Pradesh',
         client: 'Larsen & Toubro (L&T)',
         challenge:
@@ -101,5 +101,33 @@ export const allProjects = [
             { label: 'Pipe Diameters', value: 'Varied Sizes' },
         ],
         testimonial: null,
+    },
+];
+
+import boxpushingImg from '@/assets/images/Box-pushing.jpg';
+import augerboringImg from '@/assets/images/Auger-boring.jpg';
+import pipelineImg from '@/assets/images/NormalImg-1.jpg';
+
+export const services = [
+    {
+        title: 'Tunnel & Pipeline Crossing',
+        link: '/services/pipeline-crossing',
+        imgSrc: pipelineImg,
+        imgAlt: 'Specialized equipment for tunnel and pipeline crossing.',
+        description: "We install tunnel and pipeline crossings beneath active railways and highways using advanced trenchless methods. This approach guarantees minimal surface disruption, ensuring your critical infrastructure remains fully operational."
+    },
+    {
+        title: 'Box Pushing & Pipe Jacking',
+        link: '/services/pushing-jacking',
+        imgSrc: boxpushingImg,
+        imgAlt: 'Hydraulic jacks for box pushing and pipe jacking projects.',
+        description: "We construct underground underpasses (RUBs) and culverts with precision-guided box pushing and pipe jacking. This method accelerates project completion and enhances site safety by eliminating the need for open-cut excavation."
+    },
+    {
+        title: 'Precision Boring Services',
+        link: '/services/auger-boring',
+        imgSrc: augerboringImg,
+        imgAlt: 'Auger boring machine for precision underground services.',
+        description: "Install utility conduits for water, sewer, and cables with pinpoint accuracy using advanced auger and horizontal boring. Our trenchless approach is ideal for difficult ground, minimizing environmental impact and restoration costs."
     },
 ];

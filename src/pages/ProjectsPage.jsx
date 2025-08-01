@@ -2,7 +2,7 @@ import React from 'react';
 import CTA from '@/components/common/CTA';
 import PageHero from '@/components/common/PageHero';
 import { allProjects } from '@/data/projectData'; // Apni master file import karein
-import FeaturedProjectsSection from '@/components/sections/projectspage/FeaturedProjects';
+import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
 
 // Yeh component baaki sabhi projects ko ek simple grid mein dikhayega
 const AllProjectsGrid = ({ projects }) => (
@@ -47,7 +47,6 @@ const ProjectsPage = () => {
 
   // Featured aur baaki projects ko alag karein
   const featuredProjects = allProjects.filter((p) => p.isFeatured);
-  console.log(featuredProjects);
   const otherProjects = allProjects.filter((p) => !p.isFeatured);
 
   return (
@@ -58,8 +57,10 @@ const ProjectsPage = () => {
         body={heroContent.body}
       />
 
-      {/* Section 1: Featured Projects ko poori detail mein dikhayein */}
-      <FeaturedProjectsSection projects={featuredProjects} />
+      <ProjectShowcaseSection
+        title={'Landmark Project Highlights'}
+        projects={featuredProjects}
+      />
 
       {/* Section 2: Baaki sabhi projects ko grid mein dikhayein */}
       <AllProjectsGrid projects={otherProjects} />

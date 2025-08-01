@@ -5,42 +5,11 @@ import CTA from '@/components/common/CTA';
 import PageHero from '@/components/common/PageHero';
 import ServiceListSection from '@/components/common/ServiceListSection';
 
+import { services } from '@/data/projectData';
+
 const heroContent = {
   headline: 'Comprehensive Trenchless Engineering & Underground Solutions',
   body: 'Sarvottam Enterprises offers a full spectrum of specialized underground construction services designed for modern infrastructure needs. Our expertise in trenchless engineering solutions minimizes surface disruption and environmental impact. From critical pipeline crossings under railways and highways to large-scale boring and jacking, our services are categorized to meet the specific technical demands of our clients, including government agencies and major private contractors.',
-};
-
-const serviceCategoriesData = {
-  title: 'Our Service Portfolio',
-  services: [
-    {
-      id: 1,
-      imgSrc:
-        'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      title: 'Tunnel & Pipeline Crossing',
-      description:
-        'Expert solutions for creating crossings under critical infrastructure like railways, highways, and waterways with minimal disruption.',
-      link: '/services/pipeline-crossing',
-    },
-    {
-      id: 2,
-      imgSrc:
-        'https://images.pexels.com/photos/224924/pexels-photo-224924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      title: 'Horizontal Directional Drilling (HDD)',
-      description:
-        'A steerable, trenchless method for installing underground pipes, conduits, and cables along a prescribed bore path.',
-      link: '/services/hdd',
-    },
-    {
-      id: 3,
-      imgSrc:
-        'https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      title: 'Auger Boring & Pipe Jacking',
-      description:
-        'Precise, powerful techniques for installing large-diameter steel pipes and concrete culverts over long distances.',
-      link: '/services/auger-boring',
-    },
-  ],
 };
 
 const whyChooseUsData = {
@@ -80,10 +49,9 @@ const ServicePage = () => {
         headline={heroContent.headline}
         body={heroContent.body}
       />
-      <ServiceListSection
-        title={serviceCategoriesData.title}
-        services={serviceCategoriesData.services}
-      />
+
+      {/* <<< YAHAN BADLAV HAI: 'title' aur 'services' props ko data pass karein */}
+      <ServiceListSection title='Our Core Services' services={services} />
 
       <WhyChooseUs
         title={whyChooseUsData.title}
@@ -131,7 +99,6 @@ const ServicePage = () => {
         steps={serviceProcessData.steps}
       />
 
-      {/* Past Projects Show karna */}
       <CTA
         variant='inline'
         title="Let's Build the Future, Together."
