@@ -18,7 +18,6 @@ const CrossingPage = () => {
     cta: 'Get a Quote for Your Crossing Project',
   };
 
-  // 2. Data for KeyBenefits (CoreServiceOfferings ka naya version)
   const keyBenefitsContent = {
     title: 'Our Crossing Capabilities',
     features: [

@@ -15,7 +15,6 @@ export const primaryNav = [
     },
     { name: 'Projects', path: '/projects' },
     { name: 'Our Equipment', path: '/equipment' },
-    { name: 'Clients', path: '/clients' },
     { name: 'Contact', path: '/contact' },
 ];
 
@@ -24,7 +23,6 @@ export const footerNav = {
         { name: 'About Us', path: '/about' },
         { name: 'Our Projects', path: '/projects' },
         { name: 'Our Equipment', path: '/equipment' },
-        { name: 'Our Clients', path: '/clients' },
     ],
     services: [
         { name: 'Tunnel & Pipeline Crossing', path: '/services/pipeline-crossing' },

@@ -8,7 +8,6 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import EquipmentPage from './pages/EquipmentPage';
 import ProjectsPage from './pages/ProjectsPage';
-import ClientsPage from './pages/ClientsPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -42,10 +41,6 @@ const router = createBrowserRouter([
       {
         path: 'projects',
         element: <ProjectsPage />,
-      },
-      {
-        path: 'clients',
-        element: <ClientsPage />,
       },
       {
         path: 'contact',

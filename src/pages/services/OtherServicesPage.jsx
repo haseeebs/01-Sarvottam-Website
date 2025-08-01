@@ -3,6 +3,7 @@ import SupportServicesGrid from '@/components/sections/otherservicepage/SupportS
 import IntegratedApproach from '@/components/sections/otherservicepage/IntegratedApproach';
 import CoreServicesLink from '@/components/sections/otherservicepage/CoreServicesLink';
 import CTA from '@/components/common/CTA';
+import PageHero from '@/components/common/PageHero';
 
 // Data derived from the provided JSON content
 const pageContent = {
