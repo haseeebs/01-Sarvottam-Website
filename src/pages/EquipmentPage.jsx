@@ -10,7 +10,7 @@ const pageData = {
   hero: {
     headline:
       'Our State-of-the-Art Fleet: Heavy Machinery for Demanding Projects',
-    body: 'Our robust, company-owned fleet is the backbone of our operational excellence. We deploy a wide range of specialized machinery, ensuring we are prepared for any project challenge, from trenchless HDD to heavy-duty pipe jacking for railway and highway crossings.',
+    body: 'Our robust fleet is the backbone of our operations. We own and maintain a wide range of specialized machinery, ensuring we are prepared for any project challenge, from trenchless boring to heavy-duty pipe jacking.',
     cta: 'Discuss Your Project Needs',
     ctaLink: '/contact?subject=EquipmentInquiry',
   },
@@ -26,73 +26,63 @@ const pageData = {
     equipment: [
       {
         id: 1,
-        name: 'HDD Maxi-Rig',
-        category: 'Boring Machines',
-        imageUrl:
-          'https://images.unsplash.com/photo-1553142289-216a6a1b2d7e?q=80&w=2940&auto=format&fit=crop',
+        name: 'Hydraulic Rock Splitter',
+        category: 'Excavation & Breakers',
+        imageUrl: null,
       },
       {
         id: 2,
         name: 'Compact Auger Drill',
         category: 'Boring Machines',
-        imageUrl:
-          'https://images.unsplash.com/photo-1629930784483-53d712a833a6?q=80&w=2940&auto=format&fit=crop',
+        imageUrl: null,
       },
       {
         id: 3,
         name: 'Hydraulic Pipe Jack',
         category: 'Pushing & Jacking',
-        imageUrl:
-          'https://images.unsplash.com/photo-1617208100025-55e1de75333f?q=80&w=2864&auto=format&fit=crop',
+        imageUrl: null,
       },
       {
         id: 4,
         name: 'Heavy-Duty Rock Breaker',
         category: 'Excavation & Breakers',
-        imageUrl:
-          'https://images.unsplash.com/photo-1522022718485-7096e5792d47?q=80&w=2940&auto=format&fit=crop',
+        imageUrl: null,
       },
       {
         id: 5,
         name: 'Trenching Machine',
         category: 'Excavation & Breakers',
-        imageUrl:
-          'https://images.unsplash.com/photo-1628258334105-2a0b3d6ef5f3?q=80&w=2940&auto=format&fit=crop',
+        imageUrl: null,
       },
       {
         id: 6,
         name: 'Mobile Generator Unit',
         category: 'Support Equipment',
-        imageUrl:
-          'https://images.unsplash.com/photo-1600579038714-353278563345?q=80&w=2866&auto=format&fit=crop',
+        imageUrl: null,
       },
       {
         id: 7,
         name: 'Directional Drill',
         category: 'Boring Machines',
-        imageUrl:
-          'https://images.unsplash.com/photo-1619463261749-51d2047a5137?q=80&w=2940&auto=format&fit=crop',
+        imageUrl: null,
       },
       {
         id: 8,
         name: 'Pneumatic Pipe Rammer',
         category: 'Pushing & Jacking',
-        imageUrl:
-          'https://images.unsplash.com/photo-1543373122-6c16c6808dc1?q=80&w=2940&auto=format&fit=crop',
+        imageUrl: null,
       },
       {
         id: 9,
         name: 'Portable Air Compressor',
         category: 'Support Equipment',
-        imageUrl:
-          'https://images.unsplash.com/photo-1621992300039-f9c381f1816f?q=80&w=2940&auto=format&fit=crop',
+        imageUrl: null,
       },
       {
-        id: 10, // Unique ID
-        name: 'Hydraulic Rock Splitter',
-        category: 'Excavation & Breakers',
-        imageUrl:
-          'https://images.unsplash.com/photo-1599303217595-3004b901615f?q=80&w=1974&auto=format&fit=crop', // Placeholder - aap isko a-one image se badal sakte hain
+        id: 10,
+        name: 'HDD Maxi-Rig',
+        category: 'Boring Machines',
+        imageUrl: null,
       },
     ],
   },

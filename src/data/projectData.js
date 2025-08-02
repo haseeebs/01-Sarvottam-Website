@@ -69,7 +69,7 @@ export const allProjects = [
         id: 4,
         isFeatured: false,
         category: 'HDD', // Changed to be more specific
-        subCategory: 'Horizontal Directional Drilling (HDD)',
+        subCategory: 'Horizontal Directional Drilling',
         title: 'Mohanpura LBS Pipeline Project',
         location: 'Mohanpura, Madhya Pradesh',
         client: 'Jain Irrigation Systems Ltd.',
@@ -132,7 +132,7 @@ import hddImg from '@/assets/images/Hero-image-2.jpg';
 
 export const services = [
     {
-        title: 'Horizontal Directional Drilling (HDD)',
+        title: 'Horizontal Directional Drilling',
         link: '/services/hdd',
         imgSrc: hddImg,
         imgAlt: 'Horizontal Directional Drilling rig in action for a major project.',

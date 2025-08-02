@@ -1,13 +1,33 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { Wrench } from 'lucide-react'; // Hum ek icon istemal karenge
+
+// Naya Placeholder component
+// Yeh tab dikhega jab image URL maujood na ho.
+const ImagePlaceholder = ({ name }) => (
+  <div className='bg-my-secondary/20 flex aspect-[4/3] w-full flex-col items-center justify-center rounded-sm p-4 text-center'>
+    <Wrench className='text-my-primary/50 h-16 w-16' />
+    <p className='font-body text-my-primary mt-4 text-base font-semibold'>
+      {name}
+    </p>
+    <p className='font-body text-my-secondary mt-1 text-xs'>
+      Image not available
+    </p>
+  </div>
+);
 
 const EquipmentCard = ({ name, imageUrl, category }) => (
-  <div className='group relative aspect-[4/3] w-full overflow-hidden rounded-sm shadow-lg'>
-    <img
-      src={imageUrl}
-      alt={name}
-      className='h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110'
-    />
+  <div className='group relative w-full overflow-hidden rounded-sm shadow-lg'>
+    {/* Conditional rendering: Agar imageUrl hai to image, warna placeholder */}
+    {imageUrl ? (
+      <img
+        src={imageUrl}
+        alt={name}
+        className='aspect-[4/3] h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110'
+      />
+    ) : (
+      <ImagePlaceholder name={name} />
+    )}
     <div className='bg-opacity-70 bg-my-primary absolute inset-0 flex flex-col items-center justify-center p-4 text-center opacity-0 transition-opacity duration-500 group-hover:opacity-100'>
       <p className='font-body text-my-accent/90 text-sm font-semibold tracking-wider uppercase'>
         {category}
