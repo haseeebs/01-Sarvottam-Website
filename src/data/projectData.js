@@ -3,10 +3,10 @@
 // === IMAGES ===
 // In images ko 'src/assets/images' folder mein rakhein aur yahan import karein.
 // Agar images nahi hain, to null rehne dein. ProjectCard component placeholder dikha dega.
-import hddImg from '@/assets/images/Hero-image-2.jpg';
-import boxpushingImg from '@/assets/images/Box-pushing.jpg';
-import augerboringImg from '@/assets/images/Auger-boring.jpg';
-import jackpushingImg from '@/assets/images/JackpushingImg.jpg'; // Ek nayi image jack pushing ke liye
+import hddImg from '@/assets/images/Hero-image-2.webp';
+import boxpushingImg from '@/assets/images/Box-pushing.webp';
+import augerboringImg from '@/assets/images/Auger-boring.webp';
+import jackpushingImg from '@/assets/images/JackpushingImg.webp'; // Ek nayi image jack pushing ke liye
 
 // Placeholder image URLs agar aapke paas local images nahi hain
 const LNT_KUNDALIYA_IMG = 'https://images.unsplash.com/photo-1593349122524-7446587c69da?q=80&w=2070&auto=format&fit=crop';

@@ -10,7 +10,7 @@ import {
     Maximize, // 🆕 NAYA ICON: Jack Pushing mein bade diameter ke liye
 } from 'lucide-react';
 
-import BoxpushingImg from '@/assets/images/Box-pushing.jpg'
+import BoxpushingImg from '@/assets/images/Box-pushing.webp'
 
 const hddContent = {
     service1: {

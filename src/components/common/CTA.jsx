@@ -4,7 +4,7 @@ import { cva } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
-import CTAImg from '@/assets/images/CTAImg.jpg';
+import CTAImg from '@/assets/images/CTAImg.webp';
 
 // 1. CVA ke Saath Variants Define Karna
 // Base classes aur variant-specific classes yahan define ki jaati hain.

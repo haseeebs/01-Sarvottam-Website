@@ -5,10 +5,12 @@ import ClientLogosNew from '@/components/common/ClientLogos';
 import ServiceSection from '@/components/common/ServiceSection';
 import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
 import { services } from '@/data/projectData';
-import heroImage1 from '@/assets/images/Hero-image-2.jpg';
+import heroImage1 from '@/assets/images/Hero-image-2.webp';
 import { Landmark, FileText, Mountain } from 'lucide-react';
 import KeyBenefits from '@/components/common/KeyBenefits';
 import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
+import { galleryImages } from '@/data/galleryData';
+import ImageGalleryCarousel from '@/components/common/ImageGalleryCarousel';
 
 const HomePage = () => {
   const whyChooseUsData = {
@@ -60,6 +62,12 @@ const HomePage = () => {
         title={whyChooseUsData.title}
         description={whyChooseUsData.description}
         features={whyChooseUsData.features}
+      />
+
+      <ImageGalleryCarousel
+        images={galleryImages}
+        title='Glimpses of Our Work'
+        description='A visual journey through our diverse projects, showcasing our commitment to excellence and precision engineering on the ground.'
       />
 
       <CTA

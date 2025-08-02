@@ -11,11 +11,14 @@ const Footer = () => {
         <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
           <div className='space-y-8'>
             <Link to='/'>
-              <img
+              {/* <img
                 className='mb-8 h-10 w-50'
                 src={Logo}
                 alt='Sarvottam Enterprises Logo'
-              />
+              /> */}
+              <h2 className='font-family-display text-xl font-bold text-white sm:text-2xl'>
+                Sarvottam Enterprises
+              </h2>
             </Link>
             <p className='text-my-secondary text-sm/6'>
               Pioneering trenchless technology with a foundation of trust and
