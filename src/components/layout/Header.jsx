@@ -1,10 +1,17 @@
 // src/components/layout/Header.jsx
 
-import React, { useState, useEffect, useRef } from 'react'; // <--- useRef import kiya
+import React, { useState, useEffect, useRef } from 'react';
 import Logo from '@/assets/images/Logo.webp';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { primaryNav } from '@/config/navigation';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { cn } from '@/lib/utils'; // ✨ CN utility import karein
 
 const NavLink = ({ to, children, hasDropdown }) => (
   <div className='relative'>
@@ -25,8 +32,6 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-
-  // ===== NAYA CODE: TIMEOUT KE LIYE REF =====
   const dropdownTimeoutRef = useRef(null);
 
   useEffect(() => {
@@ -37,21 +42,28 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ===== NAYA CODE: MOUSE EVENTS KE LIYE HANDLERS =====
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isMenuOpen]);
+
   const handleMouseEnter = (itemName) => {
-    // Agar koi "band karne wala" timer chal raha hai, to usko cancel karo
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current);
     }
-    // Dropdown ko dikhao
     setOpenDropdown(itemName);
   };
 
   const handleMouseLeave = () => {
-    // 200 millisecond ka timer shuru karo jo dropdown ko band kar dega
     dropdownTimeoutRef.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 200); // Aap is delay ko kam ya zyada kar sakte hain
+    }, 200);
   };
 
   const navItems = primaryNav;
@@ -59,9 +71,10 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-20 w-full bg-white transition-shadow duration-300 ${
-          isScrolled ? 'shadow-[0_4px_12px_rgba(0,0,0,0.05)]' : ''
-        }`}
+        className={cn(
+          'sticky top-0 z-20 w-full bg-white transition-shadow duration-300',
+          isScrolled && 'shadow-[0_4px_12px_rgba(0,0,0,0.05)]',
+        )}
       >
         <div className='mx-auto flex h-[80px] max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8'>
           <div className='flex-shrink-0'>
@@ -75,7 +88,6 @@ const Header = () => {
               <div
                 key={item.name}
                 className='relative'
-                // ===== NAYA CODE: NAYE HANDLERS LAGAYE GAYE HAIN =====
                 onMouseEnter={() =>
                   item.dropdown && handleMouseEnter(item.name)
                 }
@@ -85,7 +97,6 @@ const Header = () => {
                   {item.name}
                 </NavLink>
                 {item.dropdown && openDropdown === item.name && (
-                  // Dropdown par alag se events lagane ki zaroorat nahi kyunki parent div hi kafi hai
                   <div className='ring-opacity-5 absolute top-full left-0 mt-2 w-64 origin-top-right rounded-sm bg-white py-2 shadow-lg ring-1 ring-black'>
                     {item.dropdown.map((subItem) => (
                       <Link
@@ -117,21 +128,54 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-10 bg-white transition-transform duration-300 ease-in-out md:hidden ${
-          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={cn(
+          'fixed inset-0 z-10 bg-white transition-transform duration-300 ease-in-out md:hidden',
+          isMenuOpen ? 'translate-x-0' : '-translate-x-full',
+        )}
       >
-        <nav className='flex h-full flex-col items-center justify-center gap-10'>
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              onClick={() => setIsMenuOpen(false)}
-              className='font-body text-my-primary text-2xl font-bold'
-            >
-              {item.name}
-            </Link>
-          ))}
+        {/* ✨ FIX: Naya mobile menu logic. Har item alag se render hoga. */}
+        <nav className='mt-20 flex h-full flex-col px-8'>
+          {navItems.map((item) =>
+            item.dropdown ? (
+              // Case 1: Agar item ke paas dropdown hai (e.g., Services)
+              <Accordion
+                type='single'
+                collapsible
+                className='w-full border-b'
+                key={item.name}
+              >
+                <AccordionItem value={item.name} className='border-b-0'>
+                  <AccordionTrigger className='font-body text-my-primary py-4 text-2xl font-bold no-underline hover:no-underline'>
+                    {item.name}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className='flex flex-col space-y-4 py-4 pl-4'>
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.path}
+                          onClick={() => setIsMenuOpen(false)}
+                          className='font-body text-my-secondary text-xl font-medium'
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            ) : (
+              // Case 2: Agar item ek simple link hai (e.g., Home, Projects)
+              <Link
+                key={item.name}
+                to={item.path}
+                onClick={() => setIsMenuOpen(false)}
+                className='font-body text-my-primary block w-full border-b py-4 text-left text-2xl font-bold'
+              >
+                {item.name}
+              </Link>
+            ),
+          )}
         </nav>
       </div>
     </>

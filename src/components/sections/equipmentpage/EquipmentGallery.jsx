@@ -11,7 +11,7 @@ const ImagePlaceholder = ({ name }) => (
       {name}
     </p>
     <p className='font-body text-my-secondary mt-1 text-xs'>
-      Image not available
+      Detailed specs available on request
     </p>
   </div>
 );

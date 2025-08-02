@@ -8,17 +8,29 @@ import { Marquee } from '@/components/magicui/marquee';
 const defaultTitle = 'Trusted By Leading Teams & Companies';
 const defaultLogos = [
   {
-    name: 'Larsen & Toubro',
-    logoUrl: 'https://logo.clearbit.com/ltconstruction.com',
+    name: 'Larsen & Toubro (L&T)',
+    logoUrl: 'https://logo.clearbit.com/larsentoubro.com',
   },
-  { name: 'GAIL', logoUrl: 'https://logo.clearbit.com/gailonline.com' },
-  { name: 'Indian Oil', logoUrl: 'https://logo.clearbit.com/iocl.com' },
-  { name: 'NTPC', logoUrl: 'https://logo.clearbit.com/ntpc.co.in' },
+  {
+    name: 'GAIL',
+    logoUrl: 'https://logo.clearbit.com/gailonline.com',
+  },
+  {
+    name: 'Indian Oil',
+    logoUrl: 'https://logo.clearbit.com/iocl.com',
+  },
+  {
+    name: 'NTPC',
+    logoUrl: 'https://logo.clearbit.com/ntpc.co.in',
+  },
   {
     name: 'Reliance Industries',
     logoUrl: 'https://logo.clearbit.com/ril.com',
   },
-  { name: 'NHAI', logoUrl: 'https://logo.clearbit.com/nhai.gov.in' },
+  {
+    name: 'NHAI',
+    logoUrl: 'https://logo.clearbit.com/nhai.gov.in',
+  },
   {
     name: 'Indian Railways',
     logoUrl: 'https://logo.clearbit.com/indianrailways.gov.in',
@@ -35,6 +47,34 @@ const defaultLogos = [
   {
     name: 'Tata',
     logoUrl: 'https://cdn.worldvectorlogo.com/logos/tata-logo.svg',
+  },
+  {
+    name: 'Megha Engineering & Infrastructures Ltd (MEIL)',
+    logoUrl: 'https://logo.clearbit.com/meil.in',
+  },
+  {
+    name: 'Jain Irrigation Systems',
+    logoUrl: 'https://logo.clearbit.com/jains.com',
+  },
+  {
+    name: 'GAIL Gas',
+    logoUrl: 'https://logo.clearbit.com/gailgas.com',
+  },
+  {
+    name: 'Tata Projects',
+    logoUrl: 'https://logo.clearbit.com/tataprojects.com',
+  },
+  {
+    name: 'BHEL',
+    logoUrl: 'https://logo.clearbit.com/bhel.com',
+  },
+  {
+    name: 'VA Tech Wabag',
+    logoUrl: 'https://logo.clearbit.com/wabag.com',
+  },
+  {
+    name: 'HPCL',
+    logoUrl: 'https://logo.clearbit.com/hindustanpetroleum.com',
   },
 ];
 

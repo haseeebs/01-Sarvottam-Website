@@ -5,17 +5,15 @@ import CTA from '@/components/common/CTA';
 import { MapPin, Settings, Landmark } from 'lucide-react';
 import KeyBenefits from '@/components/common/KeyBenefits';
 
-// In a real application, this data would likely come from a CMS or API.
 const pageData = {
   hero: {
-    headline:
-      'Our State-of-the-Art Fleet: Heavy Machinery for Demanding Projects',
-    body: 'Our robust fleet is the backbone of our operations. We own and maintain a wide range of specialized machinery, ensuring we are prepared for any project challenge, from trenchless boring to heavy-duty pipe jacking.',
+    headline: 'The Powerhouse Behind Your Project: Our Specialized Fleet',
+    body: "Our robust fleet isn't just machinery; it's your project's guarantee for success. We own and meticulously maintain a wide range of specialized equipment, from trenchless boring rigs to heavy-duty jacks, ensuring we conquer any challenge with precision and power.",
     cta: 'Discuss Your Project Needs',
     ctaLink: '/contact?subject=EquipmentInquiry',
   },
   gallery: {
-    title: 'Our Fleet',
+    title: 'Our Equipment & Resources',
     categories: [
       'All',
       'Boring Machines',
@@ -26,62 +24,106 @@ const pageData = {
     equipment: [
       {
         id: 1,
-        name: 'Hydraulic Rock Splitter',
+        name: 'High Rock Breaker',
         category: 'Excavation & Breakers',
         imageUrl: null,
       },
+
       {
         id: 2,
-        name: 'Compact Auger Drill',
-        category: 'Boring Machines',
+        name: 'Smart Rock Breaker',
+        category: 'Excavation & Breakers',
         imageUrl: null,
       },
+
       {
         id: 3,
-        name: 'Hydraulic Pipe Jack',
-        category: 'Pushing & Jacking',
+        name: 'Electric Breaker',
+        category: 'Excavation & Breakers',
         imageUrl: null,
       },
+
       {
         id: 4,
-        name: 'Heavy-Duty Rock Breaker',
+        name: 'Air Compressor Breaker',
         category: 'Excavation & Breakers',
         imageUrl: null,
       },
+
       {
         id: 5,
-        name: 'Trenching Machine',
-        category: 'Excavation & Breakers',
-        imageUrl: null,
-      },
-      {
-        id: 6,
-        name: 'Mobile Generator Unit',
+        name: 'Air Compressor',
         category: 'Support Equipment',
         imageUrl: null,
       },
+
       {
-        id: 7,
-        name: 'Directional Drill',
-        category: 'Boring Machines',
+        id: 6,
+        name: 'Rock Splitter',
+        category: 'Excavation & Breakers',
         imageUrl: null,
       },
+
+      {
+        id: 7,
+        name: 'Oxygen Air Filter',
+        category: 'Support Equipment',
+        imageUrl: null,
+      },
+
       {
         id: 8,
-        name: 'Pneumatic Pipe Rammer',
+        name: 'Power Pack & Jacks',
         category: 'Pushing & Jacking',
         imageUrl: null,
       },
+
       {
         id: 9,
-        name: 'Portable Air Compressor',
+        name: 'High Rock Cutting Machine',
+        category: 'Excavation & Breakers',
+        imageUrl: null,
+      },
+
+      {
+        id: 10,
+        name: 'Auger Boring Machine',
+        category: 'Boring Machines',
+        imageUrl: null,
+      },
+
+      {
+        id: 11,
+        name: 'HDD Machine',
+        category: 'Boring Machines',
+        imageUrl: null,
+      },
+
+      {
+        id: 12,
+        name: 'Box Pushing Tools',
+        category: 'Pushing & Jacking',
+        imageUrl: null,
+      },
+
+      {
+        id: 13,
+        name: 'Shuttering & Railing',
         category: 'Support Equipment',
         imageUrl: null,
       },
+
       {
-        id: 10,
-        name: 'HDD Maxi-Rig',
-        category: 'Boring Machines',
+        id: 14,
+        name: 'Dewatering System',
+        category: 'Support Equipment',
+        imageUrl: null,
+      },
+
+      {
+        id: 15,
+        name: 'DG Set',
+        category: 'Support Equipment',
         imageUrl: null,
       },
     ],

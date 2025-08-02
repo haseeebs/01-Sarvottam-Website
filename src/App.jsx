@@ -13,8 +13,9 @@ import NotFoundPage from './pages/NotFoundPage';
 
 // Service Page Components
 import HDDPage from './pages/services/HDDPage';
-import PushingJackingPage from './pages/services/PushingJackingPage';
 import BoringPage from './pages/services/BoringPage';
+import BoxPushingPage from './pages/services/BoxPushingPage';
+import JackPushingPage from './pages/services/JackPushingPage';
 
 // Router Configuration
 const router = createBrowserRouter([
@@ -54,8 +55,12 @@ const router = createBrowserRouter([
             element: <HDDPage />,
           },
           {
-            path: 'pushing-jacking',
-            element: <PushingJackingPage />,
+            path: 'box-pushing',
+            element: <BoxPushingPage />,
+          },
+          {
+            path: 'jack-pushing',
+            element: <JackPushingPage />,
           },
           {
             path: 'auger-boring',

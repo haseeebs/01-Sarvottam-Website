@@ -1,7 +1,8 @@
 import React from 'react';
+import { getYearsOfExperience } from '@/utils/getYearsOfExperience'; // isey import karein
 
 const expertiseStats = [
-  { value: '15+', label: 'Years Experience' },
+  { value: `${getYearsOfExperience()}+`, label: 'Years Experience' }, // Isey dynamic banayein
   { value: 'Govt.', label: 'Approved Contractor' },
   { value: 'Tough', label: 'Terrains Mastered' },
   { value: '100%', label: 'Safety Compliance' },

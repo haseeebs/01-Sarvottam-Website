@@ -162,7 +162,7 @@ const ContactFormAndDetails = ({
                       id='name'
                       type='text'
                       name='name'
-                      placeholder='John Doe'
+                      placeholder='Your name'
                       required
                     />
                   </FormField>
@@ -177,7 +177,7 @@ const ContactFormAndDetails = ({
                       id='company'
                       type='text'
                       name='company'
-                      placeholder='Acme Inc.'
+                      placeholder='Your company'
                     />
                   </FormField>
 
@@ -206,7 +206,7 @@ const ContactFormAndDetails = ({
                       id='phone'
                       type='tel'
                       name='phone'
-                      placeholder='+1 (555) 123-4567'
+                      placeholder='Enter 10-digit mobile number'
                     />
                   </FormField>
 

@@ -11,6 +11,7 @@ const AboutPage = () => {
   const heroContent = {
     headline: `Our Legacy: ${getYearsOfExperience()} Years of Trust, Determination, and Engineering Excellence`,
     cta: 'View Our Project Portfolio',
+    ctaHref: '/projects',
   };
 
   return (

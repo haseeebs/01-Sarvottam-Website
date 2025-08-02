@@ -1,46 +1,58 @@
+// src/data/projectData.js
+
+// === IMAGES ===
+// In images ko 'src/assets/images' folder mein rakhein aur yahan import karein.
+// Agar images nahi hain, to null rehne dein. ProjectCard component placeholder dikha dega.
+import hddImg from '@/assets/images/Hero-image-2.jpg';
+import boxpushingImg from '@/assets/images/Box-pushing.jpg';
+import augerboringImg from '@/assets/images/Auger-boring.jpg';
+import jackpushingImg from '@/assets/images/JackpushingImg.jpg'; // Ek nayi image jack pushing ke liye
+
+// Placeholder image URLs agar aapke paas local images nahi hain
+const LNT_KUNDALIYA_IMG = 'https://images.unsplash.com/photo-1593349122524-7446587c69da?q=80&w=2070&auto=format&fit=crop';
+const KALISINDH_IMG = 'https://images.unsplash.com/photo-1519408436233-34502b183a26?q=80&w=2070&auto=format&fit=crop';
+const HDD_MOHANPURA_IMG = 'https://images.unsplash.com/photo-1629930784483-53d712a833a6?q=80&w=2940&auto=format&fit=crop';
+const AUGER_BHOPAL_IMG = 'https://images.unsplash.com/photo-1619463261749-51d2047a5137?q=80&w=2940&auto=format&fit=crop';
+const NAMAMI_GANGE_IMG = 'https://images.unsplash.com/photo-1581093557088-e9f0e118c7ed?q=80&w=2070&auto=format&fit=crop';
+
+// === ALL PROJECTS DATA ===
+// Yahan hum client ke diye gaye projects ko nayi categories ke saath organize kar rahe hain.
 export const allProjects = [
     {
         id: 1,
         isFeatured: true,
-        category: 'Pushing & Jacking',
-        subCategory: 'Multi-Terrain Water Supply',
+        category: 'Jack Pushing', // CATEGORY UPDATE: Pushing & Jacking -> Jack Pushing
+        subCategory: 'Lift Irrigation Project', // SUBCATEGORY UPDATE: Client ke "Project Types" se liya gaya.
         title: 'L&T Lift Irrigation (Kundaliya)',
         location: 'Rajgarh, Madhya Pradesh',
         client: 'Larsen & Toubro (L&T)',
-        challenge:
-            'To execute extensive pipe crossings for a critical water supply project, navigating varied terrains including hard rock excavation up to 3 meters deep for a wide range of pipe sizes (150mm to 1600mm).',
-        solution:
-            'We deployed multiple methods suited for each challenge, including crane-assisted placement and trenchless pipe pushing. Our ability to handle diverse DI and MS pipes met the stringent quality standards of L&T.',
-        imageSrc:
-            'https://images.unsplash.com/photo-1593349122524-7446587c69da?q=80&w=2070&auto=format&fit=crop',
+        challenge: 'A critical water supply project requiring extensive pipe crossings (150mm to 1600mm) through varied terrains, including hard rock up to 3 meters deep.',
+        solution: 'Deployed multiple methods, including crane-assisted placement and trenchless pipe pushing, handling diverse DI and MS pipes to meet L&T\'s stringent quality standards.',
+        imageSrc: LNT_KUNDALIYA_IMG,
         keyStats: [
-            { label: 'Pipe Diameters', value: '600mm and above' },
-            { label: 'Terrain Handled', value: 'Hard Rock & Mixed Soil' },
-            { label: 'Technology', value: 'Trenchless + Open Cut' },
+            { label: 'Pipe Diameters', value: 'Up to 1600mm' },
+            { label: 'Terrain', value: 'Hard Rock & Mixed Soil' },
+            { label: 'Technology', value: 'Jack Pushing & Open Cut' },
         ],
         testimonial: {
-            quote:
-                "Sarvottam's capability to handle diverse pipe sizes and challenging ground conditions was critical to our project's success.",
+            quote: "Sarvottam's capability to handle diverse pipe sizes and challenging ground conditions was critical to our project's success.",
             author: 'Project Manager, L&T Water & Effluent Treatment',
         },
     },
     {
         id: 2,
         isFeatured: true,
-        category: 'Pushing & Jacking',
-        subCategory: 'Highway Crossing',
-        title: 'Kalisindh Lift Irrigation Scheme - Phase II',
+        category: 'Jack Pushing', // CATEGORY UPDATE
+        subCategory: 'Highway Crossing', // SUBCATEGORY UPDATE
+        title: 'Kalisindh Lift Irrigation - Highway Crossings',
         location: 'Madhya Pradesh',
         client: 'Megha Engineering & Infrastructures Ltd (MEIL)',
-        challenge:
-            'To install a vast range of MS encasing pipes (from 400mm to a massive 3900mm) for National & State Highway crossings, requiring expertise in all soil types, including hard rock.',
-        solution:
-            "Leveraging advanced jacking and pushing techniques, our team executed the pipe tunneling with high precision. We successfully managed the exceptionally wide range of pipe diameters as per MEIL's directives.",
-        imageSrc:
-            'https://images.unsplash.com/photo-1519408436233-34502b183a26?q=80&w=2070&auto=format&fit=crop', // Placeholder
+        challenge: 'Installing a vast range of MS encasing pipes (from 400mm to a massive 3900mm) for National & State Highway crossings in all soil types, including hard rock.',
+        solution: 'Leveraged advanced jacking and pushing techniques for high-precision pipe tunneling, successfully managing an exceptionally wide range of pipe diameters as per MEIL\'s directives.',
+        imageSrc: KALISINDH_IMG,
         keyStats: [
-            { label: 'Pipe Diameters', value: '600mm and above' },
-            { label: 'Technology', value: 'Jacking & Pushing' },
+            { label: 'Pipe Diameters', value: '400mm to 3900mm' },
+            { label: 'Technology', value: 'Jack Pushing' },
             { label: 'Infrastructure', value: 'NH & SH Crossings' },
         ],
         testimonial: null,
@@ -48,40 +60,35 @@ export const allProjects = [
     {
         id: 3,
         isFeatured: false,
-        category: 'Pushing & Jacking',
-        subCategory: 'Urban Infrastructure',
-        title: 'Digha-Kankarbagh Sewer Network Project',
+        category: 'Jack Pushing', // CATEGORY UPDATE
+        subCategory: 'Sewer Line Project', // SUBCATEGORY UPDATE
+        title: 'Digha-Kankarbagh Sewer Network',
         location: 'Patna, Bihar',
         client: 'VA Tech Wabag Ltd',
-        challenge:
-            'Laying a large 1600mm diameter RCC sewer pipe for 141 meters in a dense urban zone of Patna using a trenchless method to minimize public disruption and meet a tight 3-month schedule.',
-        solution:
-            'Our team successfully executed all associated civil works and employed the jack pushing method to install the pipeline, completing the project on schedule and demonstrating our efficiency in urban infrastructure projects.',
-        imageSrc: null,
+        challenge: 'Laying a large 1600mm diameter RCC sewer pipe for 141 meters in a dense urban zone of Patna within a tight 3-month schedule, requiring minimal public disruption.',
+        solution: 'Successfully executed all civil works and employed the jack pushing method to install the pipeline, completing the project on schedule and demonstrating efficiency in urban projects.',
+        imageSrc: null, // Client se is project ki image maangein
         keyStats: [
             { label: 'Pipe Diameter', value: '1600mm RCC' },
             { label: 'Crossing Length', value: '141 Meters' },
-            { label: 'Technology', value: 'Trenchless (Jack Pushing)' },
+            { label: 'Technology', value: 'Jack Pushing' },
         ],
         testimonial: null,
     },
     {
         id: 4,
         isFeatured: false,
-        category: 'HDD', // Changed to be more specific
-        subCategory: 'Horizontal Directional Drilling',
-        title: 'Mohanpura LBS Pipeline Project',
+        category: 'HDD',
+        subCategory: 'Highway Crossing',
+        title: 'Mohanpura Pipeline Project (HDD)',
         location: 'Mohanpura, Madhya Pradesh',
         client: 'Jain Irrigation Systems Ltd.',
-        challenge:
-            'Installing MS casing pipes (600mm to 2000mm) for a highway crossing using the HDD method through unpredictable mixed ground conditions, including soft soil, murram, and hard rock.',
-        solution:
-            'Our team expertly deployed the HDD method for both boring and pushing the casing pipe, managing all required machinery to successfully complete the 100-meter crossing across the varied strata.',
-        imageSrc:
-            'https://images.unsplash.com/photo-1629930784483-53d712a833a6?q=80&w=2940&auto=format&fit=crop', // Placeholder
+        challenge: 'Installing MS casing pipes (600mm to 2000mm) for a highway crossing using HDD through unpredictable mixed ground conditions (soft soil, murram, hard rock).',
+        solution: 'Expertly deployed the HDD method for both boring and pushing the casing pipe, managing all required machinery to complete the 100-meter crossing successfully.',
+        imageSrc: HDD_MOHANPURA_IMG,
         keyStats: [
             { label: 'Pipe Diameters', value: '600mm to 2000mm' },
-            { label: 'Terrain Handled', value: 'Mixed (Soil, Murram, Hard Rock)' },
+            { label: 'Terrain', value: 'Mixed (Soil, Murram, Hard Rock)' },
             { label: 'Technology', value: 'HDD' },
         ],
         testimonial: null,
@@ -89,20 +96,18 @@ export const allProjects = [
     {
         id: 5,
         isFeatured: true,
-        category: 'Pushing & Jacking',
-        subCategory: 'Trenchless Technology',
-        title: 'Parwati + Shipralink Project',
+        category: 'Jack Pushing', // CATEGORY UPDATE
+        subCategory: 'Lift Irrigation Project', // SUBCATEGORY UPDATE
+        title: 'L&T Parwati + Shipralink Project',
         location: 'Madhya Pradesh',
         client: 'Larsen & Toubro (L&T)',
-        challenge:
-            'This project involved complex pipeline crossings under critical infrastructure, ensuring minimal disruption and maximum efficiency.',
-        solution:
-            'Our expertise in trenchless solutions was critical for the successful execution of this high-stakes project.',
-        imageSrc: null,
+        challenge: 'Complex pipeline crossings under critical infrastructure, ensuring minimal disruption and maximum efficiency for a major irrigation link project.',
+        solution: 'Our expertise in trenchless solutions, specifically Jack Pushing, was critical for the successful execution of this high-stakes project.',
+        imageSrc: null, // Client se is project ki image maangein
         keyStats: [
-            { label: 'Role', value: 'Execution Partner' },
-            { label: 'Technology', value: 'Trenchless Solutions' },
             { label: 'Client', value: 'Larsen & Toubro' },
+            { label: 'Technology', value: 'Jack Pushing' },
+            { label: 'Project Type', value: 'Irrigation Link' },
         ],
         testimonial: null,
     },
@@ -110,50 +115,87 @@ export const allProjects = [
         id: 6,
         isFeatured: false,
         category: 'Auger Boring',
-        subCategory: 'Urban Utility Installation',
-        title: 'City Gas Distribution Network',
+        subCategory: 'Gas Pipeline Project', // SUBCATEGORY UPDATE
+        title: 'City Gas Distribution Network (Auger Boring)',
         location: 'Bhopal, Madhya Pradesh',
-        client: 'Local Gas Authority',
+        client: 'GAIL Gas (Local Authority)', // CLIENT UPDATE: Client ke notes se
         challenge: 'Installing steel casing pipes for a gas distribution network in a congested urban area without disrupting traffic.',
         solution: 'Utilized precision auger boring to accurately install pipes under busy roads, completing the project ahead of schedule with minimal surface impact.',
-        imageSrc: 'https://images.unsplash.com/photo-1619463261749-51d2047a5137?q=80&w=2940&auto=format&fit=crop',
+        imageSrc: AUGER_BHOPAL_IMG,
         keyStats: [
             { label: 'Technology', value: 'Auger Boring' },
             { label: 'Infrastructure', value: 'Urban Roads' },
+            { label: 'Utility', value: 'Gas Pipeline' },
+        ],
+        testimonial: null,
+    },
+    {
+        id: 7, // Yeh pehle se tha, ab isko aur behtar banaya gaya hai.
+        isFeatured: true,
+        category: 'Jack Pushing',
+        subCategory: 'Sewer Line Project',
+        title: 'Namami Gange - Sewer Diversion',
+        location: 'Patna, Bihar',
+        client: 'Namami Gange Mission (via L&T, Jain Irrigation)',
+        challenge: 'Diverting major sewage drains (1600mm to 2100mm diameter) away from the Ganga river in a dense urban environment as part of a critical national mission.',
+        solution: 'We executed large-scale trenchless sewer line installations using jack pushing techniques to lay new pipelines, successfully isolating the drains from the river without major disruption to the city.',
+        imageSrc: NAMAMI_GANGE_IMG,
+        keyStats: [
+            { label: 'Pipe Diameters', value: '1600mm - 2100mm' },
+            { label: 'Project', value: 'Clean Ganga Mission' },
+            { label: 'Technology', value: 'Jack Pushing' },
+        ],
+        testimonial: null,
+    },
+    {
+        id: 8,
+        isFeatured: true,
+        category: 'Box Pushing',
+        subCategory: 'Railway Crossing',
+        title: 'Railway Under-Bridge (RUB) Construction',
+        location: 'All India (various sites)',
+        client: 'Indian Railways / NHAI',
+        challenge: 'Constructing concrete box culverts and underpasses under live, operational railway tracks without disrupting train schedules, a high-risk and precision-demanding task.',
+        solution: 'Using our specialized Box Pushing technique, we incrementally push pre-cast concrete box segments under the railway embankment. This method is approved by railway authorities and guarantees structural safety and project completion on time.',
+        imageSrc: boxpushingImg, // Box Pushing ki main image istemal kar rahe hain.
+        keyStats: [
+            { label: 'Infrastructure', value: 'Live Railway Tracks' },
+            { label: 'Technology', value: 'Box Pushing' },
+            { label: 'Benefit', value: 'Zero Rail Traffic Disruption' },
         ],
         testimonial: null,
     },
 ];
 
-import boxpushingImg from '@/assets/images/Box-pushing.jpg';
-import augerboringImg from '@/assets/images/Auger-boring.jpg';
-// -import pipelineImg from '@/assets/images/NormalImg-1.jpg';
-import hddImg from '@/assets/images/Hero-image-2.jpg';
 
+// === SERVICES FOR HOMEPAGE ===
 export const services = [
     {
         title: 'Horizontal Directional Drilling',
         link: '/services/hdd',
         imgSrc: hddImg,
         imgAlt: 'Horizontal Directional Drilling rig in action for a major project.',
-        description:
-            'For long-distance crossings under rivers, highways, or sensitive areas, our HDD service provides a steerable, trenchless solution with pinpoint accuracy and minimal environmental impact.',
+        description: 'A steerable, trenchless solution for long-distance crossings under rivers, highways, or sensitive areas with pinpoint accuracy.',
     },
+    // {
+    //     title: 'Box Pushing (For Railways)',
+    //     link: '/services/box-pushing',
+    //     imgSrc: boxpushingImg,
+    //     imgAlt: 'Construction of a Railway Under-Bridge using the box pushing method.',
+    //     description: 'Specialized in constructing Railway Under-Bridges (RUBs) and culverts under live traffic with zero disruption to train services.',
+    // },
     {
-        title: 'Box Pushing & Pipe Jacking',
-        link: '/services/pushing-jacking',
-        imgSrc: boxpushingImg,
-        imgAlt: 'Hydraulic jacks for box pushing and pipe jacking projects.',
-        description:
-            'We construct underground underpasses (RUBs) and culverts with precision-guided box pushing and pipe jacking. This method accelerates project completion and enhances site safety by eliminating the need for open-cut excavation.',
+        title: 'Jack Pushing',
+        link: '/services/jack-pushing',
+        imgSrc: jackpushingImg,
+        imgAlt: 'Large diameter pipes being installed using hydraulic jacks.',
+        description: 'Ideal for installing large diameter pipelines (600mm & above) for water supply, sewer, and utility projects across any terrain.',
     },
     {
         title: 'Auger Boring',
         link: '/services/auger-boring',
         imgSrc: augerboringImg,
         imgAlt: 'Auger boring machine for precision underground services.',
-        description:
-            'Ideal for straight-line utility installations of steel casing pipes under roads and railways. Our auger boring method is a reliable and cost-effective trenchless solution for various ground conditions.',
+        description: 'A reliable and cost-effective trenchless solution for straight-line installation of steel casing pipes under roads and railways.',
     },
 ];
-// --- END OF FILE src/data/projectData.js ---

@@ -13,7 +13,7 @@ const pageData = {
     ctaLink: '#contact',
   },
   formAndDetails: {
-    title: 'Get In Touch',
+    title: 'Connect With Our Experts',
     bodyText:
       "We're here to help and answer any question you might have. We look forward to hearing from you.",
     contactInfo: [

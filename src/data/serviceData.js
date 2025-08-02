@@ -6,7 +6,11 @@ import {
     Unplug, // for Pipe Jacking (metaphor for connecting)
     Crosshair, // for Precision Boring
     Hammer, // for Pipe Ramming
+    Train, // 🆕 NAYA ICON: Box Pushing mein Railway ke liye
+    Maximize, // 🆕 NAYA ICON: Jack Pushing mein bade diameter ke liye
 } from 'lucide-react';
+
+import BoxpushingImg from '@/assets/images/Box-pushing.jpg'
 
 const hddContent = {
     service1: {
@@ -25,21 +29,36 @@ const hddContent = {
         'https://images.unsplash.com/photo-1629930784483-53d712a833a6?q=80&w=2940&auto=format&fit=crop', // Relevant image for HDD
 };
 
-const boxpushingContent = {
+const boxPushingContent = {
     service1: {
-        title: 'Box Pushing for Major Civil Structures (RUBs & Culverts)',
+        title: 'Railway Under-Bridge (RUB) Construction via Box Pushing',
         description:
-            'When your project demands the construction of a robust Road Under Bridge (RUB) or culvert beneath live traffic, our Box Pushing method is the ideal solution. We utilize powerful hydraulic systems to thrust pre-cast concrete segments into place, accelerating project completion and enhancing site safety, all while eliminating the need for open-cut excavation.',
-        Icon: Box, // Icon yahan add kiya
+            'Hum chalti hui railway lines ke neeche bina train traffic roke RUBs aur culverts banane mein mahir hain. Hamari box pushing technique railway authorities se manzoor-shuda hai aur suraksha ki zamanat deti hai.',
+        Icon: Train, // 🆕 NAYA ICON
     },
     service2: {
-        title: 'Pipe Jacking & Pushing: Large Diameter, High Precision',
+        title: 'Trenchless Underpass Solutions',
         description:
-            'For large-diameter pipelines carrying water, sewage, or other utilities, our pipe jacking service offers a superior trenchless solution. Whether navigating hard rock or unstable soil conditions, our experienced team ensures millimeter-level accuracy, significantly reducing environmental impact and restoration costs.',
-        Icon: Unplug, // Icon yahan add kiya
+            'Hamari box pushing expertise se paidal chalne walon aur gaadiyon ke liye zameen-doz raaste (underpasses) banaye jaate hain, jis se traffic mein koi rukawat nahi aati.',
+        Icon: Box,
     },
-    imageSrc:
-        'https://images.unsplash.com/photo-1599303217595-3004b901615f?q=80&w=1974&auto=format&fit=crop', // Relevant image for jacking
+    imageSrc: BoxpushingImg
+};
+
+const jackPushingContent = {
+    service1: {
+        title: 'Large Diameter Pipe Jacking (600mm & Above)',
+        description:
+            'For major water supply, sewer lines, and utility conduits, we employ high-capacity hydraulic jacks to push large diameter pipes (600mm and above) through any terrain, including hard rock and unstable soil.',
+        Icon: Maximize, // 🆕 NAYA ICON
+    },
+    service2: {
+        title: 'High-Precision Pipeline Installation',
+        description:
+            'Our jack pushing services are perfect for installing pipelines for Lift Irrigation Projects, Power Cable Protection, and Road/Highway crossings, ensuring precise alignment and grade over long distances.',
+        Icon: Unplug,
+    },
+    imageSrc: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop', // Example image
 };
 
 const boringContent = {
@@ -59,4 +78,4 @@ const boringContent = {
         'https://images.unsplash.com/photo-1619463261749-51d2047a5137?q=80&w=2940&auto=format&fit=crop', // Relevant image for boring
 };
 
-export { hddContent, boxpushingContent, boringContent };
+export { hddContent, jackPushingContent, boxPushingContent, boringContent };

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import HomepageHero from '@/components/sections/homepage/HomepageHeroSection';
 import CTA from '@/components/common/CTA';
 import ClientLogosNew from '@/components/common/ClientLogos';
@@ -18,7 +17,7 @@ const HomePage = () => {
       'Why leading organizations and government bodies trust us with their most critical infrastructure projects.',
     features: [
       {
-        name: '15+ Years of Proven Expertise',
+        name: `Over ${getYearsOfExperience()} Years of Proven Expertise`,
         description:
           'Our extensive portfolio includes complex projects for industry leaders like L&T, MEIL, and Indian Railways, demonstrating our reliability in high-stakes environments.',
         Icon: Landmark,

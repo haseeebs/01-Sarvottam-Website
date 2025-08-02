@@ -4,7 +4,6 @@ import KeyBenefits from '@/components/common/KeyBenefits';
 import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
 import CTA from '@/components/common/CTA';
 
-// Lucide React se Icons import karein
 import { GitMerge, Waves, ShieldCheck, Minimize2 } from 'lucide-react';
 import PageHero from '@/components/common/PageHero';
 import { allProjects } from '@/data/projectData';

@@ -9,10 +9,8 @@ export const primaryNav = [
                 path: '/services/hdd',
             },
             { name: 'Auger Boring', path: '/services/auger-boring' },
-            {
-                name: 'Box Pushing & Pipe Jacking',
-                path: '/services/pushing-jacking'
-            },
+            { name: 'Box Pushing', path: '/services/box-pushing' },
+            { name: 'Jack Pushing', path: '/services/jack-pushing' },
         ],
     },
     { name: 'Projects', path: '/projects' },
@@ -33,10 +31,8 @@ export const footerNav = {
             path: '/services/hdd',
         },
         { name: 'Auger Boring', path: '/services/auger-boring' },
-        {
-            name: 'Box Pushing & Pipe Jacking',
-            path: '/services/pushing-jacking'
-        },
+        { name: 'Box Pushing (For Railways)', path: '/services/box-pushing' },
+        { name: 'Jack Pushing', path: '/services/jack-pushing' },
     ],
     contact: {
         email: 'sarvottamenterprisesjackpush@gmail.com',

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/Button';
 import { Link } from 'react-router-dom';
 
-const AboutPageHero = ({ content, imageUrl, imageAlt }) => {
+const AboutPageHero = ({ content, imageUrl, imageAlt, ctaHref }) => {
   if (!content) {
     return null;
   }
@@ -19,15 +19,15 @@ const AboutPageHero = ({ content, imageUrl, imageAlt }) => {
             <p className='font-family-body text-my-primary mt-6 text-lg leading-relaxed'>
               ...our skilled and experienced team is adept at navigating the
               complexities of government tenders and{' '}
-              <Link to='/projects' className='font-bold hover:underline'>
+              <Link to={`${ctaHref}`} className='font-bold hover:underline'>
                 <i>delivering results</i>
               </Link>{' '}
               that meet the highest standards of quality and safety.
             </p>
 
             <div className='mt-8 flex justify-center md:justify-start'>
-              <Button variant={'outline-primary'} size={'lg'}>
-                <Link to={content.ctaHref || '#'}>{content.cta}</Link>
+              <Button variant={'outline-primary'} size={'lg'} asChild>
+                <Link to={content.ctaHref || '/projects'}>{content.cta}</Link>
               </Button>
             </div>
           </div>

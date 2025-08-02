@@ -11,7 +11,9 @@ import { allProjects } from '@/data/projectData';
 import { boringContent } from '@/data/serviceData';
 
 const BoringPage = () => {
-  const boringProjects = allProjects.filter((p) => p.category === 'Boring');
+  const boringProjects = allProjects.filter((p) =>
+    ['Boring', 'Auger Boring'].includes(p.category),
+  );
 
   const heroContent = {
     headline: 'Precision Auger Boring & Pipe Ramming Services',
