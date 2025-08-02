@@ -10,7 +10,7 @@ const pageData = {
   hero: {
     headline:
       'Our State-of-the-Art Fleet: Heavy Machinery for Demanding Projects',
-    body: 'Our robust fleet is the backbone of our operations. We own and maintain a wide range of specialized machinery, ensuring we are prepared for any project challenge, from trenchless boring to heavy-duty pipe jacking.',
+    body: 'Our robust, company-owned fleet is the backbone of our operational excellence. We deploy a wide range of specialized machinery, ensuring we are prepared for any project challenge, from trenchless HDD to heavy-duty pipe jacking for railway and highway crossings.',
     cta: 'Discuss Your Project Needs',
     ctaLink: '/contact?subject=EquipmentInquiry',
   },

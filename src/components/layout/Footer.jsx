@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { footerNav } from '@/config/navigation';
 import Logo from '@/assets/images/Logo.webp';
+import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
 
 const Footer = () => {
   return (
@@ -11,14 +12,14 @@ const Footer = () => {
           <div className='space-y-8'>
             <Link to='/'>
               <img
-                className='h-16 w-auto'
+                className='mb-8 h-10 w-50'
                 src={Logo}
                 alt='Sarvottam Enterprises Logo'
               />
             </Link>
             <p className='text-my-secondary text-sm/6'>
               Pioneering trenchless technology with a foundation of trust and
-              determination for over 15 years.
+              determination for over {getYearsOfExperience()} years.
             </p>
           </div>
 

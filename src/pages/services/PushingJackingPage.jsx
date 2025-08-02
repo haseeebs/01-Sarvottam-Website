@@ -16,7 +16,7 @@ const PushingJackingPage = () => {
 
   const heroContent = {
     headline: 'Advanced Pipe Jacking & Box Pushing Contractors',
-    body: 'Our pushing and jacking services are engineered for projects requiring heavy-duty underground passage. We specialize in Box Pushing (RCC/Precast) for creating railway underbridges and pedestrian subways, alongside Pipe Pushing and Jacking for large-diameter water and sewer pipelines. Our experienced team and powerful machinery ensure precise execution for even the most demanding projects.',
+    body: 'We engineer and execute heavy-duty underground crossings with precision. Our services are critical for Railway Under-Bridges (RUBs), culverts, and large-diameter pipelines, all installed with minimal surface disruption.',
     cta: 'Plan Your Pushing & Jacking Project',
     ctaLink: '/contact?subject=PushingJackingProject',
   };

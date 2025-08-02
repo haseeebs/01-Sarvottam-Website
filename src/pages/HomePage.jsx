@@ -9,29 +9,30 @@ import { services } from '@/data/projectData';
 import heroImage1 from '@/assets/images/Hero-image-2.jpg';
 import { Landmark, FileText, Mountain } from 'lucide-react';
 import KeyBenefits from '@/components/common/KeyBenefits';
+import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
 
 const HomePage = () => {
   const whyChooseUsData = {
     title: 'The Sarvottam Advantage',
     description:
-      'Why leading organizations trust us with their most critical infrastructure projects.',
+      'Why leading organizations and government bodies trust us with their most critical infrastructure projects.',
     features: [
       {
-        name: 'Proven Project Expertise',
+        name: '15+ Years of Proven Expertise',
         description:
-          "For over 15 years, we have delivered complex projects for India's leading infrastructure firms and government bodies like L&T, MEIL, and Indian Railways. Our track record is a testament to our reliability.",
+          'Our extensive portfolio includes complex projects for industry leaders like L&T, MEIL, and Indian Railways, demonstrating our reliability in high-stakes environments.',
         Icon: Landmark,
       },
       {
         name: 'Government & Tender Specialists',
         description:
-          'We possess deep experience navigating the complexities of government tenders, ensuring we meet the most stringent technical and compliance requirements for public sector projects.',
+          'We possess deep experience navigating the rigorous technical and compliance requirements of government tenders, ensuring project success from bid to completion.',
         Icon: FileText,
       },
       {
-        name: 'Mastery Over Tough Terrains',
+        name: 'Mastery Over Challenging Terrains',
         description:
-          'Our true strength lies in executing trenchless projects in challenging conditions, from hard rock to water-logged areas. We have the machinery and the know-how to cross any obstacle.',
+          'Our core strength is executing trenchless projects in difficult geological conditions, including hard rock, water-logged areas, and dense urban corridors. We overcome obstacles that others cannot.',
         Icon: Mountain,
       },
     ],
@@ -40,17 +41,14 @@ const HomePage = () => {
   return (
     <>
       <HomepageHero
-        body='Your Trusted Partner for High-Stakes Government & Private Infrastructure Projects.'
-        cta='Request a Project Quote'
+        body='Your trusted partner in trenchless technology and specialized underground engineering for India’s most demanding infrastructure projects.'
+        cta='Request a Project Consultation'
         imageSrc={heroImage1}
         ctaLink='/contact'
-        imageAlt='Trenchless Technology Project'
+        imageAlt='Trenchless technology project in action'
       >
-        The Expertise to Cross Any Obstacle. The{' '}
-        <Link to='/equipment'>
-          <i className='hover:text-my-accent underline'>Machinery</i>
-        </Link>{' '}
-        to Guarantee It.
+        Pioneering Underground Infrastructure for Over {getYearsOfExperience()}{' '}
+        Years.
       </HomepageHero>
 
       <ClientLogosNew layout='marquee' />
@@ -68,7 +66,7 @@ const HomePage = () => {
       <CTA
         variant='image-left'
         title='Ready to Discuss Your Next Infrastructure Challenge?'
-        description="With 15 years of proven experience, we are equipped to handle the most demanding projects. Let's build the future together."
+        description={`With ${getYearsOfExperience()} years of proven experience, we are equipped to handle the most demanding projects. Let's build the future together.`}
         buttonText='Get In Touch'
         buttonLink='/contact'
         buttonVariant='primary'

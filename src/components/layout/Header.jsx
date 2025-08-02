@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react';
+// src/components/layout/Header.jsx
+
+import React, { useState, useEffect, useRef } from 'react'; // <--- useRef import kiya
 import Logo from '@/assets/images/Logo.webp';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { primaryNav } from '@/config/navigation'; // <-- NAYA IMPORT
+import { primaryNav } from '@/config/navigation';
 
-const NavLink = ({ to, children, hasDropdown, onMouseEnter, onMouseLeave }) => (
-  <div
-    className='relative'
-    onMouseEnter={onMouseEnter}
-    onMouseLeave={onMouseLeave}
-  >
+const NavLink = ({ to, children, hasDropdown }) => (
+  <div className='relative'>
     <Link
       to={to}
       className='font-body group text-my-primary relative flex items-center gap-1 py-2 text-base font-bold'
@@ -28,6 +26,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
+  // ===== NAYA CODE: TIMEOUT KE LIYE REF =====
+  const dropdownTimeoutRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -35,6 +36,23 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // ===== NAYA CODE: MOUSE EVENTS KE LIYE HANDLERS =====
+  const handleMouseEnter = (itemName) => {
+    // Agar koi "band karne wala" timer chal raha hai, to usko cancel karo
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    // Dropdown ko dikhao
+    setOpenDropdown(itemName);
+  };
+
+  const handleMouseLeave = () => {
+    // 200 millisecond ka timer shuru karo jo dropdown ko band kar dega
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 200); // Aap is delay ko kam ya zyada kar sakte hain
+  };
 
   const navItems = primaryNav;
 
@@ -48,7 +66,7 @@ const Header = () => {
         <div className='mx-auto flex h-[80px] max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8'>
           <div className='flex-shrink-0'>
             <Link to='/'>
-              <img src={Logo} alt='Logo' className='h-12 w-auto' />
+              <img src={Logo} alt='Logo' className='h-10 w-auto' />
             </Link>
           </div>
 
@@ -57,13 +75,17 @@ const Header = () => {
               <div
                 key={item.name}
                 className='relative'
-                onMouseEnter={() => item.dropdown && setOpenDropdown(item.name)}
-                onMouseLeave={() => item.dropdown && setOpenDropdown(null)}
+                // ===== NAYA CODE: NAYE HANDLERS LAGAYE GAYE HAIN =====
+                onMouseEnter={() =>
+                  item.dropdown && handleMouseEnter(item.name)
+                }
+                onMouseLeave={() => item.dropdown && handleMouseLeave()}
               >
                 <NavLink to={item.path} hasDropdown={!!item.dropdown}>
                   {item.name}
                 </NavLink>
                 {item.dropdown && openDropdown === item.name && (
+                  // Dropdown par alag se events lagane ki zaroorat nahi kyunki parent div hi kafi hai
                   <div className='ring-opacity-5 absolute top-full left-0 mt-2 w-64 origin-top-right rounded-sm bg-white py-2 shadow-lg ring-1 ring-black'>
                     {item.dropdown.map((subItem) => (
                       <Link
@@ -101,7 +123,6 @@ const Header = () => {
       >
         <nav className='flex h-full flex-col items-center justify-center gap-10'>
           {navItems.map((item) => (
-            // Mobile menu mein dropdown ko alag se handle karna padega, abhi simple links
             <Link
               key={item.name}
               to={item.path}

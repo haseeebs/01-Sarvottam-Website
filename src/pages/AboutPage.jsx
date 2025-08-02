@@ -5,11 +5,11 @@ import heroImage1 from '@/assets/images/Hero-image-1.jpg';
 import TeamImg from '@/assets/images/TeamImg.jpg';
 import CTA from '@/components/common/CTA';
 import ClientLogosNew from '@/components/common/ClientLogos';
+import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
 
 const AboutPage = () => {
   const heroContent = {
-    headline:
-      'Our Legacy: 15 Years of Trust, Determination, and Engineering Excellence',
+    headline: `Our Legacy: ${getYearsOfExperience()} Years of Trust, Determination, and Engineering Excellence`,
     cta: 'View Our Project Portfolio',
   };
 
@@ -25,9 +25,9 @@ const AboutPage = () => {
       <CTA
         variant='image-left'
         title="Let's Build the Future, Together."
-        buttonText='Discover Our Services'
-        buttonLink='#'
-        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.'
+        description='Our combination of a skilled team, owned specialized machinery, and proven experience makes us the ideal partner for your next infrastructure project. Discover how our capabilities can drive your success.'
+        buttonText='Explore Our Services'
+        buttonLink='/services/hdd'
         buttonVariant='primary'
         imgUrl={TeamImg}
       />

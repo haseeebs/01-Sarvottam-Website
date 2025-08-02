@@ -15,8 +15,8 @@ const HDDPage = () => {
   const hddProjects = allProjects.filter((p) => p.category === 'HDD');
 
   const heroContent = {
-    headline: 'Horizontal Directional Drilling (HDD) Specialists',
-    body: 'Our advanced HDD services provide a steerable, trenchless solution for installing pipelines and conduits under sensitive obstacles like rivers, highways, and railways. We ensure pinpoint accuracy with minimal environmental disruption.',
+    headline: 'Horizontal Directional Drilling (HDD) Services',
+    body: 'We provide steerable, trenchless solutions for installing critical pipelines and conduits under sensitive obstacles like rivers, highways, and active railways. Our advanced guidance systems ensure pinpoint accuracy with minimal environmental and surface disruption, ideal for high-stakes government and private sector projects.',
     cta: 'Get a Quote for Your HDD Project',
     ctaLink: '/contact?subject=HDDProjectQuote',
   };

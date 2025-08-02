@@ -69,7 +69,7 @@ const BoringPage = () => {
         features={keyBenefitsContent.features}
       />
       <ProjectShowcaseSection
-        title={'Specialized Boring & Drilling Projects'}
+        title={'Featured Auger Boring Projects'}
         projects={boringProjects}
       />
       <CTA
