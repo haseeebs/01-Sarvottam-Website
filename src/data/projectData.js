@@ -1,22 +1,9 @@
-// src/data/projectData.js
-
-// === IMAGES ===
-// In images ko 'src/assets/images' folder mein rakhein aur yahan import karein.
-// Agar images nahi hain, to null rehne dein. ProjectCard component placeholder dikha dega.
-import hddImg from '@/assets/images/Hero-image-2.webp';
-import boxpushingImg from '@/assets/images/Box-pushing.webp';
-import augerboringImg from '@/assets/images/Auger-boring.webp';
-import jackpushingImg from '@/assets/images/JackpushingImg.webp'; // Ek nayi image jack pushing ke liye
-
-// Placeholder image URLs agar aapke paas local images nahi hain
-const LNT_KUNDALIYA_IMG = 'https://images.unsplash.com/photo-1593349122524-7446587c69da?q=80&w=2070&auto=format&fit=crop';
-const KALISINDH_IMG = 'https://images.unsplash.com/photo-1519408436233-34502b183a26?q=80&w=2070&auto=format&fit=crop';
-const HDD_MOHANPURA_IMG = 'https://images.unsplash.com/photo-1629930784483-53d712a833a6?q=80&w=2940&auto=format&fit=crop';
-const AUGER_BHOPAL_IMG = 'https://images.unsplash.com/photo-1619463261749-51d2047a5137?q=80&w=2940&auto=format&fit=crop';
-const NAMAMI_GANGE_IMG = 'https://images.unsplash.com/photo-1581093557088-e9f0e118c7ed?q=80&w=2070&auto=format&fit=crop';
+import hddImg from '@/assets/images/heroImg-2.webp';
+import boxpushingImg from '@/assets/images/boxPushing.webp';
+import augerboringImg from '@/assets/images/augerBoring.webp';
+import jackpushingImg from '@/assets/images/jackPushingImg.webp';
 
 // === ALL PROJECTS DATA ===
-// Yahan hum client ke diye gaye projects ko nayi categories ke saath organize kar rahe hain.
 export const allProjects = [
     {
         id: 1,
@@ -28,7 +15,7 @@ export const allProjects = [
         client: 'Larsen & Toubro (L&T)',
         challenge: 'A critical water supply project requiring extensive pipe crossings (150mm to 1600mm) through varied terrains, including hard rock up to 3 meters deep.',
         solution: 'Deployed multiple methods, including crane-assisted placement and trenchless pipe pushing, handling diverse DI and MS pipes to meet L&T\'s stringent quality standards.',
-        imageSrc: LNT_KUNDALIYA_IMG,
+        imageSrc: null,
         keyStats: [
             { label: 'Pipe Diameters', value: 'Up to 1600mm' },
             { label: 'Terrain', value: 'Hard Rock & Mixed Soil' },
@@ -49,7 +36,7 @@ export const allProjects = [
         client: 'Megha Engineering & Infrastructures Ltd (MEIL)',
         challenge: 'Installing a vast range of MS encasing pipes (from 400mm to a massive 3900mm) for National & State Highway crossings in all soil types, including hard rock.',
         solution: 'Leveraged advanced jacking and pushing techniques for high-precision pipe tunneling, successfully managing an exceptionally wide range of pipe diameters as per MEIL\'s directives.',
-        imageSrc: KALISINDH_IMG,
+        imageSrc: null,
         keyStats: [
             { label: 'Pipe Diameters', value: '400mm to 3900mm' },
             { label: 'Technology', value: 'Jack Pushing' },
@@ -85,7 +72,7 @@ export const allProjects = [
         client: 'Jain Irrigation Systems Ltd.',
         challenge: 'Installing MS casing pipes (600mm to 2000mm) for a highway crossing using HDD through unpredictable mixed ground conditions (soft soil, murram, hard rock).',
         solution: 'Expertly deployed the HDD method for both boring and pushing the casing pipe, managing all required machinery to complete the 100-meter crossing successfully.',
-        imageSrc: HDD_MOHANPURA_IMG,
+        imageSrc: null,
         keyStats: [
             { label: 'Pipe Diameters', value: '600mm to 2000mm' },
             { label: 'Terrain', value: 'Mixed (Soil, Murram, Hard Rock)' },
@@ -121,7 +108,7 @@ export const allProjects = [
         client: 'GAIL Gas (Local Authority)', // CLIENT UPDATE: Client ke notes se
         challenge: 'Installing steel casing pipes for a gas distribution network in a congested urban area without disrupting traffic.',
         solution: 'Utilized precision auger boring to accurately install pipes under busy roads, completing the project ahead of schedule with minimal surface impact.',
-        imageSrc: AUGER_BHOPAL_IMG,
+        imageSrc: null,
         keyStats: [
             { label: 'Technology', value: 'Auger Boring' },
             { label: 'Infrastructure', value: 'Urban Roads' },
@@ -139,7 +126,7 @@ export const allProjects = [
         client: 'Namami Gange Mission (via L&T, Jain Irrigation)',
         challenge: 'Diverting major sewage drains (1600mm to 2100mm diameter) away from the Ganga river in a dense urban environment as part of a critical national mission.',
         solution: 'We executed large-scale trenchless sewer line installations using jack pushing techniques to lay new pipelines, successfully isolating the drains from the river without major disruption to the city.',
-        imageSrc: NAMAMI_GANGE_IMG,
+        imageSrc: null,
         keyStats: [
             { label: 'Pipe Diameters', value: '1600mm - 2100mm' },
             { label: 'Project', value: 'Clean Ganga Mission' },

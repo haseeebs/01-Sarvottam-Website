@@ -5,7 +5,7 @@ import ClientLogosNew from '@/components/common/ClientLogos';
 import ServiceSection from '@/components/common/ServiceSection';
 import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
 import { services } from '@/data/projectData';
-import heroImage1 from '@/assets/images/Hero-image-2.webp';
+import heroImage1 from '@/assets/images/heroImg-2.webp';
 import { Landmark, FileText, Mountain } from 'lucide-react';
 import KeyBenefits from '@/components/common/KeyBenefits';
 import { getYearsOfExperience } from '@/utils/getYearsOfExperience';

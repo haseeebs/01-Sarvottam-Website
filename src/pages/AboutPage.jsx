@@ -1,8 +1,8 @@
 import React from 'react';
 import AboutPageHero from '@/components/sections/aboutpage/AboutPageHero';
 import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
-import heroImage1 from '@/assets/images/Hero-image-1.webp';
-import TeamImg from '@/assets/images/TeamImg.webp';
+import heroImage1 from '@/assets/images/heroImg-1.webp';
+import teamImg from '@/assets/images/teamImg.webp';
 import CTA from '@/components/common/CTA';
 import ClientLogosNew from '@/components/common/ClientLogos';
 import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
@@ -30,7 +30,7 @@ const AboutPage = () => {
         buttonText='Explore Our Services'
         buttonLink='/services/hdd'
         buttonVariant='primary'
-        imgUrl={TeamImg}
+        imgUrl={teamImg}
       />
     </>
   );
