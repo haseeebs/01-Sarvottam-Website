@@ -35,7 +35,7 @@ export const footerNav = {
         { name: 'Jack Pushing', path: '/services/jack-pushing' },
     ],
     contact: {
-        email: 'sarvottamenterprisesjackpush@gmail.com',
+        email: 'sarvottam24365@gmail.com',
         phone: '+91 777 180 6888',
         phone2: '+91 79746 36790',
     },

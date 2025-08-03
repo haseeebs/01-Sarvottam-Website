@@ -1,7 +1,16 @@
 import React from 'react';
 import { Button } from '@/components/ui/Button';
+import HeroCarousel from '@/components/common/HeroCarousel'; // Naya component import karein
 
-const HomepageHero = ({ children, body, cta, imageSrc, imageAlt }) => {
+// Props mein carouselImages ko add karein
+const HomepageHero = ({
+  children,
+  body,
+  cta,
+  imageSrc,
+  imageAlt,
+  carouselImages, // Naya prop
+}) => {
   return (
     <div className='bg-my-primary relative min-h-screen'>
       <div className='mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8'>
@@ -23,12 +32,17 @@ const HomepageHero = ({ children, body, cta, imageSrc, imageAlt }) => {
           </div>
         </div>
 
+        {/* Image/Carousel Section ko conditionally render karein */}
         <div className='relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0'>
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            className='aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full'
-          />
+          {carouselImages && carouselImages.length > 0 ? (
+            <HeroCarousel images={carouselImages} />
+          ) : (
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              className='aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full'
+            />
+          )}
         </div>
       </div>
     </div>

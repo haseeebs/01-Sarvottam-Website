@@ -3,6 +3,7 @@ import CTA from '@/components/common/CTA';
 import PageHero from '@/components/common/PageHero';
 import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
 import { allProjects } from '@/data/projectData'; // Import all projects
+import ClientTicker from '@/components/common/ClientTicker';
 
 const ProjectsPage = () => {
   const heroContent = {
@@ -10,12 +11,52 @@ const ProjectsPage = () => {
     body: 'Our portfolio demonstrates a consistent track record of successful project delivery for esteemed clients like L&T, MEIL, and various government bodies.',
   };
 
+  const ourClients = [
+    'L&T',
+    'Jain Irrigation',
+    'Kalpataru',
+    'Megha Engineering (MEIL)',
+    'VA Tech Wabag',
+    'BS Infra',
+    'GAIL Gas',
+    'BDEL',
+    'BHEL',
+    'NTPC',
+    'TATA Projects',
+    'Indian Railways',
+    'HPCL',
+    'NHAI',
+    'PWD & PHE Depts.',
+    'Namami Gange Project',
+    'L&T OFFSHORE',
+    'GINDA PIR',
+    'ANOX',
+    'D.D.C.',
+    'L&T KUNDLIYA',
+    'L&T SHIV PURI',
+    'L&T DEWAS',
+    'L&T KSIPRA LINK',
+    'NARMADA LINK L&T - ASHTA',
+    'L&T SEHORE',
+    'L&T UJJAIN',
+    'L&T RANCHI',
+    'L&T DELHI',
+    'L&T BOMBAY',
+    'L&T VISTA',
+    'STATE HIGHWAY UNDER GROUND. CROSSING',
+  ];
+
   return (
     <div>
       <PageHero
         intent='light'
         headline={heroContent.headline}
         body={heroContent.body}
+      />
+
+      <ClientTicker
+        title='Trusted by Industry Leaders and Government Bodies'
+        clients={ourClients}
       />
 
       {/* Naye component ka istemal */}

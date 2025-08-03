@@ -24,7 +24,7 @@ const pageData = {
     equipment: [
       {
         id: 1,
-        name: 'High Rock Breaker',
+        name: 'Hard Rock Breaker',
         category: 'Excavation & Breakers',
         imageUrl: null,
       },
@@ -80,7 +80,7 @@ const pageData = {
 
       {
         id: 9,
-        name: 'High Rock Cutting Machine',
+        name: 'hard Rock Cutting Machine',
         category: 'Excavation & Breakers',
         imageUrl: null,
       },

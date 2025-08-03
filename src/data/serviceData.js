@@ -1,7 +1,6 @@
 import {
     GitMerge, // for HDD paths
     Milestone, // for HDD precision
-    Layers, // for Multi-utility pipelines
     Box, // for Box Pushing
     Unplug, // for Pipe Jacking (metaphor for connecting)
     Crosshair, // for Precision Boring
@@ -9,8 +8,6 @@ import {
     Train, // 🆕 NAYA ICON: Box Pushing mein Railway ke liye
     Maximize, // 🆕 NAYA ICON: Jack Pushing mein bade diameter ke liye
 } from 'lucide-react';
-
-import BoxpushingImg from '@/assets/images/boxPushing.webp'
 
 const hddContent = {
     service1: {
@@ -42,7 +39,7 @@ const boxPushingContent = {
             'Hamari box pushing expertise se paidal chalne walon aur gaadiyon ke liye zameen-doz raaste (underpasses) banaye jaate hain, jis se traffic mein koi rukawat nahi aati.',
         Icon: Box,
     },
-    imageSrc: BoxpushingImg
+    imageSrc: 'https://i.ibb.co/QFfGgDG4/box-Pushing.webp'
 };
 
 const jackPushingContent = {
@@ -58,7 +55,7 @@ const jackPushingContent = {
             'Our jack pushing services are perfect for installing pipelines for Lift Irrigation Projects, Power Cable Protection, and Road/Highway crossings, ensuring precise alignment and grade over long distances.',
         Icon: Unplug,
     },
-    imageSrc: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop', // Example image
+    imageSrc: null
 };
 
 const boringContent = {

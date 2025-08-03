@@ -5,12 +5,11 @@ import ClientLogosNew from '@/components/common/ClientLogos';
 import ServiceSection from '@/components/common/ServiceSection';
 import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
 import { services } from '@/data/projectData';
-import heroImage1 from '@/assets/images/hero-img-2.webp';
 import { Landmark, FileText, Mountain } from 'lucide-react';
 import KeyBenefits from '@/components/common/KeyBenefits';
 import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
-import { galleryImages } from '@/data/galleryData';
-import ImageGalleryCarousel from '@/components/common/ImageGalleryCarousel';
+import { galleryImages } from '@/data/galleryData'; // galleryImages ko import karein
+// import ImageGalleryCarousel from '@/components/common/ImageGalleryCarousel'; // Iski ab zaroorat nahi
 
 const HomePage = () => {
   const whyChooseUsData = {
@@ -44,9 +43,12 @@ const HomePage = () => {
       <HomepageHero
         body='Your trusted partner in trenchless technology and specialized underground engineering for India’s most demanding infrastructure projects.'
         cta='Request a Project Consultation'
-        imageSrc={heroImage1}
         ctaLink='/contact'
-        imageAlt='Trenchless technology project in action'
+        // Naya prop pass karein
+        carouselImages={galleryImages}
+        // Purane props (imageSrc, imageAlt) hata dein ya comment kar dein
+        // imageSrc={heroImage1}
+        // imageAlt='Trenchless technology project in action'
       >
         Pioneering Underground Infrastructure for Over {getYearsOfExperience()}{' '}
         Years.
@@ -64,11 +66,14 @@ const HomePage = () => {
         features={whyChooseUsData.features}
       />
 
+      {/* Yeh section ab yahan nahi rahega */}
+      {/* 
       <ImageGalleryCarousel
         images={galleryImages}
         title='Glimpses of Our Work'
         description='A visual journey through our diverse projects, showcasing our commitment to excellence and precision engineering on the ground.'
-      />
+      /> 
+      */}
 
       <CTA
         variant='image-left'

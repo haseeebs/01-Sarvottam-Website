@@ -1,8 +1,6 @@
 import React from 'react';
 import AboutPageHero from '@/components/sections/aboutpage/AboutPageHero';
 import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
-import heroImage1 from '@/assets/images/hero-img-1.webp';
-import teamImg from '@/assets/images/team-img.webp';
 import CTA from '@/components/common/CTA';
 import ClientLogosNew from '@/components/common/ClientLogos';
 import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
@@ -18,7 +16,7 @@ const AboutPage = () => {
     <>
       <AboutPageHero
         content={heroContent}
-        imageUrl={heroImage1}
+        imageUrl={'https://i.ibb.co/MkLSqzxX/hero-img-1.webp'}
         imageAlt='Senior engineer at a project site'
       />
       <ExpertiseHighlights />
@@ -30,7 +28,7 @@ const AboutPage = () => {
         buttonText='Explore Our Services'
         buttonLink='/services/hdd'
         buttonVariant='primary'
-        imgUrl={teamImg}
+        imgUrl={'https://i.ibb.co/zvy6JMz/team-img.webp'}
       />
     </>
   );

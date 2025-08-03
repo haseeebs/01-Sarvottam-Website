@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Logo from '@/assets/images/Logo.webp';
 
 const NotFoundPage = () => {
   return (
@@ -7,7 +6,11 @@ const NotFoundPage = () => {
       <main className='grid min-h-screen place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8'>
         <div className='text-center'>
           <Link to='/' className='inline-block'>
-            <img className='mx-auto h-20 w-auto' src={Logo} alt='Sarvottam' />
+            <img
+              className='mx-auto h-20 w-auto'
+              src={'https://i.ibb.co/qTTnfWX/Logo.webp'}
+              alt='Sarvottam'
+            />
           </Link>
           <p className='text-my-primary text-base font-semibold'>404</p>
           <h1 className='mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl'>

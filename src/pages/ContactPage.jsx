@@ -27,7 +27,7 @@ const pageData = {
       },
       {
         type: 'Email',
-        value: 'sarvottamenterprisesjackpush@gmail.com',
+        value: 'sarvottam24365@gmail.com',
       },
     ],
   },

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { footerNav } from '@/config/navigation';
-import Logo from '@/assets/images/Logo.webp';
 import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
 
 const Footer = () => {
@@ -13,7 +12,7 @@ const Footer = () => {
             <Link to='/'>
               {/* <img
                 className='mb-8 h-10 w-50'
-                src={Logo}
+                src={'https://i.ibb.co/qTTnfWX/Logo.webp'}
                 alt='Sarvottam Enterprises Logo'
               /> */}
               <h2 className='font-family-display text-xl font-bold text-white sm:text-2xl'>

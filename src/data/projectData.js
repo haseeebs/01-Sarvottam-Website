@@ -1,9 +1,3 @@
-import hddImg from '@/assets/images/hero-img-2.webp';
-import boxpushingImg from '@/assets/images/boxPushing.webp';
-import augerboringImg from '@/assets/images/augerBoring.webp';
-import jackpushingImg from '@/assets/images/jack-pushing-img.webp';
-
-// === ALL PROJECTS DATA ===
 export const allProjects = [
     {
         id: 1,
@@ -47,17 +41,16 @@ export const allProjects = [
     {
         id: 3,
         isFeatured: false,
-        category: 'Jack Pushing', // CATEGORY UPDATE
-        subCategory: 'Sewer Line Project', // SUBCATEGORY UPDATE
+        category: 'Jack Pushing',
+        subCategory: 'Sewer Line Project',
         title: 'Digha-Kankarbagh Sewer Network',
         location: 'Patna, Bihar',
         client: 'VA Tech Wabag Ltd',
-        challenge: 'Laying a large 1600mm diameter RCC sewer pipe for 141 meters in a dense urban zone of Patna within a tight 3-month schedule, requiring minimal public disruption.',
-        solution: 'Successfully executed all civil works and employed the jack pushing method to install the pipeline, completing the project on schedule and demonstrating efficiency in urban projects.',
-        imageSrc: null, // Client se is project ki image maangein
+        challenge: 'Executing large-diameter sewer pipeline installation in a dense urban zone of Patna under a tight monthly schedule, with strict requirements to minimize public disruption.',
+        solution: 'Completed multiple stretches of sewer line using the jack pushing method and timely civil works, showcasing high efficiency in handling complex urban infrastructure projects.',
+        imageSrc: 'https://i.ibb.co/VFkccm1/wabagh-project.webp',
         keyStats: [
             { label: 'Pipe Diameter', value: '1600mm RCC' },
-            { label: 'Crossing Length', value: '141 Meters' },
             { label: 'Technology', value: 'Jack Pushing' },
         ],
         testimonial: null,
@@ -117,24 +110,6 @@ export const allProjects = [
         testimonial: null,
     },
     {
-        id: 7, // Yeh pehle se tha, ab isko aur behtar banaya gaya hai.
-        isFeatured: true,
-        category: 'Jack Pushing',
-        subCategory: 'Sewer Line Project',
-        title: 'Namami Gange - Sewer Diversion',
-        location: 'Patna, Bihar',
-        client: 'Namami Gange Mission (via L&T, Jain Irrigation)',
-        challenge: 'Diverting major sewage drains (1600mm to 2100mm diameter) away from the Ganga river in a dense urban environment as part of a critical national mission.',
-        solution: 'We executed large-scale trenchless sewer line installations using jack pushing techniques to lay new pipelines, successfully isolating the drains from the river without major disruption to the city.',
-        imageSrc: null,
-        keyStats: [
-            { label: 'Pipe Diameters', value: '1600mm - 2100mm' },
-            { label: 'Project', value: 'Clean Ganga Mission' },
-            { label: 'Technology', value: 'Jack Pushing' },
-        ],
-        testimonial: null,
-    },
-    {
         id: 8,
         isFeatured: true,
         category: 'Box Pushing',
@@ -144,7 +119,7 @@ export const allProjects = [
         client: 'Indian Railways / NHAI',
         challenge: 'Constructing concrete box culverts and underpasses under live, operational railway tracks without disrupting train schedules, a high-risk and precision-demanding task.',
         solution: 'Using our specialized Box Pushing technique, we incrementally push pre-cast concrete box segments under the railway embankment. This method is approved by railway authorities and guarantees structural safety and project completion on time.',
-        imageSrc: boxpushingImg, // Box Pushing ki main image istemal kar rahe hain.
+        imageSrc: 'https://i.ibb.co/QFfGgDG4/box-Pushing.webp',
         keyStats: [
             { label: 'Infrastructure', value: 'Live Railway Tracks' },
             { label: 'Technology', value: 'Box Pushing' },
@@ -160,7 +135,7 @@ export const services = [
     {
         title: 'Horizontal Directional Drilling',
         link: '/services/hdd',
-        imgSrc: hddImg,
+        imgSrc: 'https://i.ibb.co/pjBJ6b2d/hero-img-2.webp',
         imgAlt: 'Horizontal Directional Drilling rig in action for a major project.',
         description: 'A steerable, trenchless solution for long-distance crossings under rivers, highways, or sensitive areas with pinpoint accuracy.',
     },
@@ -174,14 +149,14 @@ export const services = [
     {
         title: 'Jack Pushing',
         link: '/services/jack-pushing',
-        imgSrc: jackpushingImg,
+        imgSrc: 'https://i.ibb.co/LXjcVjgt/jack-pushing-img.webp',
         imgAlt: 'Large diameter pipes being installed using hydraulic jacks.',
         description: 'Ideal for installing large diameter pipelines (600mm & above) for water supply, sewer, and utility projects across any terrain.',
     },
     {
         title: 'Auger Boring',
         link: '/services/auger-boring',
-        imgSrc: augerboringImg,
+        imgSrc: 'https://i.ibb.co/dsqqNnBj/auger-Boring.webp',
         imgAlt: 'Auger boring machine for precision underground services.',
         description: 'A reliable and cost-effective trenchless solution for straight-line installation of steel casing pipes under roads and railways.',
     },

@@ -1,7 +1,6 @@
 // src/components/layout/Header.jsx
 
 import React, { useState, useEffect, useRef } from 'react';
-import Logo from '@/assets/images/Logo.webp';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { primaryNav } from '@/config/navigation';
@@ -79,7 +78,11 @@ const Header = () => {
         <div className='mx-auto flex h-[80px] max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-8'>
           <div className='flex-shrink-0'>
             <Link to='/'>
-              <img src={Logo} alt='Logo' className='h-10 w-auto' />
+              <img
+                src={'https://i.ibb.co/qTTnfWX/Logo.webp'}
+                alt='Logo'
+                className='h-10 w-auto'
+              />
             </Link>
           </div>
 
