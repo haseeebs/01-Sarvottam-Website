@@ -12,6 +12,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  assetsInclude: ['**/*.webp'],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
