@@ -1,8 +1,8 @@
 import React from 'react';
 import AboutPageHero from '@/components/sections/aboutpage/AboutPageHero';
 import ExpertiseHighlights from '@/components/common/ExpertiseHighlights';
-import heroImage1 from '@/assets/images/heroImg-1.webp';
-import teamImg from '@/assets/images/teamImg.webp';
+import heroImage1 from '@/assets/images/hero-img-1.webp';
+import teamImg from '@/assets/images/team-img.webp';
 import CTA from '@/components/common/CTA';
 import ClientLogosNew from '@/components/common/ClientLogos';
 import { getYearsOfExperience } from '@/utils/getYearsOfExperience';

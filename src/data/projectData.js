@@ -1,4 +1,4 @@
-import hddImg from '@/assets/images/heroImg-2.webp';
+import hddImg from '@/assets/images/hero-img-2.webp';
 import boxpushingImg from '@/assets/images/boxPushing.webp';
 import augerboringImg from '@/assets/images/augerBoring.webp';
 import jackpushingImg from '@/assets/images/jackPushingImg.webp';
