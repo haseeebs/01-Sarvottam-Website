@@ -4,7 +4,7 @@ import EquipmentGallery from '@/components/sections/equipmentpage/EquipmentGalle
 import CTA from '@/components/common/CTA';
 import { MapPin, Settings, Landmark } from 'lucide-react';
 import KeyBenefits from '@/components/common/KeyBenefits';
-
+import { Helmet } from 'react-helmet-async';
 const pageData = {
   hero: {
     headline: 'The Powerhouse Behind Your Project: Our Specialized Fleet',
@@ -28,7 +28,6 @@ const pageData = {
         category: 'Excavation & Breakers',
         imageUrl: null,
       },
-
       {
         id: 2,
         name: 'Smart Rock Breaker',
@@ -157,17 +156,23 @@ const pageData = {
     buttonLink: '/contact?subject=FleetConsultation',
   },
 };
-
 const EquipmentPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>Our Specialized Equipment Fleet | Sarvottam Enterprises</title>
+        <meta
+          name='description'
+          content='Explore our robust fleet of specialized equipment, including HDD rigs, auger boring machines, and heavy-duty jacks, ensuring precision and power for your project.'
+        />
+        <link rel='canonical' href='https://www.your-domain.com/equipment' />
+      </Helmet>
       <PageHero
         headline={pageData.hero.headline}
         body={pageData.hero.body}
         cta={pageData.hero.cta}
         ctaLink={pageData.hero.ctaLink}
       />
-
       <EquipmentGallery
         title={pageData.gallery.title}
         categories={pageData.gallery.categories}
@@ -187,5 +192,4 @@ const EquipmentPage = () => {
     </div>
   );
 };
-
 export default EquipmentPage;

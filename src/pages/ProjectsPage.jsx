@@ -4,13 +4,12 @@ import PageHero from '@/components/common/PageHero';
 import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
 import { allProjects } from '@/data/projectData'; // Import all projects
 import ClientTicker from '@/components/common/ClientTicker';
-
+import { Helmet } from 'react-helmet-async';
 const ProjectsPage = () => {
   const heroContent = {
     headline: 'Proven Expertise, Delivered Projects',
     body: 'We provide a complete, in-house inventory of all specialized equipment and machinery required for any tunnel crossing project, ensuring seamless execution from start to finish.',
   };
-
   const ourClients = [
     'L&T',
     'Jain Irrigation',
@@ -45,15 +44,21 @@ const ProjectsPage = () => {
     'L&T VISTA',
     'STATE HIGHWAY UNDER GROUND. CROSSING',
   ];
-
   return (
     <div>
+      <Helmet>
+        <title>Our Projects Portfolio | Sarvottam Enterprises</title>
+        <meta
+          name='description'
+          content='View our portfolio of successfully delivered infrastructure projects across India, including work for L&T, MEIL, and Indian Railways. See our expertise in action.'
+        />
+        <link rel='canonical' href='https://www.your-domain.com/projects' />
+      </Helmet>
       <PageHero
         intent='light'
         headline={heroContent.headline}
         body={heroContent.body}
       />
-
       <ClientTicker
         title='Trusted by Industry Leaders and Government Bodies'
         clients={ourClients}
@@ -76,5 +81,4 @@ const ProjectsPage = () => {
     </div>
   );
 };
-
 export default ProjectsPage;

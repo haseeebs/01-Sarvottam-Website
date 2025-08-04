@@ -1,0 +1,10 @@
+# Allow all web crawlers to access the entire site.
+User-agent: *
+Allow: /
+
+# Disallow access to nothing.
+Disallow:
+
+# Location of the sitemap file.
+# IMPORTANT: Replace "https://www.your-domain.com" with your actual website domain.
+Sitemap: https://www.your-domain.com/sitemap.xml

@@ -9,9 +9,11 @@ import { Landmark, FileText, Mountain } from 'lucide-react';
 import KeyBenefits from '@/components/common/KeyBenefits';
 import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
 import { galleryImages } from '@/data/galleryData'; // galleryImages ko import karein
+import { Helmet } from 'react-helmet-async';
 // import ImageGalleryCarousel from '@/components/common/ImageGalleryCarousel'; // Iski ab zaroorat nahi
 
 const HomePage = () => {
+  const years = getYearsOfExperience();
   const whyChooseUsData = {
     title: 'The Sarvottam Advantage',
     description:
@@ -40,6 +42,16 @@ const HomePage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Sarvottam Enterprises: Trenchless Technology & Pipeline Experts
+        </title>
+        <meta
+          name='description'
+          content={`With over ${years} years of experience, Sarvottam Enterprises is your trusted partner for HDD, box pushing, and specialized underground engineering services in India.`}
+        />
+        <link rel='canonical' href='https://www.your-domain.com/' />
+      </Helmet>
       <HomepageHero
         body='Your trusted partner in trenchless technology and specialized underground engineering for India’s most demanding infrastructure projects.'
         cta='Request a Project Consultation'

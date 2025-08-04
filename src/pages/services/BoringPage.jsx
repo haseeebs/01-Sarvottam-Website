@@ -9,6 +9,7 @@ import ProjectShowcaseSection from '@/components/common/ProjectShowcaseSection';
 import PageHero from '@/components/common/PageHero';
 import { allProjects } from '@/data/projectData';
 import { boringContent } from '@/data/serviceData';
+import { Helmet } from 'react-helmet-async';
 
 const BoringPage = () => {
   const boringProjects = allProjects.filter((p) =>
@@ -54,6 +55,16 @@ const BoringPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Auger Boring & Pipe Ramming Services | Sarvottam Enterprises
+        </title>
+        <meta name='description' content={heroContent.body} />
+        <link
+          rel='canonical'
+          href='https://www.your-domain.com/services/auger-boring'
+        />
+      </Helmet>
       <PageHero
         intent='light'
         headline={heroContent.headline}

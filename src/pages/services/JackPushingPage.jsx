@@ -8,6 +8,7 @@ import { allProjects } from '@/data/projectData';
 
 import { jackPushingContent } from '@/data/serviceData';
 import { Maximize, Layers, Droplets } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const JackPushingPage = () => {
   const jackPushingProjects = allProjects.filter(
@@ -53,6 +54,14 @@ const JackPushingPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Heavy-Duty Jack Pushing Services | Sarvottam Enterprises</title>
+        <meta name='description' content={heroContent.body} />
+        <link
+          rel='canonical'
+          href='https://www.your-domain.com/services/jack-pushing'
+        />
+      </Helmet>
       <PageHero
         intent='light'
         headline={heroContent.headline}

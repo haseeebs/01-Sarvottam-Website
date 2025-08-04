@@ -7,6 +7,7 @@ import PageHero from '@/components/common/PageHero';
 import { allProjects } from '@/data/projectData';
 import { boxPushingContent } from '@/data/serviceData';
 import { Train, ShieldCheck, Construction } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const BoxPushingPage = () => {
   const boxPushingProjects = allProjects.filter(
@@ -52,6 +53,16 @@ const BoxPushingPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Specialized Box Pushing for Railway Crossings | Sarvottam Enterprises
+        </title>
+        <meta name='description' content={heroContent.body} />
+        <link
+          rel='canonical'
+          href='https://www.your-domain.com/services/box-pushing'
+        />
+      </Helmet>
       <PageHero
         intent='light'
         headline={heroContent.headline}

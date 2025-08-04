@@ -9,6 +9,7 @@ import PageHero from '@/components/common/PageHero';
 import { allProjects } from '@/data/projectData';
 import { hddContent } from '@/data/serviceData';
 import ServiceBreakdown from '@/components/common/ServiceBreakdown';
+import { Helmet } from 'react-helmet-async';
 
 const HDDPage = () => {
   const hddProjects = allProjects.filter((p) => p.category === 'HDD');
@@ -58,6 +59,13 @@ const HDDPage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Horizontal Directional Drilling (HDD) Services | Sarvottam Enterprises
+        </title>
+        <meta name='description' content={heroContent.body} />
+        <link rel='canonical' href='https://www.your-domain.com/services/hdd' />
+      </Helmet>
       <PageHero
         intent='light'
         headline={heroContent.headline}

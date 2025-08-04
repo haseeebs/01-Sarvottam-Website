@@ -3,6 +3,7 @@ import PageHero from '@/components/common/PageHero';
 import ContactFormAndDetails from '@/components/sections/contactpage/ContactFormAndDetails';
 import ContactFAQ from '@/components/sections/contactpage/ContactFAQ';
 import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
+import { Helmet } from 'react-helmet-async';
 
 // Content derived from the provided JSON data
 const pageData = {
@@ -53,8 +54,33 @@ const pageData = {
 };
 
 const ContactPage = () => {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': pageData.faq.items.map((item) => ({
+      '@type': 'Question',
+      'name': item.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': item.answer.replace(
+          '${getYearsOfExperience()}',
+          getYearsOfExperience(),
+        ),
+      },
+    })),
+  };
+
   return (
     <div>
+      <Helmet>
+        <title>Contact Us | Sarvottam Enterprises | Get a Quote</title>
+        <meta
+          name='description'
+          content='Reach out to Sarvottam Enterprises for a project quote, technical consultation, or partnership inquiries. Contact our experts via form, phone, or WhatsApp.'
+        />
+        <link rel='canonical' href='https://www.your-domain.com/contact' />
+        <script type='application/ld+json'>{JSON.stringify(faqSchema)}</script>
+      </Helmet>
       <PageHero
         intent='light'
         headline={pageData.hero.headline}
