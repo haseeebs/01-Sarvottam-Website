@@ -43,7 +43,7 @@ export const allProjects = [
         isFeatured: false,
         category: 'Jack Pushing',
         subCategory: 'Sewer Line Project',
-        title: 'Digha-Kankarbagh Sewer Network',
+        title: 'Namami Gange - Digha-Kankarbagh Sewer Network',
         location: 'Patna, Bihar',
         client: 'VA Tech Wabag Ltd',
         challenge: 'Executing large-diameter sewer pipeline installation in a dense urban zone of Patna under a tight monthly schedule, with strict requirements to minimize public disruption.',

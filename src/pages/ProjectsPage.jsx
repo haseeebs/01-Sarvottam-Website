@@ -8,7 +8,7 @@ import ClientTicker from '@/components/common/ClientTicker';
 const ProjectsPage = () => {
   const heroContent = {
     headline: 'Proven Expertise, Delivered Projects',
-    body: 'Our portfolio demonstrates a consistent track record of successful project delivery for esteemed clients like L&T, MEIL, and various government bodies.',
+    body: 'We provide a complete, in-house inventory of all specialized equipment and machinery required for any tunnel crossing project, ensuring seamless execution from start to finish.',
   };
 
   const ourClients = [
