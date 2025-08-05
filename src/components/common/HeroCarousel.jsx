@@ -18,7 +18,7 @@ const HeroCarousel = ({ images }) => {
       }}
       plugins={[
         Autoplay({
-          delay: 2500,
+          delay: 4000,
           stopOnInteraction: false,
           stopOnMouseEnter: true,
         }),
@@ -26,13 +26,13 @@ const HeroCarousel = ({ images }) => {
       className='h-full w-full'
     >
       <CarouselContent className='m-0 h-full'>
-        {images.map((image) => (
+        {images.map((image, index) => (
           <CarouselItem key={image.id} className='p-0'>
             <div className='relative h-full w-full cursor-grab active:cursor-grabbing'>
               <img
                 src={image.src}
                 alt={image.alt}
-                loading='eager'
+                loading={index === 0 ? 'eager' : 'lazy'}
                 decoding='async'
                 className='h-[75vh] w-full object-cover lg:h-screen' // Responsive Height!
                 onDragStart={(e) => e.preventDefault()}

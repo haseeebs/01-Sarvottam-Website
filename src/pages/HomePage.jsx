@@ -10,7 +10,10 @@ import KeyBenefits from '@/components/common/KeyBenefits';
 import { getYearsOfExperience } from '@/utils/getYearsOfExperience';
 import { galleryImages } from '@/data/galleryData'; // galleryImages ko import karein
 import { Helmet } from 'react-helmet-async';
+import LazySection from '@/components/common/LazySection';
 // import ImageGalleryCarousel from '@/components/common/ImageGalleryCarousel'; // Iski ab zaroorat nahi
+
+const heroImage = galleryImages[0];
 
 const HomePage = () => {
   const years = getYearsOfExperience();
@@ -57,6 +60,8 @@ const HomePage = () => {
         cta='Request a Project Consultation'
         ctaLink='/contact'
         // Naya prop pass karein
+        imageSrc={heroImage.src}
+        imageAlt={heroImage.alt}
         carouselImages={galleryImages}
         // Purane props (imageSrc, imageAlt) hata dein ya comment kar dein
         // imageSrc={heroImage1}
@@ -68,33 +73,41 @@ const HomePage = () => {
 
       <ClientLogosNew layout='marquee' />
 
-      <ServiceSection services={services} />
+      <LazySection placeholderHeight='600px'>
+        <ServiceSection services={services} />
+      </LazySection>
 
-      <ExpertiseHighlights />
+      <LazySection placeholderHeight='250px'>
+        <ExpertiseHighlights />
+      </LazySection>
 
-      <KeyBenefits
-        title={whyChooseUsData.title}
-        description={whyChooseUsData.description}
-        features={whyChooseUsData.features}
-      />
+      <LazySection placeholderHeight='500px'>
+        <KeyBenefits
+          title={whyChooseUsData.title}
+          description={whyChooseUsData.description}
+          features={whyChooseUsData.features}
+        />
+      </LazySection>
 
       {/* Yeh section ab yahan nahi rahega */}
       {/* 
       <ImageGalleryCarousel
-        images={galleryImages}
-        title='Glimpses of Our Work'
-        description='A visual journey through our diverse projects, showcasing our commitment to excellence and precision engineering on the ground.'
+      images={galleryImages}
+      title='Glimpses of Our Work'
+      description='A visual journey through our diverse projects, showcasing our commitment to excellence and precision engineering on the ground.'
       /> 
       */}
 
-      <CTA
-        variant='image-left'
-        title='Ready to Discuss Your Next Infrastructure Challenge?'
-        description={`With ${getYearsOfExperience()} years of proven experience, we are equipped to handle the most demanding projects. Let's build the future together.`}
-        buttonText='Get In Touch'
-        buttonLink='/contact'
-        buttonVariant='primary'
-      />
+      <LazySection placeholderHeight='450px'>
+        <CTA
+          variant='image-left'
+          title='Ready to Discuss Your Next Infrastructure Challenge?'
+          description={`With ${getYearsOfExperience()} years of proven experience, we are equipped to handle the most demanding projects. Let's build the future together.`}
+          buttonText='Get In Touch'
+          buttonLink='/contact'
+          buttonVariant='primary'
+        />
+      </LazySection>
     </>
   );
 };
